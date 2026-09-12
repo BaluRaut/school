@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🏫 The School — all courses, one door</title>
+<meta name="description" content="One portal for all nine learn-the-school-way courses: Docker, Kubernetes, AWS, ArgoCD, AI, Vector Databases, MCP and AI Agents — ELI5 analogies, numbered diagrams, runnable code in every AI repo.">
+<style>
+  :root { --bg:#f8fafc; --card:#fff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#326ce5; --ok:#16a34a; --blue:#2563eb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#131c2e; --ink:#e2e8f0; --muted:#94a3b8; --line:#253349; } }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif; line-height:1.6; }
+  .wrap { max-width:1280px; margin:0 auto; padding:28px 20px 60px; }
+  @media (min-width: 1660px) { .wrap { max-width: 1580px; } }
+  a { color:var(--blue); }
+  h1 { font-size:2.2rem; line-height:1.2; } h2 { font-size:1.4rem; margin:44px 0 6px; }
+  .sub { color:var(--muted); max-width:76ch; }
+  .stats { display:flex; gap:26px; flex-wrap:wrap; margin:18px 0 6px; }
+  .stat b { display:block; font-size:1.6rem; }
+  .stat span { font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+  .track { background:var(--card); border:1px solid var(--line); border-left:6px solid var(--c,var(--accent)); border-radius:16px; padding:18px 20px; margin-top:14px; }
+  .track b.title { font-size:1.05rem; }
+  .track .chain { color:var(--muted); margin-top:4px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; margin-top:16px; }
+  .school { background:var(--card); border:1px solid var(--line); border-top:5px solid var(--c,var(--accent)); border-radius:14px; padding:16px 18px; display:flex; flex-direction:column; gap:6px; }
+  .school h3 { font-size:1.08rem; }
+  .school .sig { color:var(--muted); font-size:.92rem; }
+  .school .meta { font-size:.8rem; color:var(--muted); }
+  .school .links { margin-top:auto; padding-top:8px; font-size:.9rem; display:flex; flex-wrap:wrap; gap:4px 10px; }
+  .school .links a { font-weight:600; text-decoration:none; }
+  .school .links a:hover { text-decoration:underline; }
+  table { border-collapse:collapse; width:100%; margin-top:14px; font-size:.9rem; background:var(--card); border-radius:12px; overflow:hidden; }
+  th, td { border:1px solid var(--line); padding:8px 10px; text-align:center; }
+  th { background:var(--bg); } td:first-child, th:first-child { text-align:left; white-space:nowrap; }
+  .path-row { display:flex; align-items:baseline; gap:10px; padding:8px 0; border-top:1px dashed var(--line); }
+  .path-row input { transform:scale(1.25); accent-color:var(--ok); flex:none; position:relative; top:2px; }
+  .path-row a { font-weight:600; text-decoration:none; } .path-row a:hover { text-decoration:underline; }
+  .path-row .why { color:var(--muted); font-size:.88rem; }
+  .pbar-box { position:sticky; top:0; z-index:10; background:var(--bg); padding:10px 0; }
+  .pbar-in { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:10px 16px; display:flex; align-items:center; gap:14px; }
+  .bar { flex:1; height:10px; background:var(--line); border-radius:999px; overflow:hidden; }
+  .bar > div { height:100%; width:0%; background:var(--ok); transition:width .3s; }
+  #ptext { font-weight:700; white-space:nowrap; }
+  footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:.88rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>🏫 The School — hard things, explained like you're five</h1>
+  <p class="sub">Nine courses, one method: every concept as a <b>school-analogy story</b>, every lesson
+  on its own <b>git branch</b> with a numbered <b>box-and-arrow diagram</b>, every claim backed by
+  something you can <b>run</b> — including four repos that ship real, zero-dependency code
+  (a language model, an MCP server &amp; client, an agent, a vector database).</p>
+  <div class="stats">
+    <div class="stat"><b>9</b><span>courses</span></div>
+    <div class="stat"><b>99</b><span>lesson branches</span></div>
+    <div class="stat"><b>90+</b><span>numbered diagrams</span></div>
+    <div class="stat"><b>4</b><span>runnable codebases</span></div>
+    <div class="stat"><b>0</b><span>magic left</span></div>
+  </div>
+</header>
+
+<h2>🧭 Two tracks, one universe</h2>
+<p class="sub">Same analogies everywhere — desks, lunchboxes, hall passes, gates — so knowledge
+transfers between courses. Pick a track, or interleave.</p>
+<div class="track" style="--c:#326ce5">
+  <b class="title">☁️ The Ops track — pack it, run it, ship it</b>
+  <div class="chain">0️⃣ <a href="https://baluraut.github.io/learn-aws-school/">AWS foundations (IAM &amp; EC2)</a> →
+  1️⃣ <a href="https://baluraut.github.io/learn-docker-school/">Docker &amp; ECR</a> →
+  2️⃣ <a href="https://baluraut.github.io/learn-kubernetes-school/">Kubernetes</a> (the flagship: 26 lessons) →
+  3️⃣ <a href="https://baluraut.github.io/learn-argocd-school/">ArgoCD &amp; GitOps</a></div>
+</div>
+<div class="track" style="--c:#7c3aed">
+  <b class="title">🧠 The AI track — how it works, then how to build with it</b>
+  <div class="chain">1️⃣ <a href="https://baluraut.github.io/learn-ai-school/">AI (tokens → diffusion)</a> →
+  2️⃣ <a href="https://baluraut.github.io/learn-vectordb-school/">Vector Databases</a> →
+  3️⃣ <a href="https://baluraut.github.io/learn-mcp-school/">MCP</a> →
+  4️⃣ <a href="https://baluraut.github.io/learn-agents-school/">AI Agents</a></div>
+</div>
+
+<h2>🎓 The nine schools</h2>
+<div class="grid">
+  <div class="school" style="--c:#7c3aed"><h3>🪪 AWS — IAM &amp; EC2</h3>
+    <div class="sig">The foundations: who may do what (ID cards, hats) and the rented desks everything runs on. EC2-as-code labs, ~1¢/hour.</div>
+    <div class="meta">12 lessons · 2 parts · big-picture 4K · trade-offs</div>
+    <div class="links"><a href="https://baluraut.github.io/learn-aws-school/">Site</a><a href="https://baluraut.github.io/learn-aws-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-aws-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-aws-school">Repo</a></div></div>
+  <div class="school" style="--c:#0ea5e9"><h3>🍱 Docker &amp; ECR</h3>
+    <div class="sig">Pack it (images, layers, compose, multi-stage) and ship it (registries, ECR). Real demo app + working multi-stage build in the repo.</div>
+    <div class="meta">12 lessons · 2 parts · big-picture 4K · trade-offs</div>
+    <div class="links"><a href="https://baluraut.github.io/learn-docker-school/">Site</a><a href="https://baluraut.github.io/learn-docker-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-docker-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-docker-school">Repo</a></div></div>
+  <div class="school" style="--c:#326ce5"><h3>☸️ Kubernetes — the flagship</h3>
+    <div class="sig">26 lessons: pods to control plane, GitOps, multi-AZ, then Part 3 "running it for real" — debugging, RBAC, upgrades, observability. Real manifests, real school platform.</div>
+    <div class="meta">26 lessons · 3 parts · study plan · AWS map · trade-offs · short link: <a href="https://baluraut.github.io/k8s/">/k8s</a></div>
+    <div class="links"><a href="https://baluraut.github.io/learn-kubernetes-school/">Site</a><a href="https://baluraut.github.io/learn-kubernetes-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">Study plan</a><a href="https://baluraut.github.io/learn-kubernetes-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-kubernetes-school">Repo</a></div></div>
+  <div class="school" style="--c:#ea580c"><h3>🤖 ArgoCD &amp; GitOps</h3>
+    <div class="sig">Deployment with and without ArgoCD: feel the drift problem, then meet the caretaker robot. Deployable demo app + Application manifest included.</div>
+    <div class="meta">12 lessons · 2 parts · big-picture 4K · trade-offs</div>
+    <div class="links"><a href="https://baluraut.github.io/learn-argocd-school/">Site</a><a href="https://baluraut.github.io/learn-argocd-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-argocd-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-argocd-school">Repo</a></div></div>
+  <div class="school" style="--c:#7c3aed"><h3>🧠 AI — tokens to agents</h3>
+    <div class="sig">How models work (tokens, embeddings, attention, RLHF &amp; LoRA) and how to use them (prompting, RAG, agents, diffusion, MCP). Three runnable zero-dep Python labs.</div>
+    <div class="meta">13 lessons · study plan · trade-offs · companion video decoded</div>
+    <div class="links"><a href="https://baluraut.github.io/learn-ai-school/">Site</a><a href="https://baluraut.github.io/learn-ai-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-ai-school/study-plan.html">Study plan</a><a href="https://baluraut.github.io/learn-ai-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-ai-school">Repo</a></div></div>
+  <div class="school" style="--c:#2563eb"><h3>🗺️ Vector Databases</h3>
+    <div class="sig">The library sorted by meaning: embeddings, cosine, HNSW, chunking, RAG — with a real ~70-line vector DB in the repo (and one honest failure that explains everything).</div>
+    <div class="meta">8 lessons · runnable mini-DB · landscape page · big-picture 4K</div>
+    <div class="links"><a href="https://baluraut.github.io/learn-vectordb-school/">Site</a><a href="https://baluraut.github.io/learn-vectordb-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-vectordb-school/landscape.html">Landscape</a><a href="https://github.com/BaluRaut/learn-vectordb-school">Repo</a></div></div>
+  <div class="school" style="--c:#7c3aed"><h3>🔌 MCP — the universal plug</h3>
+    <div class="sig">The Model Context Protocol with the protocol IN the repo: a real server and client (~200 lines), the wire message-by-message, 5 use cases with sequence diagrams.</div>
+    <div class="meta">8 lessons · runnable server+client · use-cases page · big-picture 4K</div>
+    <div class="links"><a href="https://baluraut.github.io/learn-mcp-school/">Site</a><a href="https://baluraut.github.io/learn-mcp-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-mcp-school/use-cases.html">Use cases</a><a href="https://github.com/BaluRaut/learn-mcp-school">Repo</a></div></div>
+  <div class="school" style="--c:#0d9488"><h3>📋 AI Agents</h3>
+    <div class="sig">Answers vs outcomes: the think→act→observe loop, tools, guardrails, failure modes — with a real runnable agent (drive it yourself!), 5 patterns, and the history &amp; future of "agentic".</div>
+    <div class="meta">8 lessons · runnable agent · patterns page · history &amp; future page</div>
+    <div class="links"><a href="https://baluraut.github.io/learn-agents-school/">Site</a><a href="https://baluraut.github.io/learn-agents-school/patterns.html">Patterns</a><a href="https://baluraut.github.io/learn-agents-school/history-and-future.html">History &amp; future</a><a href="https://github.com/BaluRaut/learn-agents-school">Repo</a></div></div>
+  <div class="school" style="--c:#64748b"><h3>🔗 /k8s — the short link</h3>
+    <div class="sig">A tiny redirect repo: baluraut.github.io/k8s → the Kubernetes course, deep links preserved. Share the short one.</div>
+    <div class="meta">1 redirect · the smallest school 😄</div>
+    <div class="links"><a href="https://baluraut.github.io/k8s/">Try it</a><a href="https://github.com/BaluRaut/k8s">Repo</a></div></div>
+</div>
+
+<h2>📊 What every school ships (the cross-review)</h2>
+<div style="overflow-x:auto"><table>
+  <tr><th>School</th><th>Lessons</th><th>Runnable code</th><th>Lesson diagrams</th><th>Big-picture 4K</th><th>Trade-offs</th><th>Study plan</th><th>Showcase page</th></tr>
+  <tr><td>🪪 AWS</td><td>12</td><td>Terraform labs</td><td>✅ 12</td><td>✅</td><td>✅</td><td>— (portal path ↓)</td><td>—</td></tr>
+  <tr><td>🍱 Docker</td><td>12</td><td>app + compose</td><td>✅ 12</td><td>✅</td><td>✅</td><td>— (portal path ↓)</td><td>—</td></tr>
+  <tr><td>☸️ Kubernetes</td><td>26</td><td>manifests + terraform</td><td>✅ 26</td><td>✅ AWS map + 10×4K</td><td>✅</td><td>✅ 9 weeks</td><td>✅ AWS components map</td></tr>
+  <tr><td>🤖 ArgoCD</td><td>12</td><td>deployable app</td><td>✅ 12</td><td>✅</td><td>✅</td><td>— (portal path ↓)</td><td>—</td></tr>
+  <tr><td>🧠 AI</td><td>13</td><td>✅ 3 Python labs</td><td>✅ 13</td><td>✅</td><td>✅ (incl. MCP)</td><td>✅ 4 weeks</td><td>—</td></tr>
+  <tr><td>🗺️ VectorDB</td><td>8</td><td>✅ mini vector DB</td><td>✅ 8</td><td>✅</td><td>≈ landscape</td><td>— (portal path ↓)</td><td>✅ landscape</td></tr>
+  <tr><td>🔌 MCP</td><td>8</td><td>✅ server + client</td><td>✅ 8</td><td>✅</td><td>→ in AI school</td><td>— (portal path ↓)</td><td>✅ 5 use cases</td></tr>
+  <tr><td>📋 Agents</td><td>8</td><td>✅ runnable agent</td><td>✅ 8</td><td>✅</td><td>≈ history page</td><td>— (portal path ↓)</td><td>✅ patterns + history</td></tr>
+</table></div>
+<p class="sub" style="margin-top:8px">All 36 pages across all sites verified live at portal build time. Courses
+without their own study plan are paced by the cross-school path below.</p>
+
+<h2>🗓️ The grand path — all nine schools, in order</h2>
+<p class="sub">Tick a school when you finish it — <b>progress saved in this browser</b>. Steady pace:
+one school every 2–4 weeks (Kubernetes: 9 — it has <a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">its own weekly plan</a>,
+as does <a href="https://baluraut.github.io/learn-ai-school/study-plan.html">AI</a>).</p>
+<div class="pbar-box"><div class="pbar-in"><span id="ptext">0 / 8</span><div class="bar"><div id="pbar"></div></div></div></div>
+<div class="path-row"><input type="checkbox" data-s="aws" id="c-aws"><label for="c-aws"><a href="https://baluraut.github.io/learn-aws-school/">1 · 🪪 AWS foundations</a></label><span class="why">— IAM cards &amp; EC2 desks: everything else stands on these</span></div>
+<div class="path-row"><input type="checkbox" data-s="docker" id="c-docker"><label for="c-docker"><a href="https://baluraut.github.io/learn-docker-school/">2 · 🍱 Docker &amp; ECR</a></label><span class="why">— pack the lunchbox, rent the bank locker</span></div>
+<div class="path-row"><input type="checkbox" data-s="k8s" id="c-k8s"><label for="c-k8s"><a href="https://baluraut.github.io/learn-kubernetes-school/">3 · ☸️ Kubernetes</a></label><span class="why">— the flagship: 26 lessons, its own 9-week plan</span></div>
+<div class="path-row"><input type="checkbox" data-s="argocd" id="c-argocd"><label for="c-argocd"><a href="https://baluraut.github.io/learn-argocd-school/">4 · 🤖 ArgoCD &amp; GitOps</a></label><span class="why">— the caretaker robot; deploys become boring (the goal)</span></div>
+<div class="path-row"><input type="checkbox" data-s="ai" id="c-ai"><label for="c-ai"><a href="https://baluraut.github.io/learn-ai-school/">5 · 🧠 AI</a></label><span class="why">— five ideas, zero magic; its own 4-week plan</span></div>
+<div class="path-row"><input type="checkbox" data-s="vdb" id="c-vdb"><label for="c-vdb"><a href="https://baluraut.github.io/learn-vectordb-school/">6 · 🗺️ Vector Databases</a></label><span class="why">— the meaning hall; RAG's machine room</span></div>
+<div class="path-row"><input type="checkbox" data-s="mcp" id="c-mcp"><label for="c-mcp"><a href="https://baluraut.github.io/learn-mcp-school/">7 · 🔌 MCP</a></label><span class="why">— the universal plug; read the actual wire</span></div>
+<div class="path-row"><input type="checkbox" data-s="agents" id="c-agents"><label for="c-agents"><a href="https://baluraut.github.io/learn-agents-school/">8 · 📋 AI Agents</a></label><span class="why">— the capstone: everything above, in one loop 🎓</span></div>
+
+<footer>
+  🏫 The School · by <a href="https://github.com/BaluRaut">BaluRaut</a> ·
+  also on this domain: <a href="https://baluraut.github.io/">the Backend Engineer's Field Library</a> ·
+  every course: MIT-spirited, analogy-powered, runnable
+</footer>
+
+</div>
+<script>
+(function(){
+  var KEY='school-portal-path', state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  var boxes=[].slice.call(document.querySelectorAll('input[data-s]'));
+  function render(){
+    var done=boxes.filter(function(b){return b.checked}).length;
+    document.getElementById('ptext').textContent=done+' / '+boxes.length;
+    document.getElementById('pbar').style.width=(100*done/boxes.length)+'%';
+  }
+  boxes.forEach(function(b){
+    b.checked=!!state[b.dataset.s];
+    b.addEventListener('change',function(){state[b.dataset.s]=b.checked;
+      localStorage.setItem(KEY,JSON.stringify(state));render();});
+  });
+  render();
+})();
+</script>
+</body>
+</html>
