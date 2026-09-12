@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>🏫 The School — all courses, one door</title>
 <meta name="description" content="One portal for all nine learn-the-school-way courses: Docker, Kubernetes, AWS, ArgoCD, AI, Vector Databases, MCP and AI Agents — ELI5 analogies, numbered diagrams, runnable code in every AI repo.">
+<meta property="og:title" content="🏫 The School — all courses, one door">
+<meta property="og:description" content="Nine courses · 99 lesson branches · 90+ numbered diagrams · 4 runnable codebases · a 127-term analogy dictionary · quizzes &amp; study plans — hard things, explained like you're five.">
+<meta property="og:image" content="https://baluraut.github.io/learn-kubernetes-school/images/big-picture-4k.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root { --bg:#f8fafc; --card:#fff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#326ce5; --ok:#16a34a; --blue:#2563eb; }
   @media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#131c2e; --ink:#e2e8f0; --muted:#94a3b8; --line:#253349; } }
@@ -58,9 +63,16 @@
     <div class="stat"><b>99</b><span>lesson branches</span></div>
     <div class="stat"><b>90+</b><span>numbered diagrams</span></div>
     <div class="stat"><b>4</b><span>runnable codebases</span></div>
+    <div class="stat"><b>127</b><span>dictionary terms</span></div>
     <div class="stat"><b>0</b><span>magic left</span></div>
   </div>
 </header>
+
+<div class="track" style="--c:#16a34a; margin-top:20px">
+  <b class="title">📖 The Dictionary — every term, its analogy, its lesson</b>
+  <div class="chain">127 terms from all nine schools on one searchable page: type "OOMKilled", "lunchbox" or
+  "hall pass" and jump straight to the diagram that teaches it → <a href="dictionary.html"><b>open the Dictionary</b></a></div>
+</div>
 
 <h2>🧭 Two tracks, one universe</h2>
 <p class="sub">Same analogies everywhere — desks, lunchboxes, hall passes, gates — so knowledge
@@ -122,18 +134,18 @@ transfers between courses. Pick a track, or interleave.</p>
 
 <h2>📊 What every school ships (the cross-review)</h2>
 <div style="overflow-x:auto"><table>
-  <tr><th>School</th><th>Lessons</th><th>Runnable code</th><th>Lesson diagrams</th><th>Big-picture 4K</th><th>Trade-offs</th><th>Study plan</th><th>Showcase page</th></tr>
-  <tr><td>🪪 AWS</td><td>12</td><td>Terraform labs</td><td>✅ 12</td><td>✅</td><td>✅</td><td>— (portal path ↓)</td><td>—</td></tr>
-  <tr><td>🍱 Docker</td><td>12</td><td>app + compose</td><td>✅ 12</td><td>✅</td><td>✅</td><td>— (portal path ↓)</td><td>—</td></tr>
-  <tr><td>☸️ Kubernetes</td><td>26</td><td>manifests + terraform</td><td>✅ 26</td><td>✅ AWS map + 10×4K</td><td>✅</td><td>✅ 9 weeks</td><td>✅ AWS components map</td></tr>
-  <tr><td>🤖 ArgoCD</td><td>12</td><td>deployable app</td><td>✅ 12</td><td>✅</td><td>✅</td><td>— (portal path ↓)</td><td>—</td></tr>
-  <tr><td>🧠 AI</td><td>13</td><td>✅ 3 Python labs</td><td>✅ 13</td><td>✅</td><td>✅ (incl. MCP)</td><td>✅ 4 weeks</td><td>—</td></tr>
-  <tr><td>🗺️ VectorDB</td><td>8</td><td>✅ mini vector DB</td><td>✅ 8</td><td>✅</td><td>≈ landscape</td><td>— (portal path ↓)</td><td>✅ landscape</td></tr>
-  <tr><td>🔌 MCP</td><td>8</td><td>✅ server + client</td><td>✅ 8</td><td>✅</td><td>→ in AI school</td><td>— (portal path ↓)</td><td>✅ 5 use cases</td></tr>
-  <tr><td>📋 Agents</td><td>8</td><td>✅ runnable agent</td><td>✅ 8</td><td>✅</td><td>≈ history page</td><td>— (portal path ↓)</td><td>✅ patterns + history</td></tr>
+  <tr><th>School</th><th>Lessons</th><th>Runnable code</th><th>Lesson diagrams</th><th>Big-picture 4K</th><th>Trade-offs</th><th>Study plan</th><th>Quiz</th><th>Showcase page</th></tr>
+  <tr><td>🪪 AWS</td><td>12</td><td>Terraform labs</td><td>✅ 12</td><td>✅</td><td>✅</td><td>✅ 4 weeks</td><td>✅ 8 Qs</td><td>—</td></tr>
+  <tr><td>🍱 Docker</td><td>12</td><td>app + compose</td><td>✅ 12</td><td>✅</td><td>✅</td><td>✅ 4 weeks</td><td>✅ 8 Qs</td><td>—</td></tr>
+  <tr><td>☸️ Kubernetes</td><td>26</td><td>manifests + terraform</td><td>✅ 26</td><td>✅ AWS map + 11×4K</td><td>✅</td><td>✅ 9 weeks</td><td>✅ 10 Qs</td><td>✅ AWS components map</td></tr>
+  <tr><td>🤖 ArgoCD</td><td>12</td><td>deployable app</td><td>✅ 12</td><td>✅</td><td>✅</td><td>✅ 4 weeks</td><td>✅ 8 Qs</td><td>—</td></tr>
+  <tr><td>🧠 AI</td><td>13</td><td>✅ 3 Python labs</td><td>✅ 13</td><td>✅</td><td>✅ (incl. MCP)</td><td>✅ 4 weeks</td><td>✅ 10 Qs</td><td>—</td></tr>
+  <tr><td>🗺️ VectorDB</td><td>8</td><td>✅ mini vector DB</td><td>✅ 8</td><td>✅</td><td>≈ landscape</td><td>✅ 3 weeks</td><td>✅ 8 Qs</td><td>✅ landscape</td></tr>
+  <tr><td>🔌 MCP</td><td>8</td><td>✅ server + client</td><td>✅ 8</td><td>✅</td><td>→ in AI school</td><td>✅ 3 weeks</td><td>✅ 8 Qs</td><td>✅ 5 use cases</td></tr>
+  <tr><td>📋 Agents</td><td>8</td><td>✅ runnable agent</td><td>✅ 8</td><td>✅</td><td>≈ history page</td><td>✅ 3 weeks</td><td>✅ 10 Qs</td><td>✅ patterns + history</td></tr>
 </table></div>
-<p class="sub" style="margin-top:8px">All 36 pages across all sites verified live at portal build time. Courses
-without their own study plan are paced by the cross-school path below.</p>
+<p class="sub" style="margin-top:8px">All pages across all sites verified live at portal build time. Every course now has its own
+weekly study plan and an end-of-course quiz — plus every term lives in the <a href="dictionary.html">📖 Dictionary</a>.</p>
 
 <h2>🗓️ The grand path — all nine schools, in order</h2>
 <p class="sub">Tick a school when you finish it — <b>progress saved in this browser</b>. Steady pace:
@@ -149,10 +161,23 @@ as does <a href="https://baluraut.github.io/learn-ai-school/study-plan.html">AI<
 <div class="path-row"><input type="checkbox" data-s="mcp" id="c-mcp"><label for="c-mcp"><a href="https://baluraut.github.io/learn-mcp-school/">7 · 🔌 MCP</a></label><span class="why">— the universal plug; read the actual wire</span></div>
 <div class="path-row"><input type="checkbox" data-s="agents" id="c-agents"><label for="c-agents"><a href="https://baluraut.github.io/learn-agents-school/">8 · 📋 AI Agents</a></label><span class="why">— the capstone: everything above, in one loop 🎓</span></div>
 
+<div id="cert" style="display:none; margin-top:26px; background:var(--card); border:3px double var(--ok); border-radius:18px; padding:34px 30px; text-align:center;">
+  <div style="font-size:2.6rem">🎓</div>
+  <div style="font-size:1.5rem; font-weight:800; margin-top:4px">Certificate of Completion</div>
+  <div class="sub" style="margin:10px auto 0">This certifies that</div>
+  <input id="cert-name" placeholder="type your name" style="display:block; margin:8px auto; padding:6px 14px; font:inherit; font-size:1.25rem; font-weight:700; text-align:center; border:none; border-bottom:2px dashed var(--line); background:transparent; color:var(--ink); max-width:340px; width:90%;">
+  <div class="sub" style="margin:6px auto 0; max-width:60ch">has walked all <b>nine schools</b> of The School — AWS, Docker, Kubernetes, ArgoCD,
+  AI, Vector Databases, MCP and AI Agents — <b>99 lessons</b>, from ID cards and lunchboxes to a running agent. Zero magic remains. 🏫</div>
+  <div id="cert-date" class="sub" style="margin-top:12px; font-weight:600"></div>
+  <button onclick="window.print()" style="margin-top:16px; padding:9px 22px; font:inherit; font-weight:700; border:none; border-radius:10px; background:var(--ok); color:#fff; cursor:pointer;">🖨️ Print / save as PDF</button>
+</div>
+
 <footer>
   🏫 The School · by <a href="https://github.com/BaluRaut">BaluRaut</a> ·
+  📖 <a href="dictionary.html">the Dictionary</a> ·
   also on this domain: <a href="https://baluraut.github.io/">the Backend Engineer's Field Library</a> ·
-  every course: MIT-spirited, analogy-powered, runnable
+  every course: MIT-spirited, analogy-powered, runnable ·
+  <a href="https://github.com/BaluRaut/school/issues">🐛 found a mistake?</a>
 </footer>
 
 </div>
@@ -161,10 +186,21 @@ as does <a href="https://baluraut.github.io/learn-ai-school/study-plan.html">AI<
   var KEY='school-portal-path', state={};
   try{state=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
   var boxes=[].slice.call(document.querySelectorAll('input[data-s]'));
+  var cert=document.getElementById('cert'), certDate=document.getElementById('cert-date'),
+      certName=document.getElementById('cert-name');
+  certName.value=localStorage.getItem('school-cert-name')||'';
+  certName.addEventListener('input',function(){localStorage.setItem('school-cert-name',certName.value)});
   function render(){
     var done=boxes.filter(function(b){return b.checked}).length;
     document.getElementById('ptext').textContent=done+' / '+boxes.length;
     document.getElementById('pbar').style.width=(100*done/boxes.length)+'%';
+    if(done===boxes.length){
+      var when=localStorage.getItem('school-cert-date');
+      if(!when){when=new Date().toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+        localStorage.setItem('school-cert-date',when);}
+      certDate.textContent='Completed on '+when;
+      cert.style.display='block';
+    } else { cert.style.display='none'; localStorage.removeItem('school-cert-date'); }
   }
   boxes.forEach(function(b){
     b.checked=!!state[b.dataset.s];

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📖 The Dictionary — every term, every analogy, one page</title>
+<meta name="description" content="The School's cross-course dictionary: 100+ technical terms, each with its school analogy and a link to the lesson that teaches it — searchable.">
+<meta property="og:title" content="📖 The School Dictionary">
+<meta property="og:description" content="100+ terms · every one with its school analogy · searchable · linked to the lesson that teaches it.">
+<meta property="og:image" content="https://baluraut.github.io/learn-kubernetes-school/images/big-picture-4k.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root { --bg:#f8fafc; --card:#fff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#326ce5; --blue:#2563eb; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#131c2e; --ink:#e2e8f0; --muted:#94a3b8; --line:#253349; } }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--ink); font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif; line-height:1.6; }
+.wrap { max-width:1100px; margin:0 auto; padding:28px 20px 60px; }
+a { color:var(--blue); } h1 { font-size:1.9rem; } .sub { color:var(--muted); max-width:76ch; }
+#search { width:100%; margin:18px 0 6px; padding:12px 16px; font:inherit; font-size:1.05rem; border:2px solid var(--line); border-radius:12px; background:var(--card); color:var(--ink); }
+#search:focus { outline:none; border-color:var(--accent); }
+#count { color:var(--muted); font-size:.88rem; margin-bottom:8px; }
+.entry { background:var(--card); border:1px solid var(--line); border-left:5px solid var(--c,var(--accent)); border-radius:12px; padding:12px 16px; margin-top:10px; display:flex; gap:14px; align-items:baseline; flex-wrap:wrap; }
+.entry b { font-size:1.02rem; min-width:190px; }
+.entry .ana { color:var(--muted); flex:1; min-width:240px; }
+.entry a { font-weight:600; text-decoration:none; white-space:nowrap; font-size:.9rem; }
+.entry a:hover { text-decoration:underline; }
+footer { margin-top:44px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:.88rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<p><a href="index.html">← Back to the School portal</a></p>
+<h1>📖 The Dictionary — every term, its analogy, its lesson</h1>
+<p class="sub">The whole analogy universe on one page: <b>100+ terms</b> from all nine schools.
+Type to search a term ("OOMKilled"), an analogy word ("lunchbox"), or a school ("agents").
+Every entry links to the lesson (or diagram) that teaches it.</p>
+<input id="search" type="search" placeholder="🔎 search terms, analogies, schools… (e.g. drift, hall pass, cosine)" autofocus>
+<div id="count"></div>
+<div id="list"></div>
+<footer>🏫 <a href="index.html">The School</a> · missing a term? <a href="https://github.com/BaluRaut/school/issues">🐛 tell us</a></footer>
+</div>
+<script>
+var K8="https://baluraut.github.io/learn-kubernetes-school/lesson-diagrams.html#";
+var DK="https://baluraut.github.io/learn-docker-school/lesson-diagrams.html#";
+var AW="https://baluraut.github.io/learn-aws-school/lesson-diagrams.html#";
+var AR="https://baluraut.github.io/learn-argocd-school/lesson-diagrams.html#";
+var AI="https://baluraut.github.io/learn-ai-school/lesson-diagrams.html#";
+var VD="https://baluraut.github.io/learn-vectordb-school/lesson-diagrams.html#";
+var MC="https://baluraut.github.io/learn-mcp-school/lesson-diagrams.html#";
+var AG="https://baluraut.github.io/learn-agents-school/lesson-diagrams.html#";
+// [term, analogy, school, url, color]
+var D=[
+["Pod","one school desk — replaceable, never repaired","☸️ Kubernetes",K8+"l02","#326ce5"],
+["Deployment","the strict class monitor: 'there shall ALWAYS be 2'","☸️ Kubernetes",K8+"l03","#326ce5"],
+["ReplicaSet","the monitor's counter — keeps the number true","☸️ Kubernetes",K8+"l03","#326ce5"],
+["Service","the reception desk — one number that never changes","☸️ Kubernetes",K8+"l04","#326ce5"],
+["Namespace","a classroom — two kids named Aarav, no confusion","☸️ Kubernetes",K8+"l05","#326ce5"],
+["ConfigMap","the notice board — public settings on the wall","☸️ Kubernetes",K8+"l06","#326ce5"],
+["Secret (k8s)","the locker key — never pinned to the notice board","☸️ Kubernetes",K8+"l06","#326ce5"],
+["Liveness probe","'are you awake?' — no answer → fresh kid","☸️ Kubernetes",K8+"l07","#326ce5"],
+["Readiness probe","'ready to answer?' — not ready → no questions, no restart","☸️ Kubernetes",K8+"l07","#326ce5"],
+["Requests & limits","lunch portions: the promised plate and the seconds cap","☸️ Kubernetes",K8+"l08","#326ce5"],
+["OOMKilled","ate over the memory cap — killed on the spot 🫃","☸️ Kubernetes",K8+"l08","#326ce5"],
+["HPA","extra school buses on rainy days","☸️ Kubernetes",K8+"l09","#326ce5"],
+["Ingress","the main gate + signboard — one entrance, routed by path","☸️ Kubernetes",K8+"l10","#326ce5"],
+["Rolling update","substituting players mid-game — the crowd never notices","☸️ Kubernetes",K8+"l11","#326ce5"],
+["PV / PVC","the library shelf and the request slip for shelf space","☸️ Kubernetes",K8+"l12","#326ce5"],
+["etcd","the school's sacred register — every wish written down","☸️ Kubernetes",K8+"l13","#326ce5"],
+["kubelet","the class teacher on every node — starts, probes, reports","☸️ Kubernetes",K8+"l13","#326ce5"],
+["Scheduler","the timetable-maker — picks the best desk for each kid","☸️ Kubernetes",K8+"l13","#326ce5"],
+["API server","the principal — the ONLY person anyone may talk to","☸️ Kubernetes",K8+"l13","#326ce5"],
+["Multi-AZ","never seat the whole class in one building 🏫🏫","☸️ Kubernetes",K8+"l15","#326ce5"],
+["PodDisruptionBudget","never send all plant-waterers to lunch at once","☸️ Kubernetes",K8+"l15","#326ce5"],
+["CrashLoopBackOff","the kid who stands up, faints, repeats — read the diary (logs)","☸️ Kubernetes",K8+"l16","#326ce5"],
+["RBAC","hall passes — kids, teachers, robots open different doors","☸️ Kubernetes",K8+"l17","#326ce5"],
+["ServiceAccount","the robot's ID card — every pod wears one","☸️ Kubernetes",K8+"l17","#326ce5"],
+["CronJob","the morning bell — rings on schedule, hands out homework","☸️ Kubernetes",K8+"l18","#326ce5"],
+["NetworkPolicy","passing-notes rules — by default every pod whispers to every pod","☸️ Kubernetes",K8+"l19","#326ce5"],
+["Taints & tolerations","the 'not for students!' desk sign and the permission chit","☸️ Kubernetes",K8+"l20","#326ce5"],
+["DaemonSet","one fire extinguisher on EVERY floor","☸️ Kubernetes",K8+"l21","#326ce5"],
+["StatefulSet","desks with name plates — postgres-0 keeps its own drawer","☸️ Kubernetes",K8+"l22","#326ce5"],
+["QoS classes","who leaves when lunch runs short — BestEffort first 🥉","☸️ Kubernetes",K8+"l23","#326ce5"],
+["Cordon & drain","tape on the door, kids walked out politely — renovation mode","☸️ Kubernetes",K8+"l24","#326ce5"],
+["CRD","teaching the office a new word — stored, checked, meaningless until…","☸️ Kubernetes",K8+"l25","#326ce5"],
+["Operator","…a robot learns the word: CRD + controller + baked-in expertise","☸️ Kubernetes",K8+"l25","#326ce5"],
+["Observability","report cards (metrics), diaries (logs), alarm bells (alerts)","☸️ Kubernetes",K8+"l26","#326ce5"],
+["Container","a packed lunchbox — everything the app needs, inside the box","🍱 Docker",DK+"l01","#0ea5e9"],
+["Image","the frozen lunchbox on the shelf — run it to open it","🍱 Docker",DK+"l01","#0ea5e9"],
+["Layer","one cake layer per Dockerfile line — unchanged layers from cache","🍱 Docker",DK+"l02","#0ea5e9"],
+["Build cache","pre-baked layers — put code on top so rebuilds stay thin","🍱 Docker",DK+"l02","#0ea5e9"],
+["Dockerfile","the recipe card — read top to bottom","🍱 Docker",DK+"l03","#0ea5e9"],
+["Port mapping (-p)","the serving window: laptop port → seat inside the box","🍱 Docker",DK+"l04","#0ea5e9"],
+["Volume (docker)","the shared fridge — survives docker rm","🍱 Docker",DK+"l05","#0ea5e9"],
+["Docker Compose","the laminated table plan — one command sets the whole table","🍱 Docker",DK+"l06","#0ea5e9"],
+["Multi-stage build","cook in the big kitchen, pack ONLY the food","🍱 Docker",DK+"l07","#0ea5e9"],
+[".dockerignore","don't pack your house keys into the lunchbox","🍱 Docker",DK+"l08","#0ea5e9"],
+[":latest","a floating sticker — you can't roll back to 'latest'","🍱 Docker",DK+"l08","#0ea5e9"],
+["Registry","the frozen-lunchbox warehouse — push once, pull anywhere","🍱 Docker",DK+"l09","#0ea5e9"],
+["Digest","the tamper-proof fingerprint of an image","🍱 Docker",DK+"l09","#0ea5e9"],
+["ECR","your private bank locker for images — IAM-guarded","🍱 Docker",DK+"l10","#0ea5e9"],
+["Lifecycle policy","the janitor: keep the newest 10 boxes, toss the rest","🍱 Docker",DK+"l11","#0ea5e9"],
+["Root account","the principal's master key — MFA it and lock it in the safe","🪪 AWS",AW+"l01","#7c3aed"],
+["IAM user","a person's ID card — never shared","🪪 AWS",AW+"l02","#7c3aed"],
+["IAM group","the staff list — permissions attach to the LIST","🪪 AWS",AW+"l02","#7c3aed"],
+["IAM policy","a permission slip: Effect · Action · Resource — default is NO","🪪 AWS",AW+"l03","#7c3aed"],
+["Explicit deny","the slip that SLAMS doors — beats any number of Allows","🪪 AWS",AW+"l03","#7c3aed"],
+["IAM role","a hat, not a person — worn temporarily, returned always","🪪 AWS",AW+"l04","#7c3aed"],
+["STS","the office that issues ~1-hour day passes (temp credentials)","🪪 AWS",AW+"l04","#7c3aed"],
+["Instance profile","the hat clipped onto an EC2 desk — machines never get passwords","🪪 AWS",AW+"l05","#7c3aed"],
+["OIDC federation","the courier shows its employee badge instead of carrying keys","🪪 AWS",AW+"l05","#7c3aed"],
+["CloudTrail","the school logbook — who, what, when, from where","🪪 AWS",AW+"l06","#7c3aed"],
+["EC2 instance","a rented desk-computer with no screen — pay by the second","🪪 AWS",AW+"l07","#7c3aed"],
+["Availability Zone","one school building — spread desks so one fire ≠ everything down","🪪 AWS",AW+"l07","#7c3aed"],
+["Spot instance","the ~90%-off standby seat — reclaimable with a 2-minute warning","🪪 AWS",AW+"l08","#7c3aed"],
+["SSM Session Manager","the escorted visit — no open door, fully audited","🪪 AWS",AW+"l09","#7c3aed"],
+["Security group","the gatekeeper's guest list — not on it = silence","🪪 AWS",AW+"l10","#7c3aed"],
+["EBS volume","the desk drawer — survives stop and reboot","🪪 AWS",AW+"l11","#7c3aed"],
+["Snapshot","a photocopy of the drawer, filed in the archive","🪪 AWS",AW+"l11","#7c3aed"],
+["AMI","the fully-set-up desk template — stamp out 100 identical desks","🪪 AWS",AW+"l11","#7c3aed"],
+["user-data","the boot checklist taped to every new desk","🪪 AWS",AW+"l12","#7c3aed"],
+["Auto Scaling Group","'always N desks' — a Deployment, for computers","🪪 AWS",AW+"l12","#7c3aed"],
+["Configuration drift","the room no longer matches the seating chart — silently","🤖 ArgoCD",AR+"l02","#ea580c"],
+["Push deployment","the courier robot delivers with the master key… then leaves","🤖 ArgoCD",AR+"l03","#ea580c"],
+["GitOps","the master plan book — reality must match the book, forever","🤖 ArgoCD",AR+"l05","#ea580c"],
+["ArgoCD","the caretaker robot who lives INSIDE the school","🤖 ArgoCD",AR+"l06","#ea580c"],
+["Application (ArgoCD)","one page of the plan book: which repo, which folder, which room","🤖 ArgoCD",AR+"l07","#ea580c"],
+["selfHeal","a kid moves the chairs; the robot puts them back","🤖 ArgoCD",AR+"l09","#ea580c"],
+["Prune","gone from the book = gone from the room","🤖 ArgoCD",AR+"l08","#ea580c"],
+["git revert (rollback)","flip the book to yesterday's page — ten seconds","🤖 ArgoCD",AR+"l10","#ea580c"],
+["App-of-apps","one master page that lists all the other pages","🤖 ArgoCD",AR+"l11","#ea580c"],
+["Sealed Secrets","a locked box glued into the book — only the cluster can open it","🤖 ArgoCD",AR+"l12","#ea580c"],
+["Machine learning","rules GROWN from examples, not written by hand","🧠 AI",AI+"l01","#7c3aed"],
+["Loss & gradient descent","the red pen + tiny downhill nudges on every dial","🧠 AI",AI+"l02","#7c3aed"],
+["Overfitting","memorized the practice test — lost on new questions","🧠 AI",AI+"l02","#7c3aed"],
+["Token","a puzzle piece of text — all the model ever sees","🧠 AI",AI+"l03","#7c3aed"],
+["BPE","glue the most frequent pair, repeat — pieces emerge","🧠 AI",AI+"l03","#7c3aed"],
+["Embedding","a seat in meaning-space — similar meanings sit together","🧠 AI",AI+"l04","#7c3aed"],
+["Next-token prediction","the sentence-completion game — the model's ONE job","🧠 AI",AI+"l05","#7c3aed"],
+["Temperature","the adventure dial: 0 safe · 1 natural · 2 chaos","🧠 AI",AI+"l05","#7c3aed"],
+["Attention","kids glancing around the class — 'it' → robot 65%","🧠 AI",AI+"l06","#7c3aed"],
+["Pretraining","years locked in the library, reading everything","🧠 AI",AI+"l07","#7c3aed"],
+["RLHF","gold stars: humans pick the better answer, the model learns taste","🧠 AI",AI+"l07","#7c3aed"],
+["LoRA","sticky notes on a frozen textbook — tiny, swappable","🧠 AI",AI+"l07","#7c3aed"],
+["Context window","the small desk — everything must fit; oldest pages slide off","🧠 AI",AI+"l08","#7c3aed"],
+["Few-shot prompting","show, don't tell — one example beats paragraphs","🧠 AI",AI+"l08","#7c3aed"],
+["Hallucination","the confident kid who never says 'I don't know'","🧠 AI",AI+"l09","#7c3aed"],
+["RAG","the open-book exam — the right pages, found and placed on the desk","🧠 AI",AI+"l10","#7c3aed"],
+["Diffusion","un-blurring TV static, step by step, toward your words","🧠 AI",AI+"l12","#7c3aed"],
+["Multimodal","every sense becomes tokens — one classroom, every subject","🧠 AI",AI+"l12","#7c3aed"],
+["Vector database","the hall where every text has a seat — search by nearness","🗺️ VectorDB",VD+"l01","#2563eb"],
+["Semantic search","find meaning-neighbors, not matching strings","🗺️ VectorDB",VD+"l01","#2563eb"],
+["Cosine similarity","compare which DIRECTION two kids face — not where they stand","🗺️ VectorDB",VD+"l03","#2563eb"],
+["Normalization","remove the volume — meaning is a direction, length is loudness","🗺️ VectorDB",VD+"l03","#2563eb"],
+["kNN","ask every kid in the hall — correct, but dies at millions","🗺️ VectorDB",VD+"l04","#2563eb"],
+["HNSW","the friendship map: local friends + pen-pals across the hall","🗺️ VectorDB",VD+"l04","#2563eb"],
+["Recall@k","the honesty metric: how many TRUE neighbors did you find?","🗺️ VectorDB",VD+"l04","#2563eb"],
+["Chunking","cutting the textbook into self-contained index cards","🗺️ VectorDB",VD+"l06","#2563eb"],
+["Metadata filter","colored stickers on the cards — stickers first, then nearness","🗺️ VectorDB",VD+"l06","#2563eb"],
+["Hybrid search","the librarian checks the catalog AND walks the hall","🗺️ VectorDB",VD+"l06","#2563eb"],
+["Reranker","a second, pickier librarian sharpens the top results","🗺️ VectorDB",VD+"l07","#2563eb"],
+["pgvector","the library you already have grew a meaning-hall wing","🗺️ VectorDB",VD+"l08","#2563eb"],
+["MCP","the standard wall socket — any instrument, any room, N+M","🔌 MCP",MC+"l01","#7c3aed"],
+["MCP host","the room the model sits in — owns all permission decisions","🔌 MCP",MC+"l02","#7c3aed"],
+["MCP client","the wall socket inside the room — one per instrument","🔌 MCP",MC+"l02","#7c3aed"],
+["MCP server","the instrument with a standard plug — wraps ONE capability","🔌 MCP",MC+"l02","#7c3aed"],
+["Tools / resources / prompts","three shelves — model, app, and user each decide one","🔌 MCP",MC+"l03","#7c3aed"],
+["initialize","the handshake: versions and capabilities exchanged first","🔌 MCP",MC+"l04","#7c3aed"],
+["JSON-RPC","the wire: requests carry ids, answers quote them back","🔌 MCP",MC+"l04","#7c3aed"],
+["stdio transport","the direct plug — host launches the server as a child process","🔌 MCP",MC+"l05","#7c3aed"],
+["Prompt injection","the forged note — instructions hiding inside tool results","🔌 MCP",MC+"l05","#7c3aed"],
+["Agent","the doer with a to-do list and a hall pass — outcomes, not answers","📋 Agents",AG+"l01","#0d9488"],
+["ReAct loop","think → act → observe — how you run errands, and how agents do","📋 Agents",AG+"l02","#0d9488"],
+["Tool description","the label on the belt — half the agent's intelligence","📋 Agents",AG+"l03","#0d9488"],
+["Scratchpad","the jotting pad the brain re-reads before every thought","📋 Agents",AG+"l04","#0d9488"],
+["Compaction","ten old jottings become one summary line — the desk breathes","📋 Agents",AG+"l04","#0d9488"],
+["MAX_STEPS","be back by lunch — the curfew that ends runaway loops","📋 Agents",AG+"l05","#0d9488"],
+["Write gate","permanent-marker actions need the teacher's [y/N]","📋 Agents",AG+"l05","#0d9488"],
+["Compounding error","the wrong turn with momentum — step 2's mistake, step 9's polish","📋 Agents",AG+"l06","#0d9488"],
+["Agent evals","scored scenarios: did the OUTCOME happen, within budget?","📋 Agents",AG+"l06","#0d9488"],
+["Critic loop","a merciless grader (best: the test suite) bounces drafts back","📋 Agents",AG+"l08","#0d9488"],
+["Human-in-the-loop","drafts flow, signatures gate — civilization's pattern","📋 Agents",AG+"l08","#0d9488"],
+["Pattern zero","steps known and fixed? write a SCRIPT — no agent at all","📋 Agents",AG+"l08","#0d9488"],
+["Agentic","an adjective and a DIAL — how much goal-pursuing autonomy","📋 Agents","https://baluraut.github.io/learn-agents-school/history-and-future.html#agentic","#0d9488"]
+];
+var list=document.getElementById('list'), count=document.getElementById('count'), inp=document.getElementById('search');
+function render(f) {
+  f=(f||'').toLowerCase();
+  var shown=0; list.innerHTML='';
+  D.forEach(function(e) {
+    if (f && (e[0]+' '+e[1]+' '+e[2]).toLowerCase().indexOf(f)===-1) return;
+    shown++;
+    var d=document.createElement('div'); d.className='entry'; d.style.setProperty('--c', e[4]);
+    d.innerHTML='<b>'+e[0]+'</b><span class="ana">'+e[1]+'</span><a href="'+e[3]+'">'+e[2]+' →</a>';
+    list.appendChild(d);
+  });
+  count.textContent=shown+' / '+D.length+' terms';
+}
+inp.addEventListener('input', function() { render(inp.value); });
+render('');
+</script>
+</body>
+</html>
