@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎓 The Program — the whole School as one curriculum</title>
+<meta name="description" content="The School's full program prospectus: 9 courses, 107 lessons, ~70 hours of reading and hands-on labs — DevOps and AI taught with school analogies, numbered diagrams, and runnable code. Free forever, MIT licensed, certificate included.">
+<meta property="og:title" content="🎓 The Program — The School's free curriculum">
+<meta property="og:description" content="9 courses · 107 lessons · ~70 hours · $0 forever · a printable certificate at the end. DevOps + AI, explained like you're five, proven by code you can run.">
+<meta property="og:image" content="https://baluraut.github.io/learn-kubernetes-school/images/big-picture-4k.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root { --bg:#f8fafc; --card:#fff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#326ce5; --ok:#16a34a; --blue:#2563eb; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#131c2e; --ink:#e2e8f0; --muted:#94a3b8; --line:#253349; } }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--ink); font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif; line-height:1.6; }
+.wrap { max-width:1100px; margin:0 auto; padding:28px 20px 60px; }
+a { color:var(--blue); }
+h1 { font-size:2.1rem; line-height:1.2; } h2 { font-size:1.4rem; margin:44px 0 8px; }
+.sub { color:var(--muted); max-width:78ch; }
+.stats { display:flex; gap:24px; flex-wrap:wrap; margin:18px 0 6px; }
+.stat b { display:block; font-size:1.55rem; }
+.stat span { font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+.hero-cta { margin-top:14px; }
+.btn { display:inline-block; background:var(--accent); color:#fff; font-weight:700; text-decoration:none; padding:10px 20px; border-radius:12px; margin:4px 8px 0 0; }
+.btn.alt { background:var(--card); color:var(--ink); border:1px solid var(--line); }
+.grid2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; margin-top:14px; }
+.card { background:var(--card); border:1px solid var(--line); border-left:5px solid var(--c,var(--accent)); border-radius:14px; padding:16px 18px; }
+.card h3 { font-size:1.03rem; margin-bottom:6px; }
+.card p, .card li { color:var(--muted); font-size:.94rem; }
+.card ul { margin-left:18px; }
+details { background:var(--card); border:1px solid var(--line); border-left:6px solid var(--c,var(--accent)); border-radius:14px; margin-top:12px; padding:0; overflow:hidden; }
+summary { cursor:pointer; padding:14px 18px; font-weight:700; display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline; }
+summary::marker { color:var(--c,var(--accent)); }
+summary .meta { font-weight:400; color:var(--muted); font-size:.86rem; }
+.dbody { padding:0 18px 16px; color:var(--muted); font-size:.94rem; }
+.dbody b { color:var(--ink); }
+.dbody .links { margin-top:10px; }
+.dbody .links a { font-weight:600; text-decoration:none; margin-right:14px; }
+.dbody .links a:hover { text-decoration:underline; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.chip { border:1px solid var(--line); background:var(--card); border-radius:999px; padding:5px 13px; font-size:.85rem; color:var(--muted); }
+.faq details { border-left-width:4px; }
+.faq .dbody { padding-top:4px; }
+.honest { background:var(--card); border:1px dashed var(--line); border-radius:14px; padding:14px 18px; margin-top:16px; color:var(--muted); font-size:.9rem; }
+footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:.88rem; }
+@media print { .btn, .hero-cta { display:none; } details { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p><a href="index.html">← Back to the School portal</a></p>
+<h1>🎓 The Program — the whole School as one curriculum</h1>
+<p class="sub">Everything the nine schools teach, laid out like a course prospectus: what you'll
+learn, in what order, how long it takes, and what you can do afterwards. The difference from a
+paid bootcamp: <b>every number below is real, and the fee is zero — forever.</b></p>
+
+<div class="stats">
+  <div class="stat"><b>9</b><span>courses</span></div>
+  <div class="stat"><b>107</b><span>lessons</span></div>
+  <div class="stat"><b>~70 h</b><span>reading + labs</span></div>
+  <div class="stat"><b>115+</b><span>diagrams</span></div>
+  <div class="stat"><b>4</b><span>runnable codebases</span></div>
+  <div class="stat"><b>$0</b><span>forever · MIT</span></div>
+</div>
+<div class="hero-cta">
+  <a class="btn" href="#curriculum">📚 See the full curriculum</a>
+  <a class="btn alt" href="index.html#big-picture">🏫 Back to the portal</a>
+  <a class="btn alt" href="javascript:window.print()">🖨️ Print this prospectus</a>
+</div>
+
+<h2>🧭 How the program works</h2>
+<div class="grid2">
+  <div class="card" style="--c:#326ce5"><h3>🧒 One method, everywhere</h3>
+    <p>Every concept is a school-analogy story first (pods are desks, IAM roles are hats,
+    RAG is an open-book exam) — then the real thing, with the jargon attached to a picture
+    you already understand.</p></div>
+  <div class="card" style="--c:#0ea5e9"><h3>🌿 One git branch = one lesson</h3>
+    <p>Branches are cumulative: check out lesson 07 and lessons 1–7 are all there. You learn
+    git by simply taking the course.</p></div>
+  <div class="card" style="--c:#0d9488"><h3>📐 Numbered diagrams</h3>
+    <p>Every lesson is one box-and-arrow diagram with circled numbers — follow 1 → 2 → 3 and
+    you've read the architecture. Big-picture 4K posters per course.</p></div>
+  <div class="card" style="--c:#7c3aed"><h3>🧪 Proof over promises</h3>
+    <p>Four repos ship real, zero-dependency code: a tiny language model, an MCP server and
+    client, an AI agent, a vector database. Quizzes and browser-saved study plans in every
+    course.</p></div>
+</div>
+
+<h2>🗺️ Choose your path</h2>
+<div class="grid2">
+  <div class="card" style="--c:#326ce5"><h3>☁️ The Ops track — ~23 weeks part-time</h3>
+    <ul>
+      <li><b>AWS</b> (6 weeks) — identity, computers, and the campus</li>
+      <li><b>Docker &amp; ECR</b> (4 weeks) — pack it, ship it</li>
+      <li><b>Kubernetes</b> (9 weeks) — the flagship: run it</li>
+      <li><b>ArgoCD</b> (4 weeks) — deploy it from git, forever</li>
+    </ul></div>
+  <div class="card" style="--c:#7c3aed"><h3>🧠 The AI track — ~13 weeks part-time</h3>
+    <ul>
+      <li><b>AI</b> (4 weeks) — how models actually work</li>
+      <li><b>Vector Databases</b> (3 weeks) — the meaning hall</li>
+      <li><b>MCP</b> (3 weeks) — the universal plug</li>
+      <li><b>AI Agents</b> (3 weeks) — the capstone loop</li>
+    </ul></div>
+</div>
+<p class="sub" style="margin-top:10px">"Part-time" assumes 2–4 sessions a week of ~40 minutes.
+Both tracks at once ≈ 9 months; one track sprinted full-time ≈ 5–7 weeks. Every course has its
+own weekly plan with checkboxes that survive in your browser.</p>
+
+<h2 id="curriculum">📚 The curriculum — nine modules</h2>
+<p class="sub">Click a module to expand it. Hours are honest estimates: reading + doing the labs.</p>
+
+<details style="--c:#7c3aed">
+  <summary>🪪 Module 1 — AWS: IAM, EC2 &amp; the campus <span class="meta">20 lessons · 6 weeks · ~13 h</span></summary>
+  <div class="dbody">
+    <b>Part 1 — identity:</b> the root master key, users &amp; groups, policy slips, roles-as-hats,
+    machine identities, hygiene. <b>Part 2 — computers:</b> instances, types &amp; pricing, connecting
+    (SSH vs SSM), security groups, EBS/snapshots/AMIs, user-data &amp; fleets.
+    <b>Part 3 — the campus:</b> VPC, S3, load balancers, Route 53, RDS, CloudWatch, Lambda, and
+    reading the bill. Labs in Terraform + CLI, ~1¢/hour, always destroyed.
+    <div class="links"><a href="https://baluraut.github.io/learn-aws-school/">Course site →</a>
+    <a href="https://baluraut.github.io/learn-aws-school/study-plan.html">6-week plan</a>
+    <a href="https://baluraut.github.io/learn-aws-school/quiz.html">Quiz (12 Qs)</a></div>
+  </div>
+</details>
+<details style="--c:#0ea5e9">
+  <summary>🍱 Module 2 — Docker &amp; ECR <span class="meta">12 lessons · 4 weeks · ~7.5 h</span></summary>
+  <div class="dbody">
+    Why containers, images &amp; layers, the Dockerfile, running containers, volumes &amp; networks,
+    Compose, multi-stage builds, image hygiene (.dockerignore, tags vs digests), registries,
+    ECR, lifecycle policies, CI to the cloud. Includes a real demo app and a working
+    multi-stage build that shrinks 180 MB to 50 MB.
+    <div class="links"><a href="https://baluraut.github.io/learn-docker-school/">Course site →</a>
+    <a href="https://baluraut.github.io/learn-docker-school/study-plan.html">4-week plan</a>
+    <a href="https://baluraut.github.io/learn-docker-school/quiz.html">Quiz</a></div>
+  </div>
+</details>
+<details style="--c:#326ce5">
+  <summary>☸️ Module 3 — Kubernetes (the flagship) <span class="meta">26 lessons · 9 weeks · ~17 h</span></summary>
+  <div class="dbody">
+    <b>The core (1–13):</b> pods, Deployments, Services, namespaces, config &amp; secrets, probes,
+    resources, HPA, ingress, rollouts, storage, the control plane. <b>Ship it (14–15):</b> GitOps
+    and multi-AZ. <b>Run it for real (16–26):</b> debugging (CrashLoopBackOff and friends), RBAC,
+    Jobs &amp; CronJobs with a real backup, NetworkPolicies, taints, DaemonSets, StatefulSets,
+    QoS &amp; evictions, node upgrades, CRDs &amp; operators, observability. Real manifests for a real
+    platform, plus the AWS-components map.
+    <div class="links"><a href="https://baluraut.github.io/learn-kubernetes-school/">Course site →</a>
+    <a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">9-week plan</a>
+    <a href="https://baluraut.github.io/learn-kubernetes-school/quiz.html">Quiz (10 Qs)</a></div>
+  </div>
+</details>
+<details style="--c:#ea580c">
+  <summary>🤖 Module 4 — ArgoCD &amp; GitOps <span class="meta">12 lessons · 4 weeks · ~7.5 h</span></summary>
+  <div class="dbody">
+    Deployment before GitOps, drift, push vs pull, the plan-book idea, ArgoCD's architecture,
+    Applications, sync policies, selfHeal &amp; prune, instant rollbacks with git revert,
+    app-of-apps, secrets in GitOps (Sealed Secrets &amp; ESO). Ships a deployable demo app you can
+    point a real ArgoCD at.
+    <div class="links"><a href="https://baluraut.github.io/learn-argocd-school/">Course site →</a>
+    <a href="https://baluraut.github.io/learn-argocd-school/study-plan.html">4-week plan</a>
+    <a href="https://baluraut.github.io/learn-argocd-school/quiz.html">Quiz</a></div>
+  </div>
+</details>
+<details style="--c:#7c3aed">
+  <summary>🧠 Module 5 — AI: tokens to agents <span class="meta">13 lessons · 4 weeks · ~8 h</span></summary>
+  <div class="dbody">
+    What ML actually is, training &amp; loss, tokens &amp; BPE, embeddings, next-token prediction,
+    attention &amp; transformers, pretraining → RLHF → LoRA, prompting &amp; context windows,
+    hallucinations, RAG, agents, diffusion &amp; multimodal, MCP. Three runnable zero-dependency
+    Python labs: a bigram language model, a tokenizer, an attention toy.
+    <div class="links"><a href="https://baluraut.github.io/learn-ai-school/">Course site →</a>
+    <a href="https://baluraut.github.io/learn-ai-school/study-plan.html">4-week plan</a>
+    <a href="https://baluraut.github.io/learn-ai-school/quiz.html">Quiz (10 Qs)</a></div>
+  </div>
+</details>
+<details style="--c:#2563eb">
+  <summary>🗺️ Module 6 — Vector Databases <span class="meta">8 lessons · 3 weeks · ~5 h</span></summary>
+  <div class="dbody">
+    Search by meaning, embeddings as coordinates, cosine similarity &amp; normalization, kNN vs
+    ANN (HNSW, IVF, recall), building a mini vector DB, chunking &amp; metadata filters &amp; hybrid
+    search, rerankers, the landscape (pgvector to dedicated engines). A real ~70-line vector
+    database lives in the repo — including one honest failure that teaches more than success.
+    <div class="links"><a href="https://baluraut.github.io/learn-vectordb-school/">Course site →</a>
+    <a href="https://baluraut.github.io/learn-vectordb-school/study-plan.html">3-week plan</a>
+    <a href="https://baluraut.github.io/learn-vectordb-school/quiz.html">Quiz</a></div>
+  </div>
+</details>
+<details style="--c:#7c3aed">
+  <summary>🔌 Module 7 — MCP: the universal plug <span class="meta">8 lessons · 3 weeks · ~5 h</span></summary>
+  <div class="dbody">
+    The N×M problem, hosts/clients/servers, tools vs resources vs prompts, the JSON-RPC wire
+    message-by-message, transports &amp; security (prompt injection, write gates), then five real
+    use cases with sequence diagrams. The protocol is IN the repo: a working server and client
+    (~200 lines, stdlib only) you can drive by hand.
+    <div class="links"><a href="https://baluraut.github.io/learn-mcp-school/">Course site →</a>
+    <a href="https://baluraut.github.io/learn-mcp-school/study-plan.html">3-week plan</a>
+    <a href="https://baluraut.github.io/learn-mcp-school/quiz.html">Quiz</a></div>
+  </div>
+</details>
+<details style="--c:#0d9488">
+  <summary>📋 Module 8 — AI Agents (the capstone) <span class="meta">8 lessons · 3 weeks · ~5 h</span></summary>
+  <div class="dbody">
+    Answers vs outcomes, the think→act→observe loop, tools as the agent's hands, memory &amp;
+    compaction, guardrails (step budgets, write gates), failure modes &amp; evals, multi-agent
+    patterns, and when NOT to build an agent. Ships a runnable agent you can drive yourself —
+    plus the history-and-future page: what came before agents and what "agentic" means.
+    <div class="links"><a href="https://baluraut.github.io/learn-agents-school/">Course site →</a>
+    <a href="https://baluraut.github.io/learn-agents-school/study-plan.html">3-week plan</a>
+    <a href="https://baluraut.github.io/learn-agents-school/quiz.html">Quiz (10 Qs)</a></div>
+  </div>
+</details>
+<details style="--c:#64748b">
+  <summary>🔗 Module 0 — the short link <span class="meta">1 redirect · 10 seconds · the smallest school</span></summary>
+  <div class="dbody">baluraut.github.io/k8s → the Kubernetes course. Share the short one. That's the whole module. 😄</div>
+</details>
+
+<h2>🛠️ Tools &amp; technologies you'll touch</h2>
+<div class="chips">
+  <span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">AWS EC2</span>
+  <span class="chip">IAM</span><span class="chip">VPC</span><span class="chip">S3</span>
+  <span class="chip">ALB</span><span class="chip">Route 53</span><span class="chip">RDS</span>
+  <span class="chip">CloudWatch</span><span class="chip">Lambda</span><span class="chip">ECR</span>
+  <span class="chip">ArgoCD</span><span class="chip">Terraform</span><span class="chip">GitHub Actions</span>
+  <span class="chip">git</span><span class="chip">Python</span><span class="chip">JSON-RPC / MCP</span>
+  <span class="chip">vector search</span><span class="chip">SSM</span><span class="chip">Helm-free YAML 😄</span>
+</div>
+
+<h2>🎒 Who this is for</h2>
+<div class="grid2">
+  <div class="card" style="--c:#16a34a"><h3>✅ A great fit if you…</h3><ul>
+    <li>are a developer/tester/student who wants DevOps or AI fundamentals that stick</li>
+    <li>learn best from pictures and stories, not walls of jargon</li>
+    <li>want to RUN things, not just read about them</li>
+    <li>have a laptop with a terminal and ~3 hours a week</li>
+  </ul></div>
+  <div class="card" style="--c:#d97706"><h3>🎓 Prerequisites (honestly few)</h3><ul>
+    <li>basic terminal comfort (cd, ls — we teach the rest)</li>
+    <li>no CS degree, no math beyond arithmetic</li>
+    <li>an AWS account only for some labs (~1¢/hour, always destroyed; a $5 budget tripwire is lesson one of cost hygiene)</li>
+  </ul></div>
+</div>
+
+<h2>💼 What you'll be able to do afterwards</h2>
+<p class="sub">The skills below map to what job listings call <b>DevOps engineer, platform
+engineer, cloud engineer, AI engineer,</b> and <b>solutions architect</b> — we teach the skills;
+we make no placement promises (nobody honestly can).</p>
+<div class="grid2">
+  <div class="card" style="--c:#326ce5"><h3>After the Ops track</h3><ul>
+    <li>read any AWS architecture diagram and know every box</li>
+    <li>containerize an app and ship it to a registry with CI</li>
+    <li>deploy, debug, scale and upgrade workloads on Kubernetes</li>
+    <li>run deployments from git with drift-free GitOps</li>
+    <li>find the four classic money leaks in a cloud bill</li>
+  </ul></div>
+  <div class="card" style="--c:#7c3aed"><h3>After the AI track</h3><ul>
+    <li>explain tokens → attention → RLHF without hand-waving</li>
+    <li>design a RAG pipeline and know when it will fail</li>
+    <li>wire a model to real tools over MCP — you've read the wire</li>
+    <li>build (and know when NOT to build) an AI agent with guardrails</li>
+  </ul></div>
+</div>
+
+<h2>📜 Certification</h2>
+<div class="card" style="--c:#16a34a">
+  <h3>🎓 The School Certificate of Completion</h3>
+  <p>Finish all eight schools on the <a href="index.html">grand path</a> and the portal unlocks a
+  printable certificate with your name and completion date. It certifies something rarer than
+  attendance: <b>zero magic left</b> — every claim on it is backed by a diagram you can redraw
+  and code you can run. It's self-issued and free, like everything here; the real credential is
+  the 107 lessons in your git history.</p>
+</div>
+
+<h2>❓ FAQ</h2>
+<div class="faq">
+<details style="--c:#326ce5"><summary>Is it really free? What's the catch?</summary>
+  <div class="dbody">Really free, MIT licensed, no sign-up, no email capture, no upsell. The only
+  costs are optional AWS lab pennies (with a $5 tripwire taught in lesson one of cost hygiene).
+  The catch: nobody chases you — the study plans' checkboxes are your only accountability. 😄</div></details>
+<details style="--c:#326ce5"><summary>What order should I take the courses in?</summary>
+  <div class="dbody">Ops track in order (AWS → Docker → Kubernetes → ArgoCD) — each stands on the
+  previous. AI track in order (AI → VectorDB → MCP → Agents). The two tracks are independent;
+  interleave freely. Total beginner? Start with Docker's lesson 01 — it's the gentlest door.</div></details>
+<details style="--c:#326ce5"><summary>How long does the whole program take?</summary>
+  <div class="dbody">~36 weeks at 2–4 short sessions a week; one track ≈ 13–23 weeks; a focused
+  full-time sprint through one track ≈ 5–7 weeks. There are no deadlines and no batches — the
+  branches wait for you.</div></details>
+<details style="--c:#326ce5"><summary>Do I need to install anything?</summary>
+  <div class="dbody">git + a terminal always; Docker Desktop for the Docker/k8s labs; Python 3
+  (stdlib only — never pip install) for the AI-side repos; Terraform + an AWS account for the
+  AWS labs. Every lesson says exactly what it needs.</div></details>
+<details style="--c:#326ce5"><summary>Found a mistake — what do I do?</summary>
+  <div class="dbody">Every page's footer has a 🐛 link to that course's GitHub issues. Corrections
+  are the school's favorite kind of homework.</div></details>
+</div>
+
+<div class="honest">🤝 <b>The honesty box:</b> this program is a solo-built, open-source study
+resource — not an accredited institution. There are no instructors on call, no rankings, no
+placement statistics, and no reviews score. What there IS: every lesson public, every diagram
+inspectable, every line of code runnable, and a git history that can't lie about any of it.</div>
+
+<footer>
+  🏫 <a href="index.html">The School</a> · 📖 <a href="dictionary.html">the Dictionary</a> ·
+  by <a href="https://github.com/BaluRaut">BaluRaut</a> · MIT licensed ·
+  <a href="https://github.com/BaluRaut/school/issues">🐛 found a mistake?</a>
+</footer>
+
+</div>
+</body>
+</html>
