@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="mr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>🏫 The School — all courses, one door</title>
-<meta name="description" content="One portal for all nine learn-the-school-way courses: Docker, Kubernetes, AWS, ArgoCD, AI, Vector Databases, MCP and AI Agents — ELI5 analogies, numbered diagrams, runnable code in every AI repo.">
-<meta property="og:title" content="🏫 The School — all courses, one door">
-<meta property="og:description" content="Nine courses · 107 lesson branches · 90+ numbered diagrams · 4 runnable codebases · a 156-term analogy dictionary · quizzes &amp; study plans — hard things, explained like you're five.">
-<meta property="og:image" content="https://baluraut.github.io/learn-kubernetes-school/images/big-picture-4k.png">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-en="🏫 The School — all courses, one door">🏫 द स्कूल — सर्व कोर्स, एकच दार</title>
+<meta content="One portal for all nine learn-the-school-way courses: Docker, Kubernetes, AWS, ArgoCD, AI, Vector Databases, MCP and AI Agents — ELI5 analogies, numbered diagrams, runnable code in every AI repo." name="description"/>
+<meta content="🏫 The School — all courses, one door" property="og:title"/>
+<meta content="Nine courses · 107 lesson branches · 90+ numbered diagrams · 4 runnable codebases · a 156-term analogy dictionary · quizzes &amp; study plans — hard things, explained like you're five." property="og:description"/>
+<meta content="https://baluraut.github.io/learn-kubernetes-school/images/big-picture-4k.png" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <style>
   :root { --bg:#f8fafc; --card:#fff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#326ce5; --ok:#16a34a; --blue:#2563eb; }
   @media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#131c2e; --ink:#e2e8f0; --muted:#94a3b8; --line:#253349; } }
@@ -48,145 +49,143 @@
   #ptext { font-weight:700; white-space:nowrap; }
   footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:.88rem; }
 </style>
-</head>
-<body>
+
+<style id="i18n-css">
+#lang-pick{position:fixed;top:10px;right:10px;z-index:9999;font:600 .85rem -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--card,#fff);color:var(--ink,#0f172a);border:1px solid var(--line,#e2e8f0);border-radius:999px;padding:6px 12px;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer}
+html[lang="mr"] body{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+html[lang="mr"] svg text{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",sans-serif}
+@media print{#lang-pick{display:none}}
+</style></head>
+<body><select aria-label="Language / भाषा" id="lang-pick" onchange="schoolSetLang(this.value)">
+<option value="mr">🇮🇳 मराठी</option><option value="en">🇬🇧 English</option></select>
 <div class="wrap">
-
 <header>
-  <h1>🏫 The School — hard things, explained like you're five</h1>
-  <p class="sub">Nine courses, one method: every concept as a <b>school-analogy story</b>, every lesson
-  on its own <b>git branch</b> with a numbered <b>box-and-arrow diagram</b>, every claim backed by
-  something you can <b>run</b> — including four repos that ship real, zero-dependency code
-  (a language model, an MCP server &amp; client, an agent, a vector database).</p>
-  <div class="stats">
-    <div class="stat"><b>9</b><span>courses</span></div>
-    <div class="stat"><b>107</b><span>lesson branches</span></div>
-    <div class="stat"><b>90+</b><span>numbered diagrams</span></div>
-    <div class="stat"><b>4</b><span>runnable codebases</span></div>
-    <div class="stat"><b>156</b><span>dictionary terms</span></div>
-    <div class="stat"><b>0</b><span>magic left</span></div>
-  </div>
+<h1 data-en="🏫 The School — hard things, explained like you're five">🏫 द स्कूल — अवघड गोष्टी, पाच वर्षांच्या मुलाला समजतील अशा</h1>
+<p class="sub" data-en="Nine courses, one method: every concept as a &lt;b&gt;school-analogy story&lt;/b&gt;, every lesson
+  on its own &lt;b&gt;git branch&lt;/b&gt; with a numbered &lt;b&gt;box-and-arrow diagram&lt;/b&gt;, every claim backed by
+  something you can &lt;b&gt;run&lt;/b&gt; — including four repos that ship real, zero-dependency code
+  (a language model, an MCP server &amp;amp; client, an agent, a vector database).">नऊ कोर्स, एकच पद्धत: प्रत्येक संकल्पना एक <b>शाळेच्या उपमेची गोष्ट</b>, प्रत्येक धडा स्वतःच्या <b>git ब्रँचवर</b> क्रमांकित <b>बॉक्स-आणि-बाण आकृतीसह</b>, प्रत्येक दावा तुम्ही स्वतः <b>चालवू</b> शकाल अशा गोष्टीने सिद्ध — यात खरा, शून्य-अवलंबित्व कोड असलेले चार रेपो आहेत (एक भाषा मॉडेल, MCP सर्व्हर &amp; क्लायंट, एक एजंट, एक व्हेक्टर डेटाबेस).</p>
+<div class="stats">
+<div class="stat" data-en="&lt;b&gt;9&lt;/b&gt;&lt;span&gt;courses&lt;/span&gt;"><b>9</b><span>कोर्स</span></div>
+<div class="stat" data-en="&lt;b&gt;107&lt;/b&gt;&lt;span&gt;lesson branches&lt;/span&gt;"><b>107</b><span>धड्यांच्या ब्रँच</span></div>
+<div class="stat" data-en="&lt;b&gt;90+&lt;/b&gt;&lt;span&gt;numbered diagrams&lt;/span&gt;"><b>90+</b><span>क्रमांकित आकृत्या</span></div>
+<div class="stat" data-en="&lt;b&gt;4&lt;/b&gt;&lt;span&gt;runnable codebases&lt;/span&gt;"><b>4</b><span>चालवता येणारे कोडबेस</span></div>
+<div class="stat" data-en="&lt;b&gt;156&lt;/b&gt;&lt;span&gt;dictionary terms&lt;/span&gt;"><b>156</b><span>शब्दकोशातील संज्ञा</span></div>
+<div class="stat" data-en="&lt;b&gt;0&lt;/b&gt;&lt;span&gt;magic left&lt;/span&gt;"><b>0</b><span>जादू उरलेली</span></div>
+</div>
 </header>
-
 <div class="track" style="--c:#326ce5; margin-top:20px">
-  <b class="title">🎓 The Program — the whole School as one prospectus</b>
-  <div class="chain">Curriculum, tracks with durations, tools covered, honest outcomes, FAQ and the
+<b class="title" data-en="🎓 The Program — the whole School as one prospectus">🎓 प्रोग्राम — संपूर्ण शाळा एका माहितीपत्रकात</b>
+<div class="chain" data-en='Curriculum, tracks with durations, tools covered, honest outcomes, FAQ and the
   certificate — all nine courses presented like a bootcamp brochure, minus the bootcamp bill →
-  <a href="program.html"><b>read the Program</b></a></div>
+  &lt;a href="program.html"&gt;&lt;b&gt;read the Program&lt;/b&gt;&lt;/a&gt;'>अभ्यासक्रम, कालावधीसह ट्रॅक, वापरलेली साधने, प्रामाणिक परिणाम, FAQ आणि प्रमाणपत्र — सर्व नऊ कोर्स एखाद्या बूटकॅम्पच्या माहितीपत्रकासारखे, फक्त बूटकॅम्पच्या बिलाशिवाय → <a href="program.html"><b>प्रोग्राम वाचा</b></a></div>
 </div>
 <div class="track" style="--c:#16a34a">
-  <b class="title">📖 The Dictionary — every term, its analogy, its lesson</b>
-  <div class="chain">156 terms from all nine schools on one searchable page: type "OOMKilled", "lunchbox" or
-  "hall pass" and jump straight to the diagram that teaches it → <a href="dictionary.html"><b>open the Dictionary</b></a></div>
+<b class="title" data-en="📖 The Dictionary — every term, its analogy, its lesson">📖 शब्दकोश — प्रत्येक संज्ञा, तिची उपमा, तिचा धडा</b>
+<div class="chain" data-en='156 terms from all nine schools on one searchable page: type "OOMKilled", "lunchbox" or
+  "hall pass" and jump straight to the diagram that teaches it → &lt;a href="dictionary.html"&gt;&lt;b&gt;open the Dictionary&lt;/b&gt;&lt;/a&gt;'>सर्व नऊ शाळांमधील 156 संज्ञा एका शोधता येणाऱ्या पानावर: "OOMKilled", "डबा" किंवा "हॉल पास" टाइप करा आणि ती शिकवणाऱ्या आकृतीवर थेट पोहोचा → <a href="dictionary.html"><b>शब्दकोश उघडा</b></a></div>
 </div>
-
-<h2>🧭 Two tracks, one universe</h2>
-<p class="sub">Same analogies everywhere — desks, lunchboxes, hall passes, gates — so knowledge
-transfers between courses. Pick a track, or interleave.</p>
+<h2 data-en="🧭 Two tracks, one universe">🧭 दोन ट्रॅक, एकच विश्व</h2>
+<p class="sub" data-en="Same analogies everywhere — desks, lunchboxes, hall passes, gates — so knowledge
+transfers between courses. Pick a track, or interleave.">सगळीकडे त्याच उपमा — बाक, डबे, हॉल पास, गेट — म्हणून ज्ञान एका कोर्समधून दुसऱ्यात सहज जाते. एक ट्रॅक निवडा, किंवा दोन्ही आलटून-पालटून करा.</p>
 <div class="track" style="--c:#326ce5">
-  <b class="title">☁️ The Ops track — pack it, run it, ship it</b>
-  <div class="chain">0️⃣ <a href="https://baluraut.github.io/learn-aws-school/">AWS foundations (IAM, EC2 &amp; the campus)</a> →
-  1️⃣ <a href="https://baluraut.github.io/learn-docker-school/">Docker &amp; ECR</a> →
-  2️⃣ <a href="https://baluraut.github.io/learn-kubernetes-school/">Kubernetes</a> (the flagship: 26 lessons) →
-  3️⃣ <a href="https://baluraut.github.io/learn-argocd-school/">ArgoCD &amp; GitOps</a></div>
+<b class="title" data-en="☁️ The Ops track — pack it, run it, ship it">☁️ Ops ट्रॅक — पॅक करा, चालवा, पाठवा</b>
+<div class="chain" data-en='0️⃣ &lt;a href="https://baluraut.github.io/learn-aws-school/"&gt;AWS foundations (IAM, EC2 &amp;amp; the campus)&lt;/a&gt; →
+  1️⃣ &lt;a href="https://baluraut.github.io/learn-docker-school/"&gt;Docker &amp;amp; ECR&lt;/a&gt; →
+  2️⃣ &lt;a href="https://baluraut.github.io/learn-kubernetes-school/"&gt;Kubernetes&lt;/a&gt; (the flagship: 26 lessons) →
+  3️⃣ &lt;a href="https://baluraut.github.io/learn-argocd-school/"&gt;ArgoCD &amp;amp; GitOps&lt;/a&gt;'>0️⃣ <a href="https://baluraut.github.io/learn-aws-school/">AWS पाया (IAM, EC2 &amp; कॅम्पस)</a> → 1️⃣ <a href="https://baluraut.github.io/learn-docker-school/">Docker &amp; ECR</a> → 2️⃣ <a href="https://baluraut.github.io/learn-kubernetes-school/">Kubernetes</a> (मुख्य कोर्स: 26 धडे) → 3️⃣ <a href="https://baluraut.github.io/learn-argocd-school/">ArgoCD &amp; GitOps</a></div>
 </div>
 <div class="track" style="--c:#7c3aed">
-  <b class="title">🧠 The AI track — how it works, then how to build with it</b>
-  <div class="chain">1️⃣ <a href="https://baluraut.github.io/learn-ai-school/">AI (tokens → diffusion)</a> →
-  2️⃣ <a href="https://baluraut.github.io/learn-vectordb-school/">Vector Databases</a> →
-  3️⃣ <a href="https://baluraut.github.io/learn-mcp-school/">MCP</a> →
-  4️⃣ <a href="https://baluraut.github.io/learn-agents-school/">AI Agents</a></div>
+<b class="title" data-en="🧠 The AI track — how it works, then how to build with it">🧠 AI ट्रॅक — ते कसे चालते, मग त्याने काय बनवायचे</b>
+<div class="chain" data-en='1️⃣ &lt;a href="https://baluraut.github.io/learn-ai-school/"&gt;AI (tokens → diffusion)&lt;/a&gt; →
+  2️⃣ &lt;a href="https://baluraut.github.io/learn-vectordb-school/"&gt;Vector Databases&lt;/a&gt; →
+  3️⃣ &lt;a href="https://baluraut.github.io/learn-mcp-school/"&gt;MCP&lt;/a&gt; →
+  4️⃣ &lt;a href="https://baluraut.github.io/learn-agents-school/"&gt;AI Agents&lt;/a&gt;'>1️⃣ <a href="https://baluraut.github.io/learn-ai-school/">AI (टोकन → डिफ्यूजन)</a> → 2️⃣ <a href="https://baluraut.github.io/learn-vectordb-school/">व्हेक्टर डेटाबेस</a> → 3️⃣ <a href="https://baluraut.github.io/learn-mcp-school/">MCP</a> → 4️⃣ <a href="https://baluraut.github.io/learn-agents-school/">AI एजंट्स</a></div>
 </div>
-
-<h2>🎓 The nine schools</h2>
+<h2 data-en="🎓 The nine schools">🎓 नऊ शाळा</h2>
 <div class="grid">
-  <div class="school" style="--c:#7c3aed"><h3>🪪 AWS — IAM, EC2 &amp; the campus</h3>
-    <div class="sig">The foundations, then the whole campus: identity (ID cards, hats), rented desks — and VPC, S3, load balancers, DNS, RDS, CloudWatch, Lambda, the bill. Labs ~1¢/hour.</div>
-    <div class="meta">20 lessons · 3 parts · campus map 4K · study plan · trade-offs</div>
-    <div class="links"><a href="https://baluraut.github.io/learn-aws-school/">Site</a><a href="https://baluraut.github.io/learn-aws-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-aws-school/study-plan.html">Study plan</a><a href="https://baluraut.github.io/learn-aws-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-aws-school">Repo</a></div></div>
-  <div class="school" style="--c:#0ea5e9"><h3>🍱 Docker &amp; ECR</h3>
-    <div class="sig">Pack it (images, layers, compose, multi-stage) and ship it (registries, ECR). Real demo app + working multi-stage build in the repo.</div>
-    <div class="meta">12 lessons · 2 parts · big-picture 4K · trade-offs</div>
-    <div class="links"><a href="https://baluraut.github.io/learn-docker-school/">Site</a><a href="https://baluraut.github.io/learn-docker-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-docker-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-docker-school">Repo</a></div></div>
-  <div class="school" style="--c:#326ce5"><h3>☸️ Kubernetes — the flagship</h3>
-    <div class="sig">26 lessons: pods to control plane, GitOps, multi-AZ, then Part 3 "running it for real" — debugging, RBAC, upgrades, observability. Real manifests, real school platform.</div>
-    <div class="meta">26 lessons · 3 parts · study plan · AWS map · trade-offs · short link: <a href="https://baluraut.github.io/k8s/">/k8s</a></div>
-    <div class="links"><a href="https://baluraut.github.io/learn-kubernetes-school/">Site</a><a href="https://baluraut.github.io/learn-kubernetes-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">Study plan</a><a href="https://baluraut.github.io/learn-kubernetes-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-kubernetes-school">Repo</a></div></div>
-  <div class="school" style="--c:#ea580c"><h3>🤖 ArgoCD &amp; GitOps</h3>
-    <div class="sig">Deployment with and without ArgoCD: feel the drift problem, then meet the caretaker robot. Deployable demo app + Application manifest included.</div>
-    <div class="meta">12 lessons · 2 parts · big-picture 4K · trade-offs</div>
-    <div class="links"><a href="https://baluraut.github.io/learn-argocd-school/">Site</a><a href="https://baluraut.github.io/learn-argocd-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-argocd-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-argocd-school">Repo</a></div></div>
-  <div class="school" style="--c:#7c3aed"><h3>🧠 AI — tokens to agents</h3>
-    <div class="sig">How models work (tokens, embeddings, attention, RLHF &amp; LoRA) and how to use them (prompting, RAG, agents, diffusion, MCP). Three runnable zero-dep Python labs.</div>
-    <div class="meta">13 lessons · study plan · trade-offs · companion video decoded</div>
-    <div class="links"><a href="https://baluraut.github.io/learn-ai-school/">Site</a><a href="https://baluraut.github.io/learn-ai-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-ai-school/study-plan.html">Study plan</a><a href="https://baluraut.github.io/learn-ai-school/before-and-tradeoffs.html">Trade-offs</a><a href="https://github.com/BaluRaut/learn-ai-school">Repo</a></div></div>
-  <div class="school" style="--c:#2563eb"><h3>🗺️ Vector Databases</h3>
-    <div class="sig">The library sorted by meaning: embeddings, cosine, HNSW, chunking, RAG — with a real ~70-line vector DB in the repo (and one honest failure that explains everything).</div>
-    <div class="meta">8 lessons · runnable mini-DB · landscape page · big-picture 4K</div>
-    <div class="links"><a href="https://baluraut.github.io/learn-vectordb-school/">Site</a><a href="https://baluraut.github.io/learn-vectordb-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-vectordb-school/landscape.html">Landscape</a><a href="https://github.com/BaluRaut/learn-vectordb-school">Repo</a></div></div>
-  <div class="school" style="--c:#7c3aed"><h3>🔌 MCP — the universal plug</h3>
-    <div class="sig">The Model Context Protocol with the protocol IN the repo: a real server and client (~200 lines), the wire message-by-message, 5 use cases with sequence diagrams.</div>
-    <div class="meta">8 lessons · runnable server+client · use-cases page · big-picture 4K</div>
-    <div class="links"><a href="https://baluraut.github.io/learn-mcp-school/">Site</a><a href="https://baluraut.github.io/learn-mcp-school/lesson-diagrams.html">Diagrams</a><a href="https://baluraut.github.io/learn-mcp-school/use-cases.html">Use cases</a><a href="https://github.com/BaluRaut/learn-mcp-school">Repo</a></div></div>
-  <div class="school" style="--c:#0d9488"><h3>📋 AI Agents</h3>
-    <div class="sig">Answers vs outcomes: the think→act→observe loop, tools, guardrails, failure modes — with a real runnable agent (drive it yourself!), 5 patterns, and the history &amp; future of "agentic".</div>
-    <div class="meta">8 lessons · runnable agent · patterns page · history &amp; future page</div>
-    <div class="links"><a href="https://baluraut.github.io/learn-agents-school/">Site</a><a href="https://baluraut.github.io/learn-agents-school/patterns.html">Patterns</a><a href="https://baluraut.github.io/learn-agents-school/history-and-future.html">History &amp; future</a><a href="https://github.com/BaluRaut/learn-agents-school">Repo</a></div></div>
-  <div class="school" style="--c:#64748b"><h3>🔗 /k8s — the short link</h3>
-    <div class="sig">A tiny redirect repo: baluraut.github.io/k8s → the Kubernetes course, deep links preserved. Share the short one.</div>
-    <div class="meta">1 redirect · the smallest school 😄</div>
-    <div class="links"><a href="https://baluraut.github.io/k8s/">Try it</a><a href="https://github.com/BaluRaut/k8s">Repo</a></div></div>
+<div class="school" style="--c:#7c3aed"><h3 data-en="🪪 AWS — IAM, EC2 &amp;amp; the campus">🪪 AWS — IAM, EC2 &amp; कॅम्पस</h3>
+<div class="sig" data-en="The foundations, then the whole campus: identity (ID cards, hats), rented desks — and VPC, S3, load balancers, DNS, RDS, CloudWatch, Lambda, the bill. Labs ~1¢/hour.">आधी पाया, मग संपूर्ण कॅम्पस: ओळख (ओळखपत्रे, टोप्या), भाड्याचे बाक — आणि VPC, S3, लोड बॅलन्सर, DNS, RDS, CloudWatch, Lambda, बिल. प्रयोग ~1¢/तास.</div>
+<div class="meta" data-en="20 lessons · 3 parts · campus map 4K · study plan · trade-offs">20 धडे · 3 भाग · कॅम्पस नकाशा 4K · अभ्यास योजना · फायदे-तोटे</div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-aws-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-aws-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-aws-school/study-plan.html"&gt;Study plan&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-aws-school/before-and-tradeoffs.html"&gt;Trade-offs&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-aws-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-aws-school/">साइट</a><a href="https://baluraut.github.io/learn-aws-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-aws-school/study-plan.html">अभ्यास योजना</a><a href="https://baluraut.github.io/learn-aws-school/before-and-tradeoffs.html">फायदे-तोटे</a><a href="https://github.com/BaluRaut/learn-aws-school">रेपो</a></div></div>
+<div class="school" style="--c:#0ea5e9"><h3>🍱 Docker &amp; ECR</h3>
+<div class="sig" data-en="Pack it (images, layers, compose, multi-stage) and ship it (registries, ECR). Real demo app + working multi-stage build in the repo.">पॅक करा (इमेज, लेयर, compose, multi-stage) आणि पाठवा (रजिस्ट्री, ECR). रेपोमध्ये खरे डेमो ॲप + चालणारा multi-stage build.</div>
+<div class="meta" data-en="12 lessons · 2 parts · big-picture 4K · trade-offs">12 धडे · 2 भाग · संपूर्ण चित्र 4K · फायदे-तोटे</div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-docker-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-docker-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-docker-school/before-and-tradeoffs.html"&gt;Trade-offs&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-docker-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-docker-school/">साइट</a><a href="https://baluraut.github.io/learn-docker-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-docker-school/before-and-tradeoffs.html">फायदे-तोटे</a><a href="https://github.com/BaluRaut/learn-docker-school">रेपो</a></div></div>
+<div class="school" style="--c:#326ce5"><h3 data-en="☸️ Kubernetes — the flagship">☸️ Kubernetes — मुख्य कोर्स</h3>
+<div class="sig" data-en='26 lessons: pods to control plane, GitOps, multi-AZ, then Part 3 "running it for real" — debugging, RBAC, upgrades, observability. Real manifests, real school platform.'>26 धडे: pod पासून control plane पर्यंत, GitOps, multi-AZ, मग भाग 3 "खऱ्या जगात चालवणे" — debugging, RBAC, अपग्रेड, observability. खरे manifests, खरे शाळेचे प्लॅटफॉर्म.</div>
+<div class="meta" data-en='26 lessons · 3 parts · study plan · AWS map · trade-offs · short link: &lt;a href="https://baluraut.github.io/k8s/"&gt;/k8s&lt;/a&gt;'>26 धडे · 3 भाग · अभ्यास योजना · AWS नकाशा · फायदे-तोटे · छोटी लिंक: <a href="https://baluraut.github.io/k8s/">/k8s</a></div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-kubernetes-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-kubernetes-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html"&gt;Study plan&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-kubernetes-school/before-and-tradeoffs.html"&gt;Trade-offs&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-kubernetes-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-kubernetes-school/">साइट</a><a href="https://baluraut.github.io/learn-kubernetes-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">अभ्यास योजना</a><a href="https://baluraut.github.io/learn-kubernetes-school/before-and-tradeoffs.html">फायदे-तोटे</a><a href="https://github.com/BaluRaut/learn-kubernetes-school">रेपो</a></div></div>
+<div class="school" style="--c:#ea580c"><h3>🤖 ArgoCD &amp; GitOps</h3>
+<div class="sig" data-en="Deployment with and without ArgoCD: feel the drift problem, then meet the caretaker robot. Deployable demo app + Application manifest included.">ArgoCD सह आणि ArgoCD शिवाय deployment: आधी drift ची समस्या अनुभवा, मग केअरटेकर रोबोटला भेटा. deploy करता येणारे डेमो ॲप + Application manifest समाविष्ट.</div>
+<div class="meta" data-en="12 lessons · 2 parts · big-picture 4K · trade-offs">12 धडे · 2 भाग · संपूर्ण चित्र 4K · फायदे-तोटे</div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-argocd-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-argocd-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-argocd-school/before-and-tradeoffs.html"&gt;Trade-offs&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-argocd-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-argocd-school/">साइट</a><a href="https://baluraut.github.io/learn-argocd-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-argocd-school/before-and-tradeoffs.html">फायदे-तोटे</a><a href="https://github.com/BaluRaut/learn-argocd-school">रेपो</a></div></div>
+<div class="school" style="--c:#7c3aed"><h3 data-en="🧠 AI — tokens to agents">🧠 AI — टोकनपासून एजंटपर्यंत</h3>
+<div class="sig" data-en="How models work (tokens, embeddings, attention, RLHF &amp;amp; LoRA) and how to use them (prompting, RAG, agents, diffusion, MCP). Three runnable zero-dep Python labs.">मॉडेल कसे चालतात (टोकन, embeddings, attention, RLHF &amp; LoRA) आणि ते कसे वापरायचे (prompting, RAG, एजंट, diffusion, MCP). तीन चालवता येणारे शून्य-अवलंबित्व Python प्रयोग.</div>
+<div class="meta" data-en="13 lessons · study plan · trade-offs · companion video decoded">13 धडे · अभ्यास योजना · फायदे-तोटे · सोबतचा व्हिडिओ उलगडलेला</div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-ai-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-ai-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-ai-school/study-plan.html"&gt;Study plan&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-ai-school/before-and-tradeoffs.html"&gt;Trade-offs&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-ai-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-ai-school/">साइट</a><a href="https://baluraut.github.io/learn-ai-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-ai-school/study-plan.html">अभ्यास योजना</a><a href="https://baluraut.github.io/learn-ai-school/before-and-tradeoffs.html">फायदे-तोटे</a><a href="https://github.com/BaluRaut/learn-ai-school">रेपो</a></div></div>
+<div class="school" style="--c:#2563eb"><h3 data-en="🗺️ Vector Databases">🗺️ व्हेक्टर डेटाबेस</h3>
+<div class="sig" data-en="The library sorted by meaning: embeddings, cosine, HNSW, chunking, RAG — with a real ~70-line vector DB in the repo (and one honest failure that explains everything).">अर्थानुसार लावलेले ग्रंथालय: embeddings, cosine, HNSW, chunking, RAG — रेपोमध्ये खरा ~70 ओळींचा व्हेक्टर DB (आणि एक प्रामाणिक अपयश जे सगळे स्पष्ट करते).</div>
+<div class="meta" data-en="8 lessons · runnable mini-DB · landscape page · big-picture 4K">8 धडे · चालवता येणारा मिनी-DB · लँडस्केप पान · संपूर्ण चित्र 4K</div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-vectordb-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-vectordb-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-vectordb-school/landscape.html"&gt;Landscape&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-vectordb-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-vectordb-school/">साइट</a><a href="https://baluraut.github.io/learn-vectordb-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-vectordb-school/landscape.html">लँडस्केप</a><a href="https://github.com/BaluRaut/learn-vectordb-school">रेपो</a></div></div>
+<div class="school" style="--c:#7c3aed"><h3 data-en="🔌 MCP — the universal plug">🔌 MCP — युनिव्हर्सल प्लग</h3>
+<div class="sig" data-en="The Model Context Protocol with the protocol IN the repo: a real server and client (~200 lines), the wire message-by-message, 5 use cases with sequence diagrams.">Model Context Protocol, आणि प्रोटोकॉल थेट रेपोमध्ये: खरा सर्व्हर आणि क्लायंट (~200 ओळी), वायरवरचा प्रत्येक संदेश, sequence आकृत्यांसह 5 प्रत्यक्ष वापर.</div>
+<div class="meta" data-en="8 lessons · runnable server+client · use-cases page · big-picture 4K">8 धडे · चालवता येणारा सर्व्हर+क्लायंट · वापर-प्रकरणे पान · संपूर्ण चित्र 4K</div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-mcp-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-mcp-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-mcp-school/use-cases.html"&gt;Use cases&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-mcp-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-mcp-school/">साइट</a><a href="https://baluraut.github.io/learn-mcp-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-mcp-school/use-cases.html">वापर-प्रकरणे</a><a href="https://github.com/BaluRaut/learn-mcp-school">रेपो</a></div></div>
+<div class="school" style="--c:#0d9488"><h3 data-en="📋 AI Agents">📋 AI एजंट्स</h3>
+<div class="sig" data-en='Answers vs outcomes: the think→act→observe loop, tools, guardrails, failure modes — with a real runnable agent (drive it yourself!), 5 patterns, and the history &amp;amp; future of "agentic".'>उत्तरे विरुद्ध परिणाम: विचार→कृती→निरीक्षण लूप, साधने, guardrails, अपयशाचे प्रकार — खऱ्या चालवता येणाऱ्या एजंटसह (स्वतः चालवा!), 5 पॅटर्न, आणि "agentic" चा इतिहास &amp; भविष्य.</div>
+<div class="meta" data-en="8 lessons · runnable agent · patterns page · history &amp;amp; future page">8 धडे · चालवता येणारा एजंट · पॅटर्न पान · इतिहास &amp; भविष्य पान</div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-agents-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-agents-school/patterns.html"&gt;Patterns&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-agents-school/history-and-future.html"&gt;History &amp;amp; future&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-agents-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-agents-school/">साइट</a><a href="https://baluraut.github.io/learn-agents-school/patterns.html">पॅटर्न</a><a href="https://baluraut.github.io/learn-agents-school/history-and-future.html">इतिहास &amp; भविष्य</a><a href="https://github.com/BaluRaut/learn-agents-school">रेपो</a></div></div>
+<div class="school" style="--c:#64748b"><h3 data-en="🔗 /k8s — the short link">🔗 /k8s — छोटी लिंक</h3>
+<div class="sig" data-en="A tiny redirect repo: baluraut.github.io/k8s → the Kubernetes course, deep links preserved. Share the short one.">एक छोटा redirect रेपो: baluraut.github.io/k8s → Kubernetes कोर्स, खोल लिंक जपून. छोटीच शेअर करा.</div>
+<div class="meta" data-en="1 redirect · the smallest school 😄">1 redirect · सर्वात लहान शाळा 😄</div>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/k8s/"&gt;Try it&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/k8s"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/k8s/">वापरून पहा</a><a href="https://github.com/BaluRaut/k8s">रेपो</a></div></div>
 </div>
-
-<h2>📊 What every school ships (the cross-review)</h2>
+<h2 data-en="📊 What every school ships (the cross-review)">📊 प्रत्येक शाळा काय देते (परस्पर-तपासणी)</h2>
 <div style="overflow-x:auto"><table>
-  <tr><th>School</th><th>Lessons</th><th>Runnable code</th><th>Lesson diagrams</th><th>Big-picture 4K</th><th>Trade-offs</th><th>Study plan</th><th>Quiz</th><th>Showcase page</th></tr>
-  <tr><td>🪪 AWS</td><td>20</td><td>Terraform + CLI labs</td><td>✅ 20</td><td>✅ + campus map</td><td>✅</td><td>✅ 6 weeks</td><td>✅ 12 Qs</td><td>✅ campus map</td></tr>
-  <tr><td>🍱 Docker</td><td>12</td><td>app + compose</td><td>✅ 12</td><td>✅</td><td>✅</td><td>✅ 4 weeks</td><td>✅ 8 Qs</td><td>—</td></tr>
-  <tr><td>☸️ Kubernetes</td><td>26</td><td>manifests + terraform</td><td>✅ 26</td><td>✅ AWS map + 11×4K</td><td>✅</td><td>✅ 9 weeks</td><td>✅ 10 Qs</td><td>✅ AWS components map</td></tr>
-  <tr><td>🤖 ArgoCD</td><td>12</td><td>deployable app</td><td>✅ 12</td><td>✅</td><td>✅</td><td>✅ 4 weeks</td><td>✅ 8 Qs</td><td>—</td></tr>
-  <tr><td>🧠 AI</td><td>13</td><td>✅ 3 Python labs</td><td>✅ 13</td><td>✅</td><td>✅ (incl. MCP)</td><td>✅ 4 weeks</td><td>✅ 10 Qs</td><td>—</td></tr>
-  <tr><td>🗺️ VectorDB</td><td>8</td><td>✅ mini vector DB</td><td>✅ 8</td><td>✅</td><td>≈ landscape</td><td>✅ 3 weeks</td><td>✅ 8 Qs</td><td>✅ landscape</td></tr>
-  <tr><td>🔌 MCP</td><td>8</td><td>✅ server + client</td><td>✅ 8</td><td>✅</td><td>→ in AI school</td><td>✅ 3 weeks</td><td>✅ 8 Qs</td><td>✅ 5 use cases</td></tr>
-  <tr><td>📋 Agents</td><td>8</td><td>✅ runnable agent</td><td>✅ 8</td><td>✅</td><td>≈ history page</td><td>✅ 3 weeks</td><td>✅ 10 Qs</td><td>✅ patterns + history</td></tr>
+<tr><th data-en="School">शाळा</th><th data-en="Lessons">धडे</th><th data-en="Runnable code">चालवता येणारा कोड</th><th data-en="Lesson diagrams">धड्यांच्या आकृत्या</th><th data-en="Big-picture 4K">संपूर्ण चित्र 4K</th><th data-en="Trade-offs">फायदे-तोटे</th><th data-en="Study plan">अभ्यास योजना</th><th data-en="Quiz">प्रश्नमंजुषा</th><th data-en="Showcase page">विशेष पान</th></tr>
+<tr><td>🪪 AWS</td><td>20</td><td data-en="Terraform + CLI labs">Terraform + CLI प्रयोग</td><td>✅ 20</td><td data-en="✅ + campus map">✅ + कॅम्पस नकाशा</td><td>✅</td><td data-en="✅ 6 weeks">✅ 6 आठवडे</td><td data-en="✅ 12 Qs">✅ 12 प्रश्न</td><td data-en="✅ campus map">✅ कॅम्पस नकाशा</td></tr>
+<tr><td>🍱 Docker</td><td>12</td><td data-en="app + compose">ॲप + compose</td><td>✅ 12</td><td>✅</td><td>✅</td><td data-en="✅ 4 weeks">✅ 4 आठवडे</td><td data-en="✅ 8 Qs">✅ 8 प्रश्न</td><td>—</td></tr>
+<tr><td>☸️ Kubernetes</td><td>26</td><td>manifests + terraform</td><td>✅ 26</td><td data-en="✅ AWS map + 11×4K">✅ AWS नकाशा + 11×4K</td><td>✅</td><td data-en="✅ 9 weeks">✅ 9 आठवडे</td><td data-en="✅ 10 Qs">✅ 10 प्रश्न</td><td data-en="✅ AWS components map">✅ AWS घटकांचा नकाशा</td></tr>
+<tr><td>🤖 ArgoCD</td><td>12</td><td data-en="deployable app">deploy करता येणारे ॲप</td><td>✅ 12</td><td>✅</td><td>✅</td><td data-en="✅ 4 weeks">✅ 4 आठवडे</td><td data-en="✅ 8 Qs">✅ 8 प्रश्न</td><td>—</td></tr>
+<tr><td>🧠 AI</td><td>13</td><td data-en="✅ 3 Python labs">✅ 3 Python प्रयोग</td><td>✅ 13</td><td>✅</td><td data-en="✅ (incl. MCP)">✅ (MCP सह)</td><td data-en="✅ 4 weeks">✅ 4 आठवडे</td><td data-en="✅ 10 Qs">✅ 10 प्रश्न</td><td>—</td></tr>
+<tr><td>🗺️ VectorDB</td><td>8</td><td data-en="✅ mini vector DB">✅ मिनी व्हेक्टर DB</td><td>✅ 8</td><td>✅</td><td data-en="≈ landscape">≈ लँडस्केप</td><td data-en="✅ 3 weeks">✅ 3 आठवडे</td><td data-en="✅ 8 Qs">✅ 8 प्रश्न</td><td data-en="✅ landscape">✅ लँडस्केप</td></tr>
+<tr><td>🔌 MCP</td><td>8</td><td data-en="✅ server + client">✅ सर्व्हर + क्लायंट</td><td>✅ 8</td><td>✅</td><td data-en="→ in AI school">→ AI शाळेत</td><td data-en="✅ 3 weeks">✅ 3 आठवडे</td><td data-en="✅ 8 Qs">✅ 8 प्रश्न</td><td data-en="✅ 5 use cases">✅ 5 वापर-प्रकरणे</td></tr>
+<tr><td data-en="📋 Agents">📋 एजंट्स</td><td>8</td><td data-en="✅ runnable agent">✅ चालवता येणारा एजंट</td><td>✅ 8</td><td>✅</td><td data-en="≈ history page">≈ इतिहास पान</td><td data-en="✅ 3 weeks">✅ 3 आठवडे</td><td data-en="✅ 10 Qs">✅ 10 प्रश्न</td><td data-en="✅ patterns + history">✅ पॅटर्न + इतिहास</td></tr>
 </table></div>
-<p class="sub" style="margin-top:8px">All pages across all sites verified live at portal build time. Every course now has its own
-weekly study plan and an end-of-course quiz — plus every term lives in the <a href="dictionary.html">📖 Dictionary</a>.</p>
-
-<h2>🗓️ The grand path — all nine schools, in order</h2>
-<p class="sub">Tick a school when you finish it — <b>progress saved in this browser</b>. Steady pace:
-one school every 2–4 weeks (Kubernetes: 9 — it has <a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">its own weekly plan</a>,
-as does <a href="https://baluraut.github.io/learn-ai-school/study-plan.html">AI</a>).</p>
+<p class="sub" data-en='All pages across all sites verified live at portal build time. Every course now has its own
+weekly study plan and an end-of-course quiz — plus every term lives in the &lt;a href="dictionary.html"&gt;📖 Dictionary&lt;/a&gt;.' style="margin-top:8px">पोर्टल बनवताना सर्व साइटवरील सर्व पाने लाइव्ह तपासली आहेत. आता प्रत्येक कोर्सला स्वतःची साप्ताहिक अभ्यास योजना आणि कोर्सअखेरची प्रश्नमंजुषा आहे — शिवाय प्रत्येक संज्ञा <a href="dictionary.html">📖 शब्दकोशात</a> आहे.</p>
+<h2 data-en="🗓️ The grand path — all nine schools, in order">🗓️ मोठा मार्ग — सर्व नऊ शाळा, क्रमाने</h2>
+<p class="sub" data-en='Tick a school when you finish it — &lt;b&gt;progress saved in this browser&lt;/b&gt;. Steady pace:
+one school every 2–4 weeks (Kubernetes: 9 — it has &lt;a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html"&gt;its own weekly plan&lt;/a&gt;,
+as does &lt;a href="https://baluraut.github.io/learn-ai-school/study-plan.html"&gt;AI&lt;/a&gt;).'>एखादी शाळा पूर्ण झाली की खूण करा — <b>प्रगती या ब्राउझरमध्ये जपली जाते</b>. स्थिर गती: दर 2–4 आठवड्यांत एक शाळा (Kubernetes: 9 — त्याची <a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">स्वतःची साप्ताहिक योजना</a> आहे, तशीच <a href="https://baluraut.github.io/learn-ai-school/study-plan.html">AI</a> ची).</p>
 <div class="pbar-box"><div class="pbar-in"><span id="ptext">0 / 8</span><div class="bar"><div id="pbar"></div></div></div></div>
-<div class="path-row"><input type="checkbox" data-s="aws" id="c-aws"><label for="c-aws"><a href="https://baluraut.github.io/learn-aws-school/">1 · 🪪 AWS foundations</a></label><span class="why">— ID cards, desks &amp; the campus everything stands on (20 lessons)</span></div>
-<div class="path-row"><input type="checkbox" data-s="docker" id="c-docker"><label for="c-docker"><a href="https://baluraut.github.io/learn-docker-school/">2 · 🍱 Docker &amp; ECR</a></label><span class="why">— pack the lunchbox, rent the bank locker</span></div>
-<div class="path-row"><input type="checkbox" data-s="k8s" id="c-k8s"><label for="c-k8s"><a href="https://baluraut.github.io/learn-kubernetes-school/">3 · ☸️ Kubernetes</a></label><span class="why">— the flagship: 26 lessons, its own 9-week plan</span></div>
-<div class="path-row"><input type="checkbox" data-s="argocd" id="c-argocd"><label for="c-argocd"><a href="https://baluraut.github.io/learn-argocd-school/">4 · 🤖 ArgoCD &amp; GitOps</a></label><span class="why">— the caretaker robot; deploys become boring (the goal)</span></div>
-<div class="path-row"><input type="checkbox" data-s="ai" id="c-ai"><label for="c-ai"><a href="https://baluraut.github.io/learn-ai-school/">5 · 🧠 AI</a></label><span class="why">— five ideas, zero magic; its own 4-week plan</span></div>
-<div class="path-row"><input type="checkbox" data-s="vdb" id="c-vdb"><label for="c-vdb"><a href="https://baluraut.github.io/learn-vectordb-school/">6 · 🗺️ Vector Databases</a></label><span class="why">— the meaning hall; RAG's machine room</span></div>
-<div class="path-row"><input type="checkbox" data-s="mcp" id="c-mcp"><label for="c-mcp"><a href="https://baluraut.github.io/learn-mcp-school/">7 · 🔌 MCP</a></label><span class="why">— the universal plug; read the actual wire</span></div>
-<div class="path-row"><input type="checkbox" data-s="agents" id="c-agents"><label for="c-agents"><a href="https://baluraut.github.io/learn-agents-school/">8 · 📋 AI Agents</a></label><span class="why">— the capstone: everything above, in one loop 🎓</span></div>
-
+<div class="path-row"><input data-s="aws" id="c-aws" type="checkbox"/><label data-en='&lt;a href="https://baluraut.github.io/learn-aws-school/"&gt;1 · 🪪 AWS foundations&lt;/a&gt;' for="c-aws"><a href="https://baluraut.github.io/learn-aws-school/">1 · 🪪 AWS पाया</a></label><span class="why" data-en="— ID cards, desks &amp;amp; the campus everything stands on (20 lessons)">— ओळखपत्रे, बाक &amp; कॅम्पस, ज्यावर बाकी सगळे उभे आहे (20 धडे)</span></div>
+<div class="path-row"><input data-s="docker" id="c-docker" type="checkbox"/><label for="c-docker"><a href="https://baluraut.github.io/learn-docker-school/">2 · 🍱 Docker &amp; ECR</a></label><span class="why" data-en="— pack the lunchbox, rent the bank locker">— डबा पॅक करा, बँक लॉकर भाड्याने घ्या</span></div>
+<div class="path-row"><input data-s="k8s" id="c-k8s" type="checkbox"/><label for="c-k8s"><a href="https://baluraut.github.io/learn-kubernetes-school/">3 · ☸️ Kubernetes</a></label><span class="why" data-en="— the flagship: 26 lessons, its own 9-week plan">— मुख्य कोर्स: 26 धडे, स्वतःची 9-आठवड्यांची योजना</span></div>
+<div class="path-row"><input data-s="argocd" id="c-argocd" type="checkbox"/><label for="c-argocd"><a href="https://baluraut.github.io/learn-argocd-school/">4 · 🤖 ArgoCD &amp; GitOps</a></label><span class="why" data-en="— the caretaker robot; deploys become boring (the goal)">— केअरटेकर रोबोट; deploy कंटाळवाणे होतात (हेच ध्येय)</span></div>
+<div class="path-row"><input data-s="ai" id="c-ai" type="checkbox"/><label for="c-ai"><a href="https://baluraut.github.io/learn-ai-school/">5 · 🧠 AI</a></label><span class="why" data-en="— five ideas, zero magic; its own 4-week plan">— पाच कल्पना, शून्य जादू; स्वतःची 4-आठवड्यांची योजना</span></div>
+<div class="path-row"><input data-s="vdb" id="c-vdb" type="checkbox"/><label data-en='&lt;a href="https://baluraut.github.io/learn-vectordb-school/"&gt;6 · 🗺️ Vector Databases&lt;/a&gt;' for="c-vdb"><a href="https://baluraut.github.io/learn-vectordb-school/">6 · 🗺️ व्हेक्टर डेटाबेस</a></label><span class="why" data-en="— the meaning hall; RAG's machine room">— अर्थांचा हॉल; RAG ची यंत्रशाळा</span></div>
+<div class="path-row"><input data-s="mcp" id="c-mcp" type="checkbox"/><label for="c-mcp"><a href="https://baluraut.github.io/learn-mcp-school/">7 · 🔌 MCP</a></label><span class="why" data-en="— the universal plug; read the actual wire">— युनिव्हर्सल प्लग; खरी वायर वाचा</span></div>
+<div class="path-row"><input data-s="agents" id="c-agents" type="checkbox"/><label data-en='&lt;a href="https://baluraut.github.io/learn-agents-school/"&gt;8 · 📋 AI Agents&lt;/a&gt;' for="c-agents"><a href="https://baluraut.github.io/learn-agents-school/">8 · 📋 AI एजंट्स</a></label><span class="why" data-en="— the capstone: everything above, in one loop 🎓">— कळस: वरचे सगळे, एकाच लूपमध्ये 🎓</span></div>
 <div id="cert" style="display:none; margin-top:26px; background:var(--card); border:3px double var(--ok); border-radius:18px; padding:34px 30px; text-align:center;">
-  <div style="font-size:2.6rem">🎓</div>
-  <div style="font-size:1.5rem; font-weight:800; margin-top:4px">Certificate of Completion</div>
-  <div class="sub" style="margin:10px auto 0">This certifies that</div>
-  <input id="cert-name" placeholder="type your name" style="display:block; margin:8px auto; padding:6px 14px; font:inherit; font-size:1.25rem; font-weight:700; text-align:center; border:none; border-bottom:2px dashed var(--line); background:transparent; color:var(--ink); max-width:340px; width:90%;">
-  <div class="sub" style="margin:6px auto 0; max-width:60ch">has walked all <b>nine schools</b> of The School — AWS, Docker, Kubernetes, ArgoCD,
-  AI, Vector Databases, MCP and AI Agents — <b>99 lessons</b>, from ID cards and lunchboxes to a running agent. Zero magic remains. 🏫</div>
-  <div id="cert-date" class="sub" style="margin-top:12px; font-weight:600"></div>
-  <button onclick="window.print()" style="margin-top:16px; padding:9px 22px; font:inherit; font-weight:700; border:none; border-radius:10px; background:var(--ok); color:#fff; cursor:pointer;">🖨️ Print / save as PDF</button>
+<div style="font-size:2.6rem">🎓</div>
+<div data-en="Certificate of Completion" style="font-size:1.5rem; font-weight:800; margin-top:4px">पूर्णत्वाचे प्रमाणपत्र</div>
+<div class="sub" data-en="This certifies that" style="margin:10px auto 0">हे प्रमाणित करण्यात येते की</div>
+<input data-en-ph="type your name" id="cert-name" placeholder="तुमचे नाव लिहा" style="display:block; margin:8px auto; padding:6px 14px; font:inherit; font-size:1.25rem; font-weight:700; text-align:center; border:none; border-bottom:2px dashed var(--line); background:transparent; color:var(--ink); max-width:340px; width:90%;"/>
+<div class="sub" data-en="has walked all &lt;b&gt;nine schools&lt;/b&gt; of The School — AWS, Docker, Kubernetes, ArgoCD,
+  AI, Vector Databases, MCP and AI Agents — &lt;b&gt;99 lessons&lt;/b&gt;, from ID cards and lunchboxes to a running agent. Zero magic remains. 🏫" style="margin:6px auto 0; max-width:60ch">यांनी द स्कूलच्या सर्व <b>नऊ शाळा</b> पूर्ण केल्या — AWS, Docker, Kubernetes, ArgoCD, AI, व्हेक्टर डेटाबेस, MCP आणि AI एजंट्स — <b>99 धडे</b>, ओळखपत्रे आणि डब्यांपासून ते चालणाऱ्या एजंटपर्यंत. जादू शून्य उरली आहे. 🏫</div>
+<div class="sub" id="cert-date" style="margin-top:12px; font-weight:600"></div>
+<button data-en="🖨️ Print / save as PDF" onclick="window.print()" style="margin-top:16px; padding:9px 22px; font:inherit; font-weight:700; border:none; border-radius:10px; background:var(--ok); color:#fff; cursor:pointer;">🖨️ प्रिंट / PDF म्हणून जतन करा</button>
 </div>
-
-<footer>
-  🏫 The School · by <a href="https://github.com/BaluRaut">BaluRaut</a> ·
-  🎓 <a href="program.html">the Program</a> ·
-  📖 <a href="dictionary.html">the Dictionary</a> ·
-  also on this domain: <a href="https://baluraut.github.io/">the Backend Engineer's Field Library</a> ·
+<footer data-en="
+  🏫 The School · by &lt;a href=&quot;https://github.com/BaluRaut&quot;&gt;BaluRaut&lt;/a&gt; ·
+  🎓 &lt;a href=&quot;program.html&quot;&gt;the Program&lt;/a&gt; ·
+  📖 &lt;a href=&quot;dictionary.html&quot;&gt;the Dictionary&lt;/a&gt; ·
+  also on this domain: &lt;a href=&quot;https://baluraut.github.io/&quot;&gt;the Backend Engineer's Field Library&lt;/a&gt; ·
   every course: MIT-spirited, analogy-powered, runnable ·
-  <a href="https://github.com/BaluRaut/school/issues">🐛 found a mistake?</a>
-</footer>
-
+  &lt;a href=&quot;https://github.com/BaluRaut/school/issues&quot;&gt;🐛 found a mistake?&lt;/a&gt;
+">🏫 द स्कूल · <a href="https://github.com/BaluRaut">BaluRaut</a> यांचे · 🎓 <a href="program.html">प्रोग्राम</a> · 📖 <a href="dictionary.html">शब्दकोश</a> · याच डोमेनवर: <a href="https://baluraut.github.io/">the Backend Engineer's Field Library</a> · प्रत्येक कोर्स: MIT-भावनेचा, उपमांवर चालणारा, चालवता येणारा · <a href="https://github.com/BaluRaut/school/issues">🐛 चूक सापडली?</a></footer>
 </div>
 <script>
 (function(){
@@ -217,5 +216,22 @@ as does <a href="https://baluraut.github.io/learn-ai-school/study-plan.html">AI<
   render();
 })();
 </script>
-</body>
+
+<script id="i18n-js">
+function schoolSetLang(l){
+  try{localStorage.setItem('school-lang',l)}catch(e){}
+  document.documentElement.setAttribute('lang',l);
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if(!el.hasAttribute('data-mr')) el.setAttribute('data-mr', el.innerHTML);
+    el.innerHTML = (l==='en') ? el.getAttribute('data-en') : el.getAttribute('data-mr');
+  });
+  document.querySelectorAll('[data-en-ph]').forEach(function(el){
+    if(!el.hasAttribute('data-mr-ph')) el.setAttribute('data-mr-ph', el.getAttribute('placeholder'));
+    el.setAttribute('placeholder', (l==='en') ? el.getAttribute('data-en-ph') : el.getAttribute('data-mr-ph'));
+  });
+  var p=document.getElementById('lang-pick'); if(p) p.value=l;
+}
+(function(){ var l='mr'; try{ l=localStorage.getItem('school-lang')||'mr'; }catch(e){}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){schoolSetLang(l)}); else schoolSetLang(l); })();
+</script></body>
 </html>

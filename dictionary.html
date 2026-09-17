@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="mr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>📖 The Dictionary — every term, every analogy, one page</title>
-<meta name="description" content="The School's cross-course dictionary: 100+ technical terms, each with its school analogy and a link to the lesson that teaches it — searchable.">
-<meta property="og:title" content="📖 The School Dictionary">
-<meta property="og:description" content="100+ terms · every one with its school analogy · searchable · linked to the lesson that teaches it.">
-<meta property="og:image" content="https://baluraut.github.io/learn-kubernetes-school/images/big-picture-4k.png">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-en="📖 The Dictionary — every term, every analogy, one page">📖 शब्दकोश — प्रत्येक संज्ञा, प्रत्येक उपमा, एकाच पानावर</title>
+<meta content="The School's cross-course dictionary: 100+ technical terms, each with its school analogy and a link to the lesson that teaches it — searchable." name="description"/>
+<meta content="📖 The School Dictionary" property="og:title"/>
+<meta content="100+ terms · every one with its school analogy · searchable · linked to the lesson that teaches it." property="og:description"/>
+<meta content="https://baluraut.github.io/learn-kubernetes-school/images/big-picture-4k.png" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <style>
 :root { --bg:#f8fafc; --card:#fff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#326ce5; --blue:#2563eb; }
 @media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --card:#131c2e; --ink:#e2e8f0; --muted:#94a3b8; --line:#253349; } }
@@ -27,18 +28,25 @@ a { color:var(--blue); } h1 { font-size:1.9rem; } .sub { color:var(--muted); max
 .entry a:hover { text-decoration:underline; }
 footer { margin-top:44px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:.88rem; }
 </style>
-</head>
-<body>
+
+<style id="i18n-css">
+#lang-pick{position:fixed;top:10px;right:10px;z-index:9999;font:600 .85rem -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--card,#fff);color:var(--ink,#0f172a);border:1px solid var(--line,#e2e8f0);border-radius:999px;padding:6px 12px;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer}
+html[lang="mr"] body{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+html[lang="mr"] svg text{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",sans-serif}
+@media print{#lang-pick{display:none}}
+</style></head>
+<body><select aria-label="Language / भाषा" id="lang-pick" onchange="schoolSetLang(this.value)">
+<option value="mr">🇮🇳 मराठी</option><option value="en">🇬🇧 English</option></select>
 <div class="wrap">
-<p><a href="index.html">← Back to the School portal</a></p>
-<h1>📖 The Dictionary — every term, its analogy, its lesson</h1>
-<p class="sub">The whole analogy universe on one page: <b>100+ terms</b> from all nine schools.
+<p data-en='&lt;a href="index.html"&gt;← Back to the School portal&lt;/a&gt;'><a href="index.html">← द स्कूल पोर्टलकडे परत</a></p>
+<h1 data-en="📖 The Dictionary — every term, its analogy, its lesson">📖 शब्दकोश — प्रत्येक संज्ञा, तिची उपमा, तिचा धडा</h1>
+<p class="sub" data-en='The whole analogy universe on one page: &lt;b&gt;100+ terms&lt;/b&gt; from all nine schools.
 Type to search a term ("OOMKilled"), an analogy word ("lunchbox"), or a school ("agents").
-Every entry links to the lesson (or diagram) that teaches it.</p>
-<input id="search" type="search" placeholder="🔎 search terms, analogies, schools… (e.g. drift, hall pass, cosine)" autofocus>
+Every entry links to the lesson (or diagram) that teaches it.'>संपूर्ण उपमांचे विश्व एकाच पानावर: सर्व नऊ शाळांमधील <b>100+ संज्ञा</b>. एखादी संज्ञा ("OOMKilled"), उपमेतील शब्द ("डबा") किंवा शाळा ("agents") शोधण्यासाठी टाइप करा. प्रत्येक नोंद ती शिकवणाऱ्या धड्याशी (किंवा आकृतीशी) जोडलेली आहे.</p>
+<input autofocus="" data-en-ph="🔎 search terms, analogies, schools… (e.g. drift, hall pass, cosine)" id="search" placeholder="🔎 संज्ञा, उपमा, शाळा शोधा… (उदा. drift, हॉल पास, cosine)" type="search"/>
 <div id="count"></div>
 <div id="list"></div>
-<footer>🏫 <a href="index.html">The School</a> · missing a term? <a href="https://github.com/BaluRaut/school/issues">🐛 tell us</a></footer>
+<footer data-en='🏫 &lt;a href="index.html"&gt;The School&lt;/a&gt; · missing a term? &lt;a href="https://github.com/BaluRaut/school/issues"&gt;🐛 tell us&lt;/a&gt;'>🏫 <a href="index.html">द स्कूल</a> · एखादी संज्ञा राहिली? <a href="https://github.com/BaluRaut/school/issues">🐛 आम्हाला सांगा</a></footer>
 </div>
 <script>
 var K8="https://baluraut.github.io/learn-kubernetes-school/lesson-diagrams.html#";
@@ -224,5 +232,22 @@ function render(f) {
 inp.addEventListener('input', function() { render(inp.value); });
 render('');
 </script>
-</body>
+
+<script id="i18n-js">
+function schoolSetLang(l){
+  try{localStorage.setItem('school-lang',l)}catch(e){}
+  document.documentElement.setAttribute('lang',l);
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if(!el.hasAttribute('data-mr')) el.setAttribute('data-mr', el.innerHTML);
+    el.innerHTML = (l==='en') ? el.getAttribute('data-en') : el.getAttribute('data-mr');
+  });
+  document.querySelectorAll('[data-en-ph]').forEach(function(el){
+    if(!el.hasAttribute('data-mr-ph')) el.setAttribute('data-mr-ph', el.getAttribute('placeholder'));
+    el.setAttribute('placeholder', (l==='en') ? el.getAttribute('data-en-ph') : el.getAttribute('data-mr-ph'));
+  });
+  var p=document.getElementById('lang-pick'); if(p) p.value=l;
+}
+(function(){ var l='mr'; try{ l=localStorage.getItem('school-lang')||'mr'; }catch(e){}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){schoolSetLang(l)}); else schoolSetLang(l); })();
+</script></body>
 </html>
