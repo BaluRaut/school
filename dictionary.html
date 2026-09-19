@@ -40,9 +40,9 @@ html[lang="mr"] svg text{font-family:"Noto Sans Devanagari","Mukta","Devanagari 
 <div class="wrap">
 <p data-en='&lt;a href="index.html"&gt;← Back to the School portal&lt;/a&gt;'><a href="index.html">← द स्कूल पोर्टलकडे परत</a></p>
 <h1 data-en="📖 The Dictionary — every term, its analogy, its lesson">📖 शब्दकोश — प्रत्येक संज्ञा, तिची उपमा, तिचा धडा</h1>
-<p class="sub" data-en='The whole analogy universe on one page: &lt;b&gt;100+ terms&lt;/b&gt; from all nine schools.
+<p class="sub" data-en='The whole analogy universe on one page: &lt;b&gt;100+ terms&lt;/b&gt; from all ten schools.
 Type to search a term ("OOMKilled"), an analogy word ("lunchbox"), or a school ("agents").
-Every entry links to the lesson (or diagram) that teaches it.'>संपूर्ण उपमांचे विश्व एकाच पानावर: सर्व नऊ शाळांमधील <b>100+ संज्ञा</b>. एखादी संज्ञा ("OOMKilled"), उपमेतील शब्द ("डबा") किंवा शाळा ("agents") शोधण्यासाठी टाइप करा. प्रत्येक नोंद ती शिकवणाऱ्या धड्याशी (किंवा आकृतीशी) जोडलेली आहे.</p>
+Every entry links to the lesson (or diagram) that teaches it.'>संपूर्ण उपमांचे विश्व एकाच पानावर: सर्व दहा शाळांमधील <b>100+ संज्ञा</b>. एखादी संज्ञा ("OOMKilled"), उपमेतील शब्द ("डबा") किंवा शाळा ("agents") शोधण्यासाठी टाइप करा. प्रत्येक नोंद ती शिकवणाऱ्या धड्याशी (किंवा आकृतीशी) जोडलेली आहे.</p>
 <input autofocus="" data-en-ph="🔎 search terms, analogies, schools… (e.g. drift, hall pass, cosine)" id="search" placeholder="🔎 संज्ञा, उपमा, शाळा शोधा… (उदा. drift, हॉल पास, cosine)" type="search"/>
 <div id="count"></div>
 <div id="list"></div>
@@ -57,6 +57,7 @@ var AI="https://baluraut.github.io/learn-ai-school/lesson-diagrams.html#";
 var VD="https://baluraut.github.io/learn-vectordb-school/lesson-diagrams.html#";
 var MC="https://baluraut.github.io/learn-mcp-school/lesson-diagrams.html#";
 var AG="https://baluraut.github.io/learn-agents-school/lesson-diagrams.html#";
+var CI="https://baluraut.github.io/learn-cicd-school/lesson-diagrams.html#";
 // [term, analogy, school, url, color]
 var D=[
 ["Pod","one school desk — replaceable, never repaired","☸️ Kubernetes",K8+"l02","#326ce5"],
@@ -230,6 +231,19 @@ var D=[
 ["Human-in-the-loop","drafts flow, signatures gate — civilization's pattern","📋 Agents",AG+"l08","#0d9488"],
 ["Pattern zero","steps known and fixed? write a SCRIPT — no agent at all","📋 Agents",AG+"l08","#0d9488"],
 ["Agentic","an adjective and a DIAL — how much goal-pursuing autonomy","📋 Agents","https://baluraut.github.io/learn-agents-school/history-and-future.html#agentic","#0d9488"]
+["CI (continuous integration)","the mailroom checks every submission the day it arrives — no term-end pile-up","📮 CI/CD",CI+"l01","#16a34a"],
+["Continuous delivery vs deployment","always ready to send (a human presses the button) vs sent automatically (no button)","📮 CI/CD",CI+"l01","#16a34a"],
+["Pipeline / workflow","the conveyor belt: a bell (trigger), desks (jobs), tasks (steps), clerks (runners)","📮 CI/CD",CI+"l02","#16a34a"],
+["Runner","the clerk — a fresh machine per job; nothing survives between jobs","📮 CI/CD",CI+"l02","#16a34a"],
+["Matrix build","three rulers on the same homework, in parallel (node 20 / 22 / 24)","📮 CI/CD",CI+"l04","#16a34a"],
+["Cache key","the drawer's label — a hash of the inputs; new bytes, new drawer (a miss)","📮 CI/CD",CI+"l04","#16a34a"],
+["Artifact (CI)","the envelope carried between desks — an OUTPUT kept for days; a cache is only a speed-up","📮 CI/CD",CI+"l05","#16a34a"],
+["OIDC (CI → cloud)","the courier's badge: a signed token swapped for a day pass — no stored keys","📮 CI/CD",CI+"l06","#16a34a"],
+["Image tag = commit SHA","the copy is labeled with the homework's fingerprint — the tag IS the version","📮 CI/CD",CI+"l07","#d97706"],
+["Approval gate","the principal's signature before the main board — environment + required reviewers","📮 CI/CD",CI+"l08","#d97706"],
+["Rolling / blue-green / canary","replace the pins one by one · two boards, flip the sign · one class sees it first","📮 CI/CD",CI+"l09","#d97706"],
+["Push-model CD","the van drives to the cluster and applies — then nobody watches the board (→ ArgoCD)","📮 CI/CD",CI+"l10","#d97706"],
+["DORA metrics","the scoreboard: deployment frequency · lead time · change failure rate · time to restore","📮 CI/CD",CI+"l12","#4f46e5"],
 ];
 var list=document.getElementById('list'), count=document.getElementById('count'), inp=document.getElementById('search');
 function render(f) {
