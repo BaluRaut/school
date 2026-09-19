@@ -5257,5 +5257,14 @@
 "long context: harder to use reliably": "लांब context: विश्वासार्हपणे वापरणे कठीण",
 "changing / external facts → RAG · stable behaviour or style → fine-tuning (L07) — a rule of thumb": "बदलणारी / बाहेरची तथ्ये → RAG · स्थिर वर्तन किंवा शैली → fine-tuning (L07) — अंगठ्याचा नियम",
 "loop until the goal is met — or max steps · timeout · repeated failure": "ध्येय गाठेपर्यंत लूप — किंवा कमाल पायऱ्या · timeout · पुन्हा-पुन्हा अपयश",
-"LoRA: real style/format/domain-voice gains with a small adapter": "LoRA: छोट्या adapter ने खरी शैली/स्वरूप/domain-आवाजाची कमाई"
+"LoRA: real style/format/domain-voice gains with a small adapter": "LoRA: छोट्या adapter ने खरी शैली/स्वरूप/domain-आवाजाची कमाई",
+"fast at large scale · right index": "मोठ्या प्रमाणातही वेगवान · योग्य index",
+"a trained network → fixed-size vector": "प्रशिक्षित network → ठराविक-आकाराचा vector",
+"(hundreds–thousands of dims)": "(शेकडो–हजारो dims)",
+"where directions = MEANING": "जिथे दिशा = अर्थ",
+"ANN trades some recall for much faster search — tune it; benchmarks without recall numbers are marketing": "ANN थोडा recall देऊन खूप वेगवान शोध घेतो — ते tune करा; recall चे आकडे नसलेले benchmarks म्हणजे marketing",
+"a vector DB is the storage/query system · HNSW or IVF is an index strategy INSIDE it": "vector DB म्हणजे साठवण/शोध प्रणाली · HNSW किंवा IVF ही तिच्या आतली index ची युक्ती",
+"natural seams · self-contained · overlap 🔁": "नैसर्गिक शिवणी · स्वयंपूर्ण · overlap 🔁",
+"size &amp; overlap fit the docs — e.g. ~hundreds of tokens": "आकार &amp; overlap दस्तऐवजांना साजेसे — उदा. ~शेकडो tokens",
+"chunking moves quality a lot · the index mostly moves speed": "chunking गुणवत्ता खूप बदलते · index मुख्यतः वेग बदलतो"
 }
