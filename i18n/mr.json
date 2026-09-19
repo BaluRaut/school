@@ -3895,5 +3895,9 @@
 "<input data-c=\"c15\" type=\"checkbox\"/> I understand how Kubernetes consumes the image": "<input data-c=\"c15\" type=\"checkbox\"/> Kubernetes इमेज कशी वापरते हे मला समजते",
 "11 questions — pick an answer, get the why. One attempt per question (until reset). Your best score is saved in this browser.": "11 प्रश्न — उत्तर निवडा, कारण मिळवा. प्रत्येक प्रश्नाला एकच प्रयत्न (reset पर्यंत). तुमचा सर्वोत्तम गुण या ब्राउझरमध्ये जपला जातो.",
 "0 / 11 · best: —": "0 / 11 · सर्वोत्तम: —",
-"a consistent environment on every machine — dev ≈ prod": "प्रत्येक मशीनवर सुसंगत environment — dev ≈ prod"
+"a consistent environment on every machine — dev ≈ prod": "प्रत्येक मशीनवर सुसंगत environment — dev ≈ prod",
+"The recipe card — these lines cover most Dockerfiles you'll meet.": "पाककृतीचे कार्ड — या ओळी तुम्हाला भेटणाऱ्या बहुतेक Dockerfiles व्यापतात.",
+"These instructions cover most Dockerfiles you'll meet — RUN happens at build, CMD at start, and EXPOSE publishes nothing.": "या सूचना तुम्हाला भेटणाऱ्या बहुतेक Dockerfiles व्यापतात — RUN build वेळी घडते, CMD सुरू होताना, आणि EXPOSE काहीही publish करत नाही.",
+"a smaller base image means less to pull, less to patch —": "लहान base इमेज म्हणजे ओढायला कमी, patch करायला कमी —",
+"and potentially a smaller attack surface": "आणि शक्यतो हल्ल्यासाठी कमी पृष्ठभाग"
 }
