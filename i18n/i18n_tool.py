@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """i18n tool for The School sites.
-  extract <out.json> <html...>   -> collect unique translatable units (en -> "" ) merging into out.json
-  apply   <mr.json>  <html...>   -> rewrite pages: Marathi default, data-en holds English, + lang dropdown
+  extract <dict.json> <html...>   -> collect unique translatable units (en -> "") merging into dict.json
+  apply   <dict.json> <html...>   -> rewrite pages: Marathi default, data-en holds English, + lang dropdown
+  restore -           <html...>   -> strip the Marathi layer, put English back (clean page to edit)
+  dump    <dict.json> <start> <count>   -> print untranslated units with ids
+  merge   <dict.json> <batch.json...>   -> merge {id: mr} batches into dict.json
 """
-import sys, json, re, html
-from bs4 import BeautifulSoup, NavigableString, Comment
+import sys, json, re
+from bs4 import BeautifulSoup, NavigableString
 
 INLINE = {'b','i','em','strong','code','kbd','small','br','span','a','sup','sub','u','mark','tspan','abbr','input','wbr'}
-SKIP_TAGS = {'script','style','pre','noscript','svg:defs','defs','marker','select','option'}
-UNIT_TAGS = {'p','h1','h2','h3','h4','h5','li','td','th','a','span','summary','label','div','text','title','figcaption','button','b','strong','em','i','small','caption','dt','dd','blockquote','section','header','footer','nav','article','aside','main','ul','ol','table','tr','details','figure','form','svg','g','body','html','head','textPath'}
+SKIP_TAGS = {'script','style','pre','noscript','defs','marker','select','option'}
 
 def norm(s):
     return re.sub(r'\s+', ' ', s).strip()
@@ -26,21 +28,18 @@ def is_leaf(el):
 def worth(txt):
     t = norm(re.sub(r'<[^>]+>', '', txt))
     if not t: return False
-    if re.fullmatch(r'[\W\d_]+', t): return False   # numbers / symbols / emoji only
+    if re.fullmatch(r'[\W\d_]+', t): return False
     if len(t) < 2: return False
     return True
 
 def units(soup):
-    """yield elements that are translation units (outermost leaf elements with text)."""
     out = []
     def walk(el):
         if el.name in SKIP_TAGS: return
-        if el.name in ('script','style'): return
-        if el.name not in INLINE and el.name != 'body' and el.name != 'html' and el.name != 'head' and is_leaf(el):
+        if el.name not in INLINE and el.name not in ('body','html','head') and is_leaf(el):
             inner = el.decode_contents()
             if worth(inner):
-                out.append(el); return
-            # leaf with only inline children but no text: nothing
+                out.append(el)
             return
         for c in list(el.children):
             if isinstance(c, NavigableString): continue
@@ -55,20 +54,35 @@ def units(soup):
 def key_of(el):
     return norm(el.decode_contents())
 
+def strip_layer(soup):
+    for el in soup.select('[data-en]'):
+        el.clear(); el.append(BeautifulSoup(el['data-en'], 'html.parser')); del el['data-en']
+        if el.has_attr('data-mr'): del el['data-mr']
+    for el in soup.select('[data-en-ph]'):
+        el['placeholder'] = el['data-en-ph']; del el['data-en-ph']
+    for sid in ('i18n-js','i18n-css','lang-pick'):
+        t = soup.find(id=sid)
+        if t: t.decompose()
+    soup.html['lang'] = 'en'
+
+def load_soup(f):
+    raw = open(f, encoding='utf-8').read()
+    soup = BeautifulSoup(raw, 'html.parser')
+    if 'id="i18n-js"' in raw:
+        strip_layer(soup)
+    return soup
+
 def extract(out_path, files):
     try: d = json.load(open(out_path))
     except Exception: d = {}
     for f in files:
-        soup = BeautifulSoup(open(f, encoding='utf-8').read(), 'html.parser')
-        # attributes: placeholder
+        soup = load_soup(f)
         for el in units(soup):
-            k = key_of(el)
-            d.setdefault(k, "")
+            d.setdefault(key_of(el), "")
         for el in soup.find_all(attrs={'placeholder': True}):
             d.setdefault(norm(el['placeholder']), "")
     json.dump(d, open(out_path,'w'), ensure_ascii=False, indent=0)
-    todo = sum(1 for v in d.values() if not v)
-    print(f'{out_path}: {len(d)} units, {todo} untranslated')
+    print(f'{out_path}: {len(d)} units, {sum(1 for v in d.values() if not v)} untranslated')
 
 SWITCH_CSS = '''
 <style id="i18n-css">
@@ -103,20 +117,7 @@ function schoolSetLang(l){
 def apply(mr_path, files):
     d = json.load(open(mr_path))
     for f in files:
-        raw = open(f, encoding='utf-8').read()
-        if 'id="i18n-js"' in raw:
-            # idempotent: strip previous injection & restore English before re-applying
-            soup = BeautifulSoup(raw, 'html.parser')
-            for el in soup.select('[data-en]'):
-                el.clear(); el.append(BeautifulSoup(el['data-en'], 'html.parser')); del el['data-en']
-                if el.has_attr('data-mr'): del el['data-mr']
-            for el in soup.select('[data-en-ph]'):
-                el['placeholder'] = el['data-en-ph']; del el['data-en-ph']
-            for sid in ('i18n-js','i18n-css','lang-pick'):
-                t = soup.find(id=sid)
-                if t: t.decompose()
-        else:
-            soup = BeautifulSoup(raw, 'html.parser')
+        soup = load_soup(f)
         n = 0
         for el in units(soup):
             k = key_of(el)
@@ -129,13 +130,20 @@ def apply(mr_path, files):
             if mr and mr != k:
                 el['data-en-ph'] = el['placeholder']; el['placeholder'] = mr
         soup.html['lang'] = 'mr'
-        head = soup.head
-        head.append(BeautifulSoup(SWITCH_CSS, 'html.parser'))
-        body = soup.body
-        body.insert(0, BeautifulSoup(SWITCH_HTML, 'html.parser'))
-        body.append(BeautifulSoup(SWITCH_JS, 'html.parser'))
+        soup.head.append(BeautifulSoup(SWITCH_CSS, 'html.parser'))
+        soup.body.insert(0, BeautifulSoup(SWITCH_HTML, 'html.parser'))
+        soup.body.append(BeautifulSoup(SWITCH_JS, 'html.parser'))
         open(f, 'w', encoding='utf-8').write(str(soup))
         print(f'{f.split("/")[-1]}: {n} units translated')
+
+def restore(_path, files):
+    for f in files:
+        raw = open(f, encoding='utf-8').read()
+        if 'id="i18n-js"' not in raw:
+            print(f.split('/')[-1], 'was not applied'); continue
+        soup = BeautifulSoup(raw, 'html.parser'); strip_layer(soup)
+        open(f, 'w', encoding='utf-8').write(str(soup))
+        print(f.split('/')[-1], 'restored to English')
 
 def dump(path, args):
     d = json.load(open(path)); keys = list(d.keys())
@@ -158,4 +166,4 @@ def merge(path, args):
 
 if __name__ == '__main__':
     cmd, path, *files = sys.argv[1:]
-    {'extract': extract, 'apply': apply, 'dump': dump, 'merge': merge}[cmd](path, files)
+    {'extract': extract, 'apply': apply, 'restore': restore, 'dump': dump, 'merge': merge}[cmd](path, files)
