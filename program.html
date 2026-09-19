@@ -47,6 +47,7 @@ summary .meta { font-weight:400; color:var(--muted); font-size:.86rem; }
 .honest { background:var(--card); border:1px dashed var(--line); border-radius:14px; padding:14px 18px; margin-top:16px; color:var(--muted); font-size:.9rem; }
 footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:.88rem; }
 @media print { .btn, .hero-cta { display:none; } details { break-inside:avoid; } }
+.dtext{margin:0 0 8px}
 </style>
 
 <style id="i18n-css">
@@ -118,12 +119,12 @@ own weekly plan with checkboxes that survive in your browser.' style="margin-top
 <details style="--c:#7c3aed">
 <summary data-en='🪪 Module 1 — AWS: IAM, EC2 &amp;amp; the campus &lt;span class="meta"&gt;25 lessons · 8 weeks · ~16 h&lt;/span&gt;'>🪪 मॉड्यूल 1 — AWS: IAM, EC2 &amp; कॅम्पस <span class="meta">25 धडे · 8 आठवडे · ~16 तास</span></summary>
 <div class="dbody">
-<b data-en="Part 1 — identity:">भाग 1 — ओळख:</b> the root master key, users &amp; groups, policy slips, roles-as-hats,
-    machine identities, hygiene. <b data-en="Part 2 — computers:">भाग 2 — संगणक:</b> instances, types &amp; pricing, connecting
-    (SSH vs SSM), security groups, EBS/snapshots/AMIs, user-data &amp; fleets.
-    <b data-en="Part 3 — the campus:">भाग 3 — कॅम्पस:</b> VPC, S3, load balancers, Route 53, RDS, CloudWatch, Lambda, and
-    reading the bill. <b data-en="Part 4 — doors, routes &amp;amp; guards:">भाग 4 — दारे, मार्ग &amp; पहारेकरी:</b> subnet networking (NACLs, endpoints), NAT gateway, Route 53 routing policies, WAF &amp; Shield, API Gateway. Labs in Terraform + CLI, small and always destroyed.
-    <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-aws-school/"&gt;Course site →&lt;/a&gt;
+<p class="dtext" data-en="&lt;b&gt;Part 1 — identity:&lt;/b&gt; the root master key, users &amp;amp; groups, policy slips, roles-as-hats,
+    machine identities, hygiene. &lt;b&gt;Part 2 — computers:&lt;/b&gt; instances, types &amp;amp; pricing, connecting
+    (SSH vs SSM), security groups, EBS/snapshots/AMIs, user-data &amp;amp; fleets.
+    &lt;b&gt;Part 3 — the campus:&lt;/b&gt; VPC, S3, load balancers, Route 53, RDS, CloudWatch, Lambda, and
+    reading the bill. &lt;b&gt;Part 4 — doors, routes &amp;amp; guards:&lt;/b&gt; subnet networking (NACLs, endpoints), NAT gateway, Route 53 routing policies, WAF &amp;amp; Shield, API Gateway. Labs in Terraform + CLI, small and always destroyed."><b>भाग 1 — ओळख:</b> root ची मास्टर किल्ली, users &amp; groups, policy चिठ्ठ्या, टोपीसारखे roles, मशीनची ओळख, स्वच्छता. <b>भाग 2 — संगणक:</b> instances, प्रकार &amp; किंमत, जोडणी (SSH विरुद्ध SSM), security groups, EBS/snapshots/AMIs, user-data &amp; fleets. <b>भाग 3 — कॅम्पस:</b> VPC, S3, load balancers, Route 53, RDS, CloudWatch, Lambda, आणि बिल वाचणे. <b>भाग 4 — दारे, रस्ते &amp; पहारेकरी:</b> subnet networking (NACLs, endpoints), NAT gateway, Route 53 routing policies, WAF &amp; Shield, API Gateway. लॅब Terraform + CLI मध्ये, छोट्या आणि नेहमी नष्ट केलेल्या.</p>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-aws-school/"&gt;Course site →&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-aws-school/study-plan.html"&gt;8-week plan&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-aws-school/quiz.html"&gt;Quiz (25 Qs)&lt;/a&gt;'><a href="https://baluraut.github.io/learn-aws-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-aws-school/study-plan.html">8-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-aws-school/quiz.html">प्रश्नमंजुषा (25 प्रश्न)</a></div>
 </div>
@@ -131,11 +132,10 @@ own weekly plan with checkboxes that survive in your browser.' style="margin-top
 <details style="--c:#0ea5e9">
 <summary data-en='🍱 Module 2 — Docker &amp;amp; ECR &lt;span class="meta"&gt;12 lessons · 4 weeks · ~7.5 h&lt;/span&gt;'>🍱 मॉड्यूल 2 — Docker &amp; ECR <span class="meta">12 धडे · 4 आठवडे · ~7.5 तास</span></summary>
 <div class="dbody">
-    Why containers, images &amp; layers, the Dockerfile, running containers, volumes &amp; networks,
+<p class="dtext" data-en="Why containers, images &amp;amp; layers, the Dockerfile, running containers, volumes &amp;amp; networks,
     Compose, multi-stage builds, image hygiene (.dockerignore, tags vs digests), registries,
-    ECR, lifecycle policies, CI to the cloud. Includes a real demo app and a working
-    multi-stage build that shrinks 180 MB to 50 MB.
-    <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-docker-school/"&gt;Course site →&lt;/a&gt;
+    ECR, lifecycle policies, CI to the cloud. Includes a real demo app and a working multi-stage build you can watch shrink the image.">कंटेनर का, इमेज &amp; layers, Dockerfile, कंटेनर चालवणे, volumes &amp; networks, Compose, multi-stage builds, इमेजची स्वच्छता (.dockerignore, tags विरुद्ध digests), रजिस्ट्री, ECR, lifecycle policies, CI ते क्लाउड. एक खरे डेमो ॲप आणि इमेज आकसताना तुम्ही पाहू शकाल असा चालू multi-stage build समाविष्ट.</p>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-docker-school/"&gt;Course site →&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-docker-school/study-plan.html"&gt;4-week plan&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-docker-school/quiz.html"&gt;Quiz&lt;/a&gt;'><a href="https://baluraut.github.io/learn-docker-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-docker-school/study-plan.html">4-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-docker-school/quiz.html">प्रश्नमंजुषा</a></div>
 </div>
@@ -143,25 +143,27 @@ own weekly plan with checkboxes that survive in your browser.' style="margin-top
 <details style="--c:#326ce5">
 <summary data-en='☸️ Module 3 — Kubernetes (the flagship) &lt;span class="meta"&gt;26 lessons · 9 weeks · ~17 h&lt;/span&gt;'>☸️ मॉड्यूल 3 — Kubernetes (मुख्य कोर्स) <span class="meta">26 धडे · 9 आठवडे · ~17 तास</span></summary>
 <div class="dbody">
-<b data-en="The core (1–13):">गाभा (1–13):</b> pods, Deployments, Services, namespaces, config &amp; secrets, probes,
-    resources, HPA, ingress, rollouts, storage, the control plane. <b data-en="Ship it (14–15):">पाठवा (14–15):</b> GitOps
-    and multi-AZ. <b data-en="Run it for real (16–26):">खऱ्या जगात चालवा (16–26):</b> debugging (CrashLoopBackOff and friends), RBAC,
-    Jobs &amp; CronJobs with a real backup, NetworkPolicies, taints, DaemonSets, StatefulSets,
-    QoS &amp; evictions, node upgrades, CRDs &amp; operators, observability. Real manifests for a real
-    platform, plus the AWS-components map.
-    <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-kubernetes-school/"&gt;Course site →&lt;/a&gt;
+<p class="dtext" data-en="&lt;b&gt;The core (1–13):&lt;/b&gt; pods, Deployments, Services, namespaces, config &amp;amp; secrets, probes,
+    resources, HPA, ingress, rollouts, storage, the control plane. &lt;b&gt;Ship it (14–15):&lt;/b&gt; GitOps
+    and multi-AZ. &lt;b&gt;Run it for real (16–26):&lt;/b&gt; debugging (CrashLoopBackOff and friends), RBAC,
+    Jobs &amp;amp; CronJobs with a real backup, NetworkPolicies, taints, DaemonSets, StatefulSets,
+    QoS &amp;amp; evictions, node upgrades, CRDs &amp;amp; operators, observability. Real manifests for a real
+    platform, plus the AWS-components map, a five-table cheat sheet, a printable triage card and the AWS → Docker → Kubernetes analogy map."><b>गाभा (1–13):</b> pods, Deployments, Services, namespaces, config &amp; secrets, probes, resources, HPA, ingress, rollouts, storage, control plane. <b>पाठवा (14–15):</b> GitOps आणि multi-AZ. <b>खऱ्या जगात चालवा (16–26):</b> debugging (CrashLoopBackOff आणि मित्रमंडळी), RBAC, खऱ्या backup सह Jobs &amp; CronJobs, NetworkPolicies, taints, DaemonSets, StatefulSets, QoS &amp; evictions, node upgrades, CRDs &amp; operators, observability. खऱ्या प्लॅटफॉर्मसाठी खरे manifests, शिवाय AWS-घटकांचा नकाशा, पाच तक्त्यांचे cheat sheet, प्रिंट करता येणारे triage card आणि AWS → Docker → Kubernetes उपमांचा नकाशा.</p>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-kubernetes-school/"&gt;Course site →&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html"&gt;9-week plan&lt;/a&gt;
-&lt;a href="https://baluraut.github.io/learn-kubernetes-school/quiz.html"&gt;Quiz (10 Qs)&lt;/a&gt;'><a href="https://baluraut.github.io/learn-kubernetes-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">9-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-kubernetes-school/quiz.html">प्रश्नमंजुषा (10 प्रश्न)</a></div>
+&lt;a href="https://baluraut.github.io/learn-kubernetes-school/quiz.html"&gt;Quiz (20 Qs)&lt;/a&gt;
+&lt;a href="https://baluraut.github.io/learn-kubernetes-school/cheat-sheet.html"&gt;Cheat sheet&lt;/a&gt;
+&lt;a href="https://baluraut.github.io/learn-kubernetes-school/triage-card.html"&gt;Triage card&lt;/a&gt;'><a href="https://baluraut.github.io/learn-kubernetes-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-kubernetes-school/study-plan.html">9-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-kubernetes-school/quiz.html">प्रश्नमंजुषा (20 प्रश्न)</a> <a href="https://baluraut.github.io/learn-kubernetes-school/cheat-sheet.html">Cheat sheet</a> <a href="https://baluraut.github.io/learn-kubernetes-school/triage-card.html">Triage card</a></div>
 </div>
 </details>
 <details style="--c:#ea580c">
 <summary data-en='🤖 Module 4 — ArgoCD &amp;amp; GitOps &lt;span class="meta"&gt;12 lessons · 4 weeks · ~7.5 h&lt;/span&gt;'>🤖 मॉड्यूल 4 — ArgoCD &amp; GitOps <span class="meta">12 धडे · 4 आठवडे · ~7.5 तास</span></summary>
 <div class="dbody">
-    Deployment before GitOps, drift, push vs pull, the plan-book idea, ArgoCD's architecture,
-    Applications, sync policies, selfHeal &amp; prune, instant rollbacks with git revert,
-    app-of-apps, secrets in GitOps (Sealed Secrets &amp; ESO). Ships a deployable demo app you can
-    point a real ArgoCD at.
-    <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-argocd-school/"&gt;Course site →&lt;/a&gt;
+<p class="dtext" data-en="Deployment before GitOps, drift, push vs pull, the plan-book idea, ArgoCD's architecture,
+    Applications, sync policies, selfHeal &amp;amp; prune, instant rollbacks with git revert,
+    app-of-apps, secrets in GitOps (Sealed Secrets &amp;amp; ESO). Ships a deployable demo app you can
+    point a real ArgoCD at.">GitOps आधीचे deployment, drift, push विरुद्ध pull, प्लॅन-वहीची कल्पना, ArgoCD ची रचना, Applications, sync policies, selfHeal &amp; prune, git revert ने तत्काळ rollback, app-of-apps, GitOps मधली secrets (Sealed Secrets &amp; ESO). खऱ्या ArgoCD कडे दाखवता येईल असे deploy करण्याजोगे डेमो ॲप सोबत.</p>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-argocd-school/"&gt;Course site →&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-argocd-school/study-plan.html"&gt;4-week plan&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-argocd-school/quiz.html"&gt;Quiz&lt;/a&gt;'><a href="https://baluraut.github.io/learn-argocd-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-argocd-school/study-plan.html">4-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-argocd-school/quiz.html">प्रश्नमंजुषा</a></div>
 </div>
@@ -169,11 +171,11 @@ own weekly plan with checkboxes that survive in your browser.' style="margin-top
 <details style="--c:#7c3aed">
 <summary data-en='🧠 Module 5 — AI: tokens to agents &lt;span class="meta"&gt;13 lessons · 4 weeks · ~8 h&lt;/span&gt;'>🧠 मॉड्यूल 5 — AI: टोकनपासून एजंटपर्यंत <span class="meta">13 धडे · 4 आठवडे · ~8 तास</span></summary>
 <div class="dbody">
-    What ML actually is, training &amp; loss, tokens &amp; BPE, embeddings, next-token prediction,
-    attention &amp; transformers, pretraining → RLHF → LoRA, prompting &amp; context windows,
-    hallucinations, RAG, agents, diffusion &amp; multimodal, MCP. Three runnable zero-dependency
-    Python labs: a bigram language model, a tokenizer, an attention toy.
-    <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-ai-school/"&gt;Course site →&lt;/a&gt;
+<p class="dtext" data-en="What ML actually is, training &amp;amp; loss, tokens &amp;amp; BPE, embeddings, next-token prediction,
+    attention &amp;amp; transformers, pretraining → RLHF → LoRA, prompting &amp;amp; context windows,
+    hallucinations, RAG, agents, diffusion &amp;amp; multimodal, MCP. Three runnable zero-dependency
+    Python labs: a bigram language model, a tokenizer, an attention toy.">ML खरे काय आहे, training &amp; loss, tokens &amp; BPE, embeddings, पुढच्या token चा अंदाज, attention &amp; transformers, pretraining → RLHF → LoRA, prompting &amp; context windows, hallucinations, RAG, agents, diffusion &amp; multimodal, MCP. तीन चालू, शून्य-dependency Python लॅब: bigram भाषा मॉडेल, tokenizer, attention चे खेळणे.</p>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-ai-school/"&gt;Course site →&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-ai-school/study-plan.html"&gt;4-week plan&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-ai-school/quiz.html"&gt;Quiz (10 Qs)&lt;/a&gt;'><a href="https://baluraut.github.io/learn-ai-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-ai-school/study-plan.html">4-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-ai-school/quiz.html">प्रश्नमंजुषा (10 प्रश्न)</a></div>
 </div>
@@ -181,11 +183,11 @@ own weekly plan with checkboxes that survive in your browser.' style="margin-top
 <details style="--c:#2563eb">
 <summary data-en='🗺️ Module 6 — Vector Databases &lt;span class="meta"&gt;8 lessons · 3 weeks · ~5 h&lt;/span&gt;'>🗺️ मॉड्यूल 6 — व्हेक्टर डेटाबेस <span class="meta">8 धडे · 3 आठवडे · ~5 तास</span></summary>
 <div class="dbody">
-    Search by meaning, embeddings as coordinates, cosine similarity &amp; normalization, kNN vs
-    ANN (HNSW, IVF, recall), building a mini vector DB, chunking &amp; metadata filters &amp; hybrid
+<p class="dtext" data-en="Search by meaning, embeddings as coordinates, cosine similarity &amp;amp; normalization, kNN vs
+    ANN (HNSW, IVF, recall), building a mini vector DB, chunking &amp;amp; metadata filters &amp;amp; hybrid
     search, rerankers, the landscape (pgvector to dedicated engines). A real ~70-line vector
-    database lives in the repo — including one honest failure that teaches more than success.
-    <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-vectordb-school/"&gt;Course site →&lt;/a&gt;
+    database lives in the repo — including one honest failure that teaches more than success.">अर्थाने शोध, coordinates म्हणून embeddings, cosine similarity &amp; normalization, kNN विरुद्ध ANN (HNSW, IVF, recall), छोटा vector DB बांधणे, chunking &amp; metadata filters &amp; hybrid search, rerankers, बाजारपेठ (pgvector ते समर्पित engines). रेपोमध्ये ~70 ओळींचा खरा vector database आहे — यशापेक्षा जास्त शिकवणाऱ्या एका प्रामाणिक अपयशासह.</p>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-vectordb-school/"&gt;Course site →&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-vectordb-school/study-plan.html"&gt;3-week plan&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-vectordb-school/quiz.html"&gt;Quiz&lt;/a&gt;'><a href="https://baluraut.github.io/learn-vectordb-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-vectordb-school/study-plan.html">3-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-vectordb-school/quiz.html">प्रश्नमंजुषा</a></div>
 </div>
@@ -193,11 +195,11 @@ own weekly plan with checkboxes that survive in your browser.' style="margin-top
 <details style="--c:#7c3aed">
 <summary data-en='🔌 Module 7 — MCP: the universal plug &lt;span class="meta"&gt;8 lessons · 3 weeks · ~5 h&lt;/span&gt;'>🔌 मॉड्यूल 7 — MCP: युनिव्हर्सल प्लग <span class="meta">8 धडे · 3 आठवडे · ~5 तास</span></summary>
 <div class="dbody">
-    The N×M problem, hosts/clients/servers, tools vs resources vs prompts, the JSON-RPC wire
-    message-by-message, transports &amp; security (prompt injection, write gates), then five real
+<p class="dtext" data-en="The N×M problem, hosts/clients/servers, tools vs resources vs prompts, the JSON-RPC wire
+    message-by-message, transports &amp;amp; security (prompt injection, write gates), then five real
     use cases with sequence diagrams. The protocol is IN the repo: a working server and client
-    (~200 lines, stdlib only) you can drive by hand.
-    <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-mcp-school/"&gt;Course site →&lt;/a&gt;
+    (~200 lines, stdlib only) you can drive by hand.">N×M समस्या, hosts/clients/servers, tools विरुद्ध resources विरुद्ध prompts, JSON-RPC wire संदेशा-संदेशाने, transports &amp; सुरक्षा (prompt injection, write gates), मग sequence diagrams सह पाच खरे use cases. Protocol रेपोच्या आतच आहे: हाताने चालवता येणारा server आणि client (~200 ओळी, फक्त stdlib).</p>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-mcp-school/"&gt;Course site →&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-mcp-school/study-plan.html"&gt;3-week plan&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-mcp-school/quiz.html"&gt;Quiz&lt;/a&gt;'><a href="https://baluraut.github.io/learn-mcp-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-mcp-school/study-plan.html">3-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-mcp-school/quiz.html">प्रश्नमंजुषा</a></div>
 </div>
@@ -205,11 +207,11 @@ own weekly plan with checkboxes that survive in your browser.' style="margin-top
 <details style="--c:#0d9488">
 <summary data-en='📋 Module 8 — AI Agents (the capstone) &lt;span class="meta"&gt;8 lessons · 3 weeks · ~5 h&lt;/span&gt;'>📋 मॉड्यूल 8 — AI एजंट्स (कळस) <span class="meta">8 धडे · 3 आठवडे · ~5 तास</span></summary>
 <div class="dbody">
-    Answers vs outcomes, the think→act→observe loop, tools as the agent's hands, memory &amp;
-    compaction, guardrails (step budgets, write gates), failure modes &amp; evals, multi-agent
+<p class="dtext" data-en="Answers vs outcomes, the think→act→observe loop, tools as the agent's hands, memory &amp;amp;
+    compaction, guardrails (step budgets, write gates), failure modes &amp;amp; evals, multi-agent
     patterns, and when NOT to build an agent. Ships a runnable agent you can drive yourself —
-    plus the history-and-future page: what came before agents and what "agentic" means.
-    <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-agents-school/"&gt;Course site →&lt;/a&gt;
+    plus the history-and-future page: what came before agents and what &quot;agentic&quot; means.">उत्तरे विरुद्ध परिणाम, think→act→observe लूप, एजंटचे हात म्हणून tools, memory &amp; compaction, guardrails (step budgets, write gates), अपयशाचे प्रकार &amp; evals, multi-agent नमुने, आणि एजंट कधी बांधू नये. स्वतः चालवता येणारा एजंट सोबत — शिवाय इतिहास-आणि-भविष्य पान: एजंट्सआधी काय होते आणि "agentic" म्हणजे काय.</p>
+<div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-agents-school/"&gt;Course site →&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-agents-school/study-plan.html"&gt;3-week plan&lt;/a&gt;
 &lt;a href="https://baluraut.github.io/learn-agents-school/quiz.html"&gt;Quiz (10 Qs)&lt;/a&gt;'><a href="https://baluraut.github.io/learn-agents-school/">कोर्स साइट →</a> <a href="https://baluraut.github.io/learn-agents-school/study-plan.html">3-आठवड्यांची योजना</a> <a href="https://baluraut.github.io/learn-agents-school/quiz.html">प्रश्नमंजुषा (10 प्रश्न)</a></div>
 </div>
