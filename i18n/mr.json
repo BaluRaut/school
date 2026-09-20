@@ -6563,5 +6563,6 @@
 "ui/index.html: ~80 lines, every element chosen for what it means — style comes next": "ui/index.html: ~80 ओळी, प्रत्येक element त्याच्या अर्थासाठी निवडलेला — शैली नंतर",
 "images max-width:100% · never a fixed width wider than a phone — ui/styles.css, about fifty lines, is the whole layout": "प्रतिमांना max-width:100% · फोनपेक्षा रुंद ठरलेली रुंदी कधीच नको — ui/styles.css, सुमारे पन्नास ओळी, हीच संपूर्ण मांडणी",
 "ui/app.js does it by hand in under a hundred lines — read it once and frameworks stop being magic (lesson 07)": "ui/app.js हे शंभरहून कमी ओळींत हाताने करते — एकदा वाचा आणि frameworks ची जादू संपते (धडा 07)",
-"ui/smoke_test.py is the zero-dependency version: lang, h1, labels, alt, tokens, focus, the API — 10 checks in ~25 lines, in CI (CI/CD school) ·": "ui/smoke_test.py ही शून्य-dependency आवृत्ती: lang, h1, labels, alt, tokens, focus, API — ~25 ओळींत 10 तपासण्या, CI मध्ये (CI/CD शाळा) ·"
+"ui/smoke_test.py is the zero-dependency version: lang, h1, labels, alt, tokens, focus, the API — 10 checks in ~25 lines, in CI (CI/CD school) ·": "ui/smoke_test.py ही शून्य-dependency आवृत्ती: lang, h1, labels, alt, tokens, focus, API — ~25 ओळींत 10 तपासण्या, CI मध्ये (CI/CD शाळा) ·",
+"polling every 5 s is the thing webhooks replace — the receiver in api/webhook_receiver.py is barely a dozen lines": "दर 5 सेकंदांनी polling हेच webhooks बदलतात — api/webhook_receiver.py मधला receiver जेमतेम डझनभर ओळींचा आहे"
 }
