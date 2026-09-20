@@ -40,9 +40,9 @@ html[lang="mr"] svg text{font-family:"Noto Sans Devanagari","Mukta","Devanagari 
 <div class="wrap">
 <p data-en='&lt;a href="index.html"&gt;← Back to the School portal&lt;/a&gt;'><a href="index.html">← द स्कूल पोर्टलकडे परत</a></p>
 <h1 data-en="📖 The Dictionary — every term, its analogy, its lesson">📖 शब्दकोश — प्रत्येक संज्ञा, तिची उपमा, तिचा धडा</h1>
-<p class="sub" data-en='The whole analogy universe on one page: &lt;b&gt;100+ terms&lt;/b&gt; from all ten schools.
+<p class="sub">The whole analogy universe on one page: <b>100+ terms</b> from all twelve schools.
 Type to search a term ("OOMKilled"), an analogy word ("lunchbox"), or a school ("agents").
-Every entry links to the lesson (or diagram) that teaches it.'>संपूर्ण उपमांचे विश्व एकाच पानावर: सर्व दहा शाळांमधील <b>100+ संज्ञा</b>. एखादी संज्ञा ("OOMKilled"), उपमेतील शब्द ("डबा") किंवा शाळा ("agents") शोधण्यासाठी टाइप करा. प्रत्येक नोंद ती शिकवणाऱ्या धड्याशी (किंवा आकृतीशी) जोडलेली आहे.</p>
+Every entry links to the lesson (or diagram) that teaches it.</p>
 <input autofocus="" data-en-ph="🔎 search terms, analogies, schools… (e.g. drift, hall pass, cosine)" id="search" placeholder="🔎 संज्ञा, उपमा, शाळा शोधा… (उदा. drift, हॉल पास, cosine)" type="search"/>
 <div id="count"></div>
 <div id="list"></div>
@@ -58,6 +58,9 @@ var VD="https://baluraut.github.io/learn-vectordb-school/lesson-diagrams.html#";
 var MC="https://baluraut.github.io/learn-mcp-school/lesson-diagrams.html#";
 var AG="https://baluraut.github.io/learn-agents-school/lesson-diagrams.html#";
 var CI="https://baluraut.github.io/learn-cicd-school/lesson-diagrams.html#";
+var DB="https://baluraut.github.io/learn-database-school/lesson-diagrams.html#";
+var AP="https://baluraut.github.io/learn-api-school/lesson-diagrams.html#";
+var UI="https://baluraut.github.io/learn-ui-school/lesson-diagrams.html#";
 // [term, analogy, school, url, color]
 var D=[
 ["Pod","one school desk — replaceable, never repaired","☸️ Kubernetes",K8+"l02","#326ce5"],
@@ -244,6 +247,46 @@ var D=[
 ["Rolling / blue-green / canary","replace the pins one by one · two boards, flip the sign · one class sees it first","📮 CI/CD",CI+"l09","#d97706"],
 ["Push-model CD","the van drives to the cluster and applies — then nobody watches the board (→ ArgoCD)","📮 CI/CD",CI+"l10","#d97706"],
 ["DORA metrics","the scoreboard: deployment frequency · lead time · change failure rate · time to restore","📮 CI/CD",CI+"l12","#4f46e5"],
+["Primary key","the line number in the register that nobody ever reuses","🗄️ Database",DB+"l02","#b45309"],
+["Foreign key","'see register X, line 3' — the database refuses a line that points nowhere","🗄️ Database",DB+"l02","#b45309"],
+["JOIN","cross-referencing registers by their keys — one wide answer","🗄️ Database",DB+"l03","#b45309"],
+["Transaction","the ledger in pencil: all the lines, or none of them","🗄️ Database",DB+"l04","#b45309"],
+["ROLLBACK","the eraser — both pencil marks vanish, the ledger never lies","🗄️ Database",DB+"l04","#b45309"],
+["ACID","atomic · consistent · isolated · durable — the ledger's four promises","🗄️ Database",DB+"l04","#b45309"],
+["Normalisation","one fact, one place — the teacher's phone lives in ONE row","🗄️ Database",DB+"l05","#b45309"],
+["Index (database)","the card catalogue — SCAN becomes SEARCH","🗄️ Database",DB+"l06","#b45309"],
+["EXPLAIN","the archivist tells you the route before walking it","🗄️ Database",DB+"l06","#b45309"],
+["Isolation level","how much of another clerk's pencil you are allowed to see","🗄️ Database",DB+"l07","#b45309"],
+["Deadlock","two clerks each holding the register the other needs — one is sacrificed","🗄️ Database",DB+"l07","#b45309"],
+["Migration","a numbered work order: renovate the room while school is open","🗄️ Database",DB+"l08","#b45309"],
+["Expand/contract","add the new column → write both → backfill → read new → drop the old","🗄️ Database",DB+"l08","#b45309"],
+["RPO / RTO","how much may we lose · how long may the room be shut — agreed before the fire","🗄️ Database",DB+"l09","#b45309"],
+["Read replica","a copy of the room for readers — always a beat behind (lag)","🗄️ Database",DB+"l10","#b45309"],
+["N+1 query","one question for the list, then one per row — replace it with a JOIN","🗄️ Database",DB+"l12","#b45309"],
+["REST","nouns in filing cabinets; the HTTP method is the verb","🏢 API",AP+"l03","#0e7490"],
+["Idempotent","doing it twice leaves the same result as once (PUT, DELETE)","🏢 API",AP+"l03","#0e7490"],
+["Idempotency-Key","the receipt number — the same POST twice files once","🏢 API",AP+"l07","#0e7490"],
+["Status code","the clerk's stamp: 2xx done · 4xx your slip · 5xx our office","🏢 API",AP+"l02","#0e7490"],
+["OpenAPI","the printed catalogue of every form the counter accepts","🏢 API",AP+"l04","#0e7490"],
+["API key","a program's hall pass — machine to machine, kept out of browsers","🏢 API",AP+"l06","#0e7490"],
+["401 vs 403","'who are you?' versus 'I know you, and no'","🏢 API",AP+"l06","#0e7490"],
+["Cursor pagination","'the next 20 after the one I saw' — stable while the list grows","🏢 API",AP+"l08","#0e7490"],
+["429 / Retry-After","the queue at the counter — wait, then retry with backoff and jitter","🏢 API",AP+"l10","#0e7490"],
+["ETag","a fingerprint of the answer — If-None-Match gets a 304, no body","🏢 API",AP+"l10","#0e7490"],
+["Webhook","you leave your phone number; the counter calls YOU back on events","🏢 API",AP+"l11","#0e7490"],
+["API gateway","the school gate in front of every counter: auth, limits, routing, logs","🏢 API",AP+"l12","#0e7490"],
+["DOM","the tree the browser builds from your HTML, and paints","📌 UI",UI+"l01","#db2777"],
+["Semantic HTML","choosing the element that means what you mean — keyboard and roles for free","📌 UI",UI+"l02","#db2777"],
+["Flexbox / grid","a row of things · a page of areas — the two layout systems","📌 UI",UI+"l03","#db2777"],
+["Mobile first","write the phone layout, then add columns with a min-width media query","📌 UI",UI+"l03","#db2777"],
+["UI = render(state)","one source of truth; change state, repaint — never edit the DOM by hand","📌 UI",UI+"l05","#db2777"],
+["Skip link","the first Tab stop — jump past the nav straight to the content","📌 UI",UI+"l06","#db2777"],
+["Live region","aria-live: the board announces what changed without a reload","📌 UI",UI+"l06","#db2777"],
+["Design token","a named decision (--accent, --space-2) — change it once, everything follows","📌 UI",UI+"l08","#db2777"],
+["Core Web Vitals","LCP · INP · CLS — what 'fast' means to a person, measured on a slow phone","📌 UI",UI+"l09","#db2777"],
+["CORS","the counter naming which origins a browser may let call it","📌 UI",UI+"l11","#db2777"],
+["XSS","user text rendered as HTML runs as code — textContent, never innerHTML","📌 UI",UI+"l11","#db2777"],
+["Cache busting","hashed filenames + a long max-age — new build, new name, never stale","📌 UI",UI+"l12","#db2777"],
 ];
 var list=document.getElementById('list'), count=document.getElementById('count'), inp=document.getElementById('search');
 function render(f) {
