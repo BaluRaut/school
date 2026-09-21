@@ -6729,7 +6729,7 @@
 "the method is the verb; cacheable": "method हेच क्रियापद; cache होणारे",
 "whole representation comes back": "संपूर्ण प्रतिरूप परत येते",
 "📞 call-oriented — RPC": "📞 call-केंद्रित — RPC",
-"{method: 'students.list', id: 1}": "",
+"{method: 'students.list', id: 1}": "{method: 'students.list', id: 1}",
 "a VERB by name · JSON-RPC, gRPC,": "नावाने एक क्रियापद · JSON-RPC, gRPC,",
 "SOAP, tRPC — errors are data": "SOAP, tRPC — चुका म्हणजे data",
 "🧩 query-oriented — GraphQL": "🧩 query-केंद्रित — GraphQL",
