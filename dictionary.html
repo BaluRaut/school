@@ -46,9 +46,9 @@ html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sa
 <div class="wrap">
 <p data-en='&lt;a href="index.html"&gt;← Back to the School portal&lt;/a&gt;'><a href="index.html">← द स्कूल पोर्टलकडे परत</a></p>
 <h1 data-en="📖 The Dictionary — every term, its analogy, its lesson">📖 शब्दकोश — प्रत्येक संज्ञा, तिची उपमा, तिचा धडा</h1>
-<p class="sub" data-en='The whole analogy universe on one page: &lt;b&gt;244 terms&lt;/b&gt; from all fourteen schools.
+<p class="sub" data-en='The whole analogy universe on one page: &lt;b&gt;264 terms&lt;/b&gt; from all fifteen schools.
 Type to search a term ("OOMKilled"), an analogy word ("lunchbox"), or a school ("agents").
-Every entry links to the lesson (or diagram) that teaches it.'>संपूर्ण उपमांचे विश्व एकाच पानावर: सर्व चौदा शाळांमधील <b>244 संज्ञा</b>. एखादी संज्ञा ("OOMKilled"), उपमेतील शब्द ("डबा") किंवा शाळा ("agents") शोधण्यासाठी टाइप करा. प्रत्येक नोंद ती शिकवणाऱ्या धड्याशी (किंवा आकृतीशी) जोडलेली आहे.</p>
+Every entry links to the lesson (or diagram) that teaches it.'>संपूर्ण उपमांचे विश्व एकाच पानावर: सर्व पंधरा शाळांमधील <b>264 संज्ञा</b>. एखादी संज्ञा ("OOMKilled"), उपमेतील शब्द ("डबा") किंवा शाळा ("agents") शोधण्यासाठी टाइप करा. प्रत्येक नोंद ती शिकवणाऱ्या धड्याशी (किंवा आकृतीशी) जोडलेली आहे.</p>
 <input autofocus="" data-en-ph="🔎 search terms, analogies, schools… (e.g. drift, hall pass, cosine)" id="search" placeholder="🔎 संज्ञा, उपमा, शाळा शोधा… (उदा. drift, हॉल पास, cosine)" type="search"/>
 <div id="count"></div>
 <div id="list"></div>
@@ -69,6 +69,7 @@ var AP="https://baluraut.github.io/learn-api-school/lesson-diagrams.html#";
 var UI="https://baluraut.github.io/learn-ui-school/lesson-diagrams.html#";
 var NW="https://baluraut.github.io/learn-networking-school/lesson-diagrams.html#";
 var SH="https://baluraut.github.io/learn-shell-school/lesson-diagrams.html#";
+var DS="https://baluraut.github.io/learn-dsa-school/lesson-diagrams.html#";
 // [term, analogy, school, url, color]
 var D=[
 ["Pod","one school desk — replaceable, never repaired","☸️ Kubernetes",K8+"l02","#326ce5"],
@@ -315,6 +316,26 @@ var D=[
 ["trap … EXIT","the fire-drill card: clean up on every way out, including Ctrl-C","🧹 Shell",SH+"l08","#047857"],
 ["SIGTERM vs SIGKILL","\'please stop\' (catchable) versus \'out, now\' — Docker sends TERM, then KILL","🧹 Shell",SH+"l09","#047857"],
 ["cron","the bell: a five-field timetable, a bare environment, and a lock so two bells do not collide","🧹 Shell",SH+"l10","#047857"],
+["Big-O","the shape of the growth when the school doubles: O(1) same, O(log n) +1, O(n) ×2, O(n²) ×4","🧮 DSA",DS+"l01","#a16207"],
+["Array","the row of numbered lockers: locker 17 in one step, insert at the front and everyone shifts","🧮 DSA",DS+"l02","#a16207"],
+["Two pointers / sliding window","two monitors walking inwards · a window of k days that adds one and drops one — O(n), not O(n²)","🧮 DSA",DS+"l02","#a16207"],
+["Linked list","the treasure hunt: each note says where the next one is — O(1) to add a note, O(n) to reach the i-th","🧮 DSA",DS+"l03","#a16207"],
+["Stack (LIFO)","the tray pile: the last tray on is the first off — brackets, undo, the call stack","🧮 DSA",DS+"l04","#a16207"],
+["Queue (FIFO)","the lunch line: first to join is first served — a ring buffer so nobody shuffles","🧮 DSA",DS+"l04","#a16207"],
+["Hash map / dict","pigeonholes by name: hash(name) says which box, so a lookup is O(1) on average","🧮 DSA",DS+"l05","#a16207"],
+["Collision","two names in one pigeonhole: look through the short list; double the boxes at 75% full","🧮 DSA",DS+"l05","#a16207"],
+["Recursion","the head asks the deputy a smaller version of the same question until the base case answers","🧮 DSA",DS+"l06","#a16207"],
+["Call stack","the pile of unanswered questions: ~1000 deep and Python says stop","🧮 DSA",DS+"l06","#a16207"],
+["Merge sort / quick sort","split the class in half and zip two sorted lines · pick a pivot, shorter left, taller right — n log n","🧮 DSA",DS+"l07","#a16207"],
+["Stable sort","equal heights keep their original order in the line — merge, insertion and Timsort yes; quick no","🧮 DSA",DS+"l07","#a16207"],
+["Binary search","the sorted register: open in the middle, throw half away — at most 16 looks for 50,000 names","🧮 DSA",DS+"l08","#a16207"],
+["Binary search tree (BST)","the catalogue drawer: smaller cards left, bigger right; insert sorted keys and it becomes a list in disguise","🧮 DSA",DS+"l09","#a16207"],
+["Heap","the podium: the smallest (or biggest) is always on top; push and pop in O(log n)","🧮 DSA",DS+"l09","#a16207"],
+["Graph","the corridor map: rooms are nodes, corridors are edges, each room names its neighbours","🧮 DSA",DS+"l10","#a16207"],
+["BFS / DFS","flood the corridors level by level with a queue · follow one corridor to its end with a stack","🧮 DSA",DS+"l10","#a16207"],
+["Dijkstra","corridors have lengths: always extend the shortest known walk, kept on a heap","🧮 DSA",DS+"l10","#a16207"],
+["Dynamic programming","answers on the board: write each sub-answer once, read it the next thousand times","🧮 DSA",DS+"l11","#a16207"],
+["Greedy","take the meeting that ends first and never look back — right only when a proof says so","🧮 DSA",DS+"l11","#a16207"],
 ];
 var list=document.getElementById('list'), count=document.getElementById('count'), inp=document.getElementById('search');
 function render(f) {
