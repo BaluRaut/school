@@ -46,9 +46,9 @@ html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sa
 <div class="wrap">
 <p data-en='&lt;a href="index.html"&gt;← Back to the School portal&lt;/a&gt;'><a href="index.html">← द स्कूल पोर्टलकडे परत</a></p>
 <h1 data-en="📖 The Dictionary — every term, its analogy, its lesson">📖 शब्दकोश — प्रत्येक संज्ञा, तिची उपमा, तिचा धडा</h1>
-<p class="sub" data-en='The whole analogy universe on one page: &lt;b&gt;224 terms&lt;/b&gt; from all twelve schools.
+<p class="sub" data-en='The whole analogy universe on one page: &lt;b&gt;244 terms&lt;/b&gt; from all fourteen schools.
 Type to search a term ("OOMKilled"), an analogy word ("lunchbox"), or a school ("agents").
-Every entry links to the lesson (or diagram) that teaches it.'>संपूर्ण उपमांचे विश्व एकाच पानावर: सर्व बारा शाळांमधील <b>224 संज्ञा</b>. एखादी संज्ञा ("OOMKilled"), उपमेतील शब्द ("डबा") किंवा शाळा ("agents") शोधण्यासाठी टाइप करा. प्रत्येक नोंद ती शिकवणाऱ्या धड्याशी (किंवा आकृतीशी) जोडलेली आहे.</p>
+Every entry links to the lesson (or diagram) that teaches it.'>संपूर्ण उपमांचे विश्व एकाच पानावर: सर्व चौदा शाळांमधील <b>244 संज्ञा</b>. एखादी संज्ञा ("OOMKilled"), उपमेतील शब्द ("डबा") किंवा शाळा ("agents") शोधण्यासाठी टाइप करा. प्रत्येक नोंद ती शिकवणाऱ्या धड्याशी (किंवा आकृतीशी) जोडलेली आहे.</p>
 <input autofocus="" data-en-ph="🔎 search terms, analogies, schools… (e.g. drift, hall pass, cosine)" id="search" placeholder="🔎 संज्ञा, उपमा, शाळा शोधा… (उदा. drift, हॉल पास, cosine)" type="search"/>
 <div id="count"></div>
 <div id="list"></div>
@@ -67,6 +67,8 @@ var CI="https://baluraut.github.io/learn-cicd-school/lesson-diagrams.html#";
 var DB="https://baluraut.github.io/learn-database-school/lesson-diagrams.html#";
 var AP="https://baluraut.github.io/learn-api-school/lesson-diagrams.html#";
 var UI="https://baluraut.github.io/learn-ui-school/lesson-diagrams.html#";
+var NW="https://baluraut.github.io/learn-networking-school/lesson-diagrams.html#";
+var SH="https://baluraut.github.io/learn-shell-school/lesson-diagrams.html#";
 // [term, analogy, school, url, color]
 var D=[
 ["Pod","one school desk — replaceable, never repaired","☸️ Kubernetes",K8+"l02","#326ce5"],
@@ -293,6 +295,26 @@ var D=[
 ["CORS","the counter naming which origins a browser may let call it","📌 UI",UI+"l11","#db2777"],
 ["XSS","user text rendered as HTML runs as code — textContent, never innerHTML","📌 UI",UI+"l11","#db2777"],
 ["Cache busting","hashed filenames + a long max-age — new build, new name, never stale","📌 UI",UI+"l12","#db2777"],
+["IP address","the building\'s address on the road — WHICH computer","🕸️ Networking",NW+"l02","#0369a1"],
+["Subnet / CIDR","the wing: /24 = the first 24 bits are the wing, 256 addresses","🕸️ Networking",NW+"l02","#0369a1"],
+["NAT","the gate rewrites every private from-address to the school\'s one public address","🕸️ Networking",NW+"l02","#0369a1"],
+["Port","the room number — WHICH program; 0–1023 are the well-known rooms","🕸️ Networking",NW+"l03","#0369a1"],
+["Socket","one desk: (ip:port ↔ ip:port) names one conversation","🕸️ Networking",NW+"l03","#0369a1"],
+["TCP","registered post: a handshake, receipts, order — a stream with no message boundaries","🕸️ Networking",NW+"l05","#0369a1"],
+["UDP","the loudspeaker: no handshake, no receipt, some shouts are lost","🕸️ Networking",NW+"l05","#0369a1"],
+["DNS","the school directory: a name becomes an address, remembered for one TTL","🕸️ Networking",NW+"l06","#0369a1"],
+["TLS certificate","the server\'s ID card, signed by a CA everyone trusts — then the envelope is sealed","🕸️ Networking",NW+"l08","#0369a1"],
+["Firewall","the gate\'s list of which rooms visitors may knock on — drops silently (timed out)","🕸️ Networking",NW+"l10","#0369a1"],
+["Load balancer","the reception desk in front of many counters — L4 by ip:port, L7 by URL","🕸️ Networking",NW+"l11","#0369a1"],
+["Exit code","the card the caretaker holds up: 0 = done, anything else = no","🧹 Shell",SH+"l01","#047857"],
+["stdout / stderr","the report on the notice board · the complaints in the notebook — they never mix","🧹 Shell",SH+"l03","#047857"],
+["Pipe |","a corridor from one command\'s report to the next one\'s input","🧹 Shell",SH+"l03","#047857"],
+["awk","the office\'s report writer: columns, sums, groups in one line","🧹 Shell",SH+"l04","#047857"],
+["\"$var\" (quoting)","the name tag kept whole — unquoted, it splits on spaces: bug number one","🧹 Shell",SH+"l05","#047857"],
+["set -euo pipefail","strict mode: stop on failure, refuse unset names, notice a failing pipe","🧹 Shell",SH+"l08","#047857"],
+["trap … EXIT","the fire-drill card: clean up on every way out, including Ctrl-C","🧹 Shell",SH+"l08","#047857"],
+["SIGTERM vs SIGKILL","\'please stop\' (catchable) versus \'out, now\' — Docker sends TERM, then KILL","🧹 Shell",SH+"l09","#047857"],
+["cron","the bell: a five-field timetable, a bare environment, and a lock so two bells do not collide","🧹 Shell",SH+"l10","#047857"],
 ];
 var list=document.getElementById('list'), count=document.getElementById('count'), inp=document.getElementById('search');
 function render(f) {
