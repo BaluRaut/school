@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import warnings; from bs4 import MarkupResemblesLocatorWarning; warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 """i18n tool for The School sites.
   extract <dict.json> <html...>   -> collect unique translatable units (en -> "") merging into dict.json
   apply   <dict.json> <html...>   -> rewrite pages: Marathi default, data-en holds English, + lang dropdown
