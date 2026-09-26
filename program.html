@@ -5,9 +5,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title data-en="🎓 The Program — the whole School as one curriculum">🎓 प्रोग्राम — संपूर्ण शाळा एका अभ्यासक्रमात</title>
-<meta content="The School's full program prospectus: 15 courses, 206 lessons, ~132 hours of reading and hands-on labs — DevOps and AI taught with school analogies, numbered diagrams, and runnable code. Free forever, MIT licensed, certificate included." name="description"/>
+<meta content="The School's full program prospectus: 15 courses, 207 lessons, ~132 hours of reading and hands-on labs — DevOps and AI taught with school analogies, numbered diagrams, and runnable code. Free forever, MIT licensed, certificate included." name="description"/>
 <meta content="🎓 The Program — The School's free curriculum" property="og:title"/>
-<meta content="15 courses · 206 lessons · ~132 hours · $0 forever · a printable certificate at the end. DevOps + AI, explained like you're five, proven by code you can run." property="og:description"/>
+<meta content="15 courses · 207 lessons · ~132 hours · $0 forever · a printable certificate at the end. DevOps + AI, explained like you're five, proven by code you can run." property="og:description"/>
 <meta content="https://baluraut.github.io/learn-kubernetes-school/images/big-picture-4k.png" property="og:image"/>
 <meta content="website" property="og:type"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -49,19 +49,7 @@ footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; co
 @media print { .btn, .hero-cta { display:none; } details { break-inside:avoid; } }
 .dtext{margin:0 0 8px}
 </style>
-
-<style id="i18n-css">
-#lang-pick{position:fixed;top:10px;right:10px;z-index:9999;font:600 .85rem -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--card,#fff);color:var(--ink,#0f172a);border:1px solid var(--line,#e2e8f0);border-radius:999px;padding:6px 12px;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer}
-html[lang="mr"] body{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-html[lang="mr"] svg text{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",sans-serif}
-.i18n-en{display:block;font-size:.86em;line-height:1.35;color:var(--muted,#64748b);font-weight:400;margin-top:2px;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-.i18n-en.i{display:inline;margin:0 0 0 .3em;font-size:.92em;opacity:.85}
-.i18n-en.i::before{content:"· "}
-h1 .i18n-en,h2 .i18n-en{font-size:.58em;margin-top:4px} h3 .i18n-en{font-size:.78em}
-.lab .i18n-en,.wk .i18n-en{color:inherit;opacity:.85}
-html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-@media print{#lang-pick{display:none}}
-</style><style id="navfab-css">
+<style id="navfab-css">
 #navfab{position:fixed;right:18px;bottom:18px;z-index:9000;display:flex;flex-direction:column;align-items:flex-end;gap:10px;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
 #navfab button.fb{border:0;cursor:pointer;border-radius:999px;box-shadow:0 6px 18px rgba(15,23,42,.28);display:flex;align-items:center;gap:8px;font-weight:700}
 #navfab .fb-main{background:var(--accent,#2563eb);color:#fff;height:52px;padding:0 18px 0 16px;font-size:1rem}
@@ -85,7 +73,19 @@ html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sa
  #navpanel{left:0;right:0;bottom:0;width:auto;max-height:78vh;border-radius:18px 18px 0 0}}
 @media print{#navfab,#navpanel{display:none!important}}
 </style>
-</head>
+
+<style id="i18n-css">
+#lang-pick{position:fixed;top:10px;right:10px;z-index:9999;font:600 .85rem -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--card,#fff);color:var(--ink,#0f172a);border:1px solid var(--line,#e2e8f0);border-radius:999px;padding:6px 12px;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer}
+html[lang="mr"] body{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+html[lang="mr"] svg text{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",sans-serif}
+.i18n-en{display:block;font-size:.86em;line-height:1.35;color:var(--muted,#64748b);font-weight:400;margin-top:2px;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+.i18n-en.i{display:inline;margin:0 0 0 .3em;font-size:.92em;opacity:.85}
+.i18n-en.i::before{content:"· "}
+h1 .i18n-en,h2 .i18n-en{font-size:.58em;margin-top:4px} h3 .i18n-en{font-size:.78em}
+.lab .i18n-en,.wk .i18n-en{color:inherit;opacity:.85}
+html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+@media print{#lang-pick{display:none}}
+</style></head>
 <body><select aria-label="Language / भाषा" id="lang-pick" onchange="schoolSetLang(this.value)">
 <option value="both">🇮🇳🇬🇧 मराठी + English</option><option value="mr">🇮🇳 मराठी</option><option value="en">🇬🇧 English</option></select>
 <div class="wrap">
@@ -96,7 +96,7 @@ learn, in what order, how long it takes, and what you can do afterwards. The dif
 paid bootcamp: &lt;b&gt;every number below is real, and the fee is zero — forever.&lt;/b&gt;">पंधरा शाळा जे शिकवतात ते सगळे, कोर्सच्या माहितीपत्रकासारखे मांडलेले: तुम्ही काय शिकाल, कोणत्या क्रमाने, किती वेळ लागेल, आणि नंतर तुम्ही काय करू शकाल. सशुल्क bootcamp पेक्षा फरक: <b>खालचा प्रत्येक आकडा खरा आहे, आणि फी शून्य — कायमची.</b></p>
 <div class="stats">
 <div class="stat" data-en="&lt;b&gt;15&lt;/b&gt;&lt;span&gt;courses&lt;/span&gt;"><b>15</b><span>कोर्स</span></div>
-<div class="stat" data-en="&lt;b&gt;206&lt;/b&gt;&lt;span&gt;lessons&lt;/span&gt;"><b>206</b><span>धडे</span></div>
+<div class="stat" data-en="&lt;b&gt;207&lt;/b&gt;&lt;span&gt;lessons&lt;/span&gt;"><b>207</b><span>धडे</span></div>
 <div class="stat" data-en="&lt;b&gt;~132 h&lt;/b&gt;&lt;span&gt;reading + labs&lt;/span&gt;"><b>~132 तास</b><span>वाचन + लॅब</span></div>
 <div class="stat" data-en="&lt;b&gt;190+&lt;/b&gt;&lt;span&gt;diagrams&lt;/span&gt;"><b>190+</b><span>आकृत्या</span></div>
 <div class="stat" data-en="&lt;b&gt;10&lt;/b&gt;&lt;span&gt;runnable codebases&lt;/span&gt;"><b>10</b><span>चालवता येणारे कोडबेस</span></div>
@@ -147,7 +147,7 @@ paid bootcamp: &lt;b&gt;every number below is real, and the fee is zero — fore
 <ul>
 <li data-en="&lt;b&gt;DSA&lt;/b&gt; (4 weeks) — the library: every container and every walk, with its cost measured"><b>DSA</b> (4 आठवडे) — ग्रंथालय: प्रत्येक container आणि प्रत्येक चाल, खर्चासह मोजलेली</li>
 <li data-en="&lt;b&gt;Databases&lt;/b&gt; (6 weeks) — the record room: where the truth lives"><b>डेटाबेस</b> (6 आठवडे) — रेकॉर्ड रूम: सत्य जिथे राहते</li>
-<li data-en="&lt;b&gt;APIs&lt;/b&gt; (5 weeks) — the front office: how programs ask for it, and the full maps"><b>API</b> (5 आठवडे) — फ्रंट ऑफिस: प्रोग्राम ते कसे मागतात, आणि संपूर्ण नकाशे</li>
+<li data-en="&lt;b&gt;APIs&lt;/b&gt; (6 weeks) — the front office: how programs ask for it, and the full maps"><b>API</b> (6 आठवडे) — फ्रंट ऑफिस: प्रोग्राम ते कसे मागतात, आणि संपूर्ण नकाशे</li>
 <li data-en="&lt;b&gt;UI&lt;/b&gt; (4 weeks) — the notice board: what people finally see"><b>UI</b> (4 आठवडे) — सूचना फलक: लोक शेवटी काय पाहतात</li>
 </ul></div>
 </div>
@@ -276,14 +276,14 @@ own weekly plan with checkboxes that survive in your browser.' style="margin-top
 </div>
 </details>
 <details style="--c:#0e7490">
-<summary data-en='🏢 Module 11 — APIs: the front office &lt;span class="meta"&gt;16 lessons · 5 weeks · ~10 h&lt;/span&gt;'>🏢 मॉड्यूल 11 — API: फ्रंट ऑफिस <span class="meta">16 धडे · 5 आठवडे · ~10 तास</span></summary>
+<summary data-en='🏢 Module 11 — APIs: the front office &lt;span class="meta"&gt;17 lessons · 6 weeks · ~10.75 h&lt;/span&gt;'>🏢 मॉड्यूल 11 — API: फ्रंट ऑफिस <span class="meta">17 धडे · 6 आठवडे · ~10.75 तास</span></summary>
 <div class="dbody">
-<p class="dtext" data-en="Why a counter beats wandering into the archive, HTTP anatomy and status codes, REST resources and the verbs that are safe to repeat, JSON schemas and the OpenAPI catalogue, building the counter in four parts, auth (API keys, bearer tokens, OAuth, 401 vs 403), one error shape and idempotency keys, filter → sort → cursor pagination, additive versus breaking versions with deprecation and sunset, rate limits, ETags and the polite client, GraphQL and gRPC and webhooks, and contract tests, generated docs and the API gateway. Ships a real zero-dependency HTTP/JSON API with an OpenAPI file, a polite client and a curl smoke test. Part 3, the full maps (lessons 13–16): every REST method, every authentication method with every OAuth grant type, twenty API types from REST and gRPC to MQTT and batch files, and the nine kinds of API testing — each drawn one per row, with a second server that answers the same data as REST, JSON-RPC, GraphQL, long polling, SSE and a real WebSocket, and a third that guards the same grades seven ways.">दप्तरखान्यात भटकण्यापेक्षा काउंटर का बरा, HTTP ची रचना आणि status codes, REST resources आणि पुन्हा करायला सुरक्षित क्रियापदे, JSON schemas आणि OpenAPI कॅटलॉग, चार भागांत काउंटर बांधणे, auth (API keys, bearer tokens, OAuth, 401 विरुद्ध 403), एकच error shape आणि idempotency keys, गाळा → क्रम लावा → cursor pagination, additive विरुद्ध breaking आवृत्त्या deprecation आणि sunset सह, rate limits, ETags आणि सभ्य client, GraphQL आणि gRPC आणि webhooks, आणि contract tests, तयार docs व API gateway. OpenAPI फाइल, सभ्य client आणि curl smoke test सह खरे शून्य-dependency HTTP/JSON API सोबत. भाग 3, संपूर्ण नकाशे (धडे 13–16): प्रत्येक REST method, प्रत्येक OAuth grant type सह प्रत्येक authentication पद्धत, REST आणि gRPC पासून MQTT आणि batch फाइल्सपर्यंत वीस API प्रकार, आणि API testing चे नऊ प्रकार — प्रत्येक एका ओळीत काढलेला, तोच data REST, JSON-RPC, GraphQL, long polling, SSE व खऱ्या WebSocket म्हणून देणारा दुसरा server, आणि त्याच grades चे सात प्रकारे रक्षण करणारा तिसरा server सोबत.</p>
+<p class="dtext" data-en="Why a counter beats wandering into the archive, HTTP anatomy and status codes, REST resources and the verbs that are safe to repeat, JSON schemas and the OpenAPI catalogue, building the counter in four parts, auth (API keys, bearer tokens, OAuth, 401 vs 403), one error shape and idempotency keys, filter → sort → cursor pagination, additive versus breaking versions with deprecation and sunset, rate limits, ETags and the polite client, GraphQL and gRPC and webhooks, and contract tests, generated docs and the API gateway. Ships a real zero-dependency HTTP/JSON API with an OpenAPI file, a polite client and a curl smoke test. Part 3, the full maps (lessons 13–16): every REST method, every authentication method with every OAuth grant type, twenty API types from REST and gRPC to MQTT and batch files, and the nine kinds of API testing — each drawn one per row, with a second server that answers the same data as REST, JSON-RPC, GraphQL, long polling, SSE and a real WebSocket, and a third that guards the same grades seven ways. Part 4 measures it like production: latency percentiles p25–p99 per route, and how Prometheus, Datadog and CloudWatch watch an API.">दप्तरखान्यात भटकण्यापेक्षा काउंटर का बरा, HTTP ची रचना आणि status codes, REST resources आणि पुन्हा करायला सुरक्षित क्रियापदे, JSON schemas आणि OpenAPI कॅटलॉग, चार भागांत काउंटर बांधणे, auth (API keys, bearer tokens, OAuth, 401 विरुद्ध 403), एकच error shape आणि idempotency keys, गाळा → क्रम लावा → cursor pagination, additive विरुद्ध breaking आवृत्त्या deprecation आणि sunset सह, rate limits, ETags आणि सभ्य client, GraphQL आणि gRPC आणि webhooks, आणि contract tests, तयार docs व API gateway. OpenAPI फाइल, सभ्य client आणि curl smoke test सह खरे शून्य-dependency HTTP/JSON API सोबत. भाग 4 ते production सारखे मोजतो: प्रत्येक route चे latency percentiles p25–p99, आणि Prometheus, Datadog व CloudWatch API वर कसे लक्ष ठेवतात.</p>
 <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-api-school/"&gt;Course site →&lt;/a&gt;
-&lt;a href="https://baluraut.github.io/learn-api-school/study-plan.html"&gt;5-week plan&lt;/a&gt;
-&lt;a href="https://baluraut.github.io/learn-api-school/quiz.html"&gt;Quiz (20 Qs)&lt;/a&gt;'><a href="https://baluraut.github.io/learn-api-school/">कोर्स साइट →</a>
-<a href="https://baluraut.github.io/learn-api-school/study-plan.html">5-आठवड्यांची योजना</a>
-<a href="https://baluraut.github.io/learn-api-school/quiz.html">प्रश्नमंजुषा (20 प्रश्न)</a></div>
+&lt;a href="https://baluraut.github.io/learn-api-school/study-plan.html"&gt;6-week plan&lt;/a&gt;
+&lt;a href="https://baluraut.github.io/learn-api-school/quiz.html"&gt;Quiz (23 Qs)&lt;/a&gt;'><a href="https://baluraut.github.io/learn-api-school/">कोर्स साइट →</a>
+<a href="https://baluraut.github.io/learn-api-school/study-plan.html">6-आठवड्यांची योजना</a>
+<a href="https://baluraut.github.io/learn-api-school/quiz.html">प्रश्नमंजुषा (23 प्रश्न)</a></div>
 </div>
 </details>
 <details style="--c:#db2777">
@@ -384,7 +384,7 @@ we make no placement promises (nobody honestly can).">खालील कौश�
 <p data-en="Finish all fifteen schools on the &lt;a href=&quot;index.html&quot;&gt;grand path&lt;/a&gt; and the portal unlocks a
   printable certificate with your name and completion date. It certifies something rarer than
   attendance: &lt;b&gt;zero magic left&lt;/b&gt; — every claim on it is backed by a diagram you can redraw
-  and code you can run. It's self-issued and free, like everything here; the real credential is the 206 lessons in your git history.">सर्व पंधरा शाळा <a href="index.html">मोठ्या मार्गावर</a> पूर्ण करा आणि पोर्टल तुमच्या नावासह व पूर्ण झाल्याच्या तारखेसह छापता येणारे प्रमाणपत्र उघडते. स्व-जारी आणि इथल्या सगळ्यासारखे मोफत; खरे प्रमाणपत्र म्हणजे तुमच्या git इतिहासातले 206 धडे.</p>
+  and code you can run. It's self-issued and free, like everything here; the real credential is the 207 lessons in your git history.">सर्व पंधरा शाळा <a href="index.html">मोठ्या मार्गावर</a> पूर्ण करा आणि पोर्टल तुमच्या नावासह व पूर्ण झाल्याच्या तारखेसह छापता येणारे प्रमाणपत्र उघडते. स्व-जारी आणि इथल्या सगळ्यासारखे मोफत; खरे प्रमाणपत्र म्हणजे तुमच्या git इतिहासातले 207 धडे.</p>
 </div>
 <h2>❓ FAQ</h2>
 <div class="faq">
@@ -418,44 +418,7 @@ inspectable, every line of code runnable, and a git history that can't lie about
   &lt;a href="https://github.com/BaluRaut/school/issues"&gt;🐛 found a mistake?&lt;/a&gt;
 '>🏫 <a href="index.html">द स्कूल</a> · 📖 <a href="dictionary.html">शब्दकोश</a> · <a href="https://github.com/BaluRaut">BaluRaut</a> यांचे · MIT परवाना · <a href="https://github.com/BaluRaut/school/issues">🐛 चूक सापडली?</a></footer>
 </div>
-
-<script id="i18n-js">
-var I18N_INLINE={A:1,SPAN:1,CODE:1,B:1,I:1,EM:1,STRONG:1,BUTTON:1,LABEL:1,SUMMARY:1,SMALL:1,KBD:1};
-function schoolSetLang(l){
-  if(l!=='en'&&l!=='mr'&&l!=='both') l='both';
-  try{localStorage.setItem('school-lang2',l)}catch(e){}
-  document.documentElement.setAttribute('lang', l==='en' ? 'en' : 'mr');
-  document.querySelectorAll('[data-en]').forEach(function(el){
-    if(!el.hasAttribute('data-mr')) el.setAttribute('data-mr', el.innerHTML);
-    var en=el.getAttribute('data-en'), mr=el.getAttribute('data-mr');
-    var svg = el.namespaceURI && el.namespaceURI.indexOf('svg')>-1;
-    if(svg){
-      el.innerHTML = (l==='en') ? en : mr;
-      var t=el.querySelector('title'); if(t) t.remove();
-      if(l==='both'){ t=document.createElementNS('http://www.w3.org/2000/svg','title'); t.textContent=en.replace(/<[^>]+>/g,''); el.insertBefore(t, el.firstChild); }
-      return;
-    }
-    if(l==='en') el.innerHTML = en;
-    else if(l==='mr') el.innerHTML = mr;
-    else if(en.replace(/\s+/g,' ').trim()===mr.replace(/\s+/g,' ').trim()) el.innerHTML = mr;
-    else {
-      var e2=en.replace(/<span class="(ln|num|wk)">[\s\S]*?<\/span>\s*/g,'');
-      if(e2.charAt(0)!=='<' && mr.charAt(0)!=='<'){           /* drop the prefix both languages share, e.g. "01 · 🏢 " */
-        var i=0; while(i<e2.length&&i<mr.length&&e2.charAt(i)===mr.charAt(i)) i++;
-        var cut=e2.lastIndexOf(' ',i); if(cut>0 && cut<e2.length-1) e2=e2.slice(cut+1);
-      }
-      el.innerHTML = mr + '<span class="i18n-en'+(I18N_INLINE[el.tagName]?' i':'')+'">'+e2+'</span>';
-    }
-  });
-  document.querySelectorAll('[data-en-ph]').forEach(function(el){
-    if(!el.hasAttribute('data-mr-ph')) el.setAttribute('data-mr-ph', el.getAttribute('placeholder'));
-    el.setAttribute('placeholder', (l==='en') ? el.getAttribute('data-en-ph') : (l==='mr' ? el.getAttribute('data-mr-ph') : el.getAttribute('data-mr-ph')+' / '+el.getAttribute('data-en-ph')));
-  });
-  var p=document.getElementById('lang-pick'); if(p) p.value=l;
-}
-(function(){ var l='both'; try{ l=localStorage.getItem('school-lang2')||'both'; }catch(e){}
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){schoolSetLang(l)}); else schoolSetLang(l); })();
-</script><div id="navfab-js"><script>
+<div id="navfab-js"><script>
 (function(){
 const PAGES=[["index.html", "🏫 All schools", "🏫 सर्व शाळा"], ["program.html", "🎓 The program", "🎓 कार्यक्रम"], ["dictionary.html", "📖 Dictionary", "📖 शब्दकोश"]], PORTAL="", HERE=location.pathname.split('/').pop()||'index.html';
 const mr=()=> (document.documentElement.lang||'').startsWith('mr');
@@ -505,5 +468,42 @@ if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.f
  items().forEach(i=>{const t=document.getElementById(i.id);if(t)io.observe(t)})}
 })();
 </script></div><!--/navfab-js-->
-</body>
+
+<script id="i18n-js">
+var I18N_INLINE={A:1,SPAN:1,CODE:1,B:1,I:1,EM:1,STRONG:1,BUTTON:1,LABEL:1,SUMMARY:1,SMALL:1,KBD:1};
+function schoolSetLang(l){
+  if(l!=='en'&&l!=='mr'&&l!=='both') l='both';
+  try{localStorage.setItem('school-lang2',l)}catch(e){}
+  document.documentElement.setAttribute('lang', l==='en' ? 'en' : 'mr');
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if(!el.hasAttribute('data-mr')) el.setAttribute('data-mr', el.innerHTML);
+    var en=el.getAttribute('data-en'), mr=el.getAttribute('data-mr');
+    var svg = el.namespaceURI && el.namespaceURI.indexOf('svg')>-1;
+    if(svg){
+      el.innerHTML = (l==='en') ? en : mr;
+      var t=el.querySelector('title'); if(t) t.remove();
+      if(l==='both'){ t=document.createElementNS('http://www.w3.org/2000/svg','title'); t.textContent=en.replace(/<[^>]+>/g,''); el.insertBefore(t, el.firstChild); }
+      return;
+    }
+    if(l==='en') el.innerHTML = en;
+    else if(l==='mr') el.innerHTML = mr;
+    else if(en.replace(/\s+/g,' ').trim()===mr.replace(/\s+/g,' ').trim()) el.innerHTML = mr;
+    else {
+      var e2=en.replace(/<span class="(ln|num|wk)">[\s\S]*?<\/span>\s*/g,'');
+      if(e2.charAt(0)!=='<' && mr.charAt(0)!=='<'){           /* drop the prefix both languages share, e.g. "01 · 🏢 " */
+        var i=0; while(i<e2.length&&i<mr.length&&e2.charAt(i)===mr.charAt(i)) i++;
+        var cut=e2.lastIndexOf(' ',i); if(cut>0 && cut<e2.length-1) e2=e2.slice(cut+1);
+      }
+      el.innerHTML = mr + '<span class="i18n-en'+(I18N_INLINE[el.tagName]?' i':'')+'">'+e2+'</span>';
+    }
+  });
+  document.querySelectorAll('[data-en-ph]').forEach(function(el){
+    if(!el.hasAttribute('data-mr-ph')) el.setAttribute('data-mr-ph', el.getAttribute('placeholder'));
+    el.setAttribute('placeholder', (l==='en') ? el.getAttribute('data-en-ph') : (l==='mr' ? el.getAttribute('data-mr-ph') : el.getAttribute('data-mr-ph')+' / '+el.getAttribute('data-en-ph')));
+  });
+  var p=document.getElementById('lang-pick'); if(p) p.value=l;
+}
+(function(){ var l='both'; try{ l=localStorage.getItem('school-lang2')||'both'; }catch(e){}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){schoolSetLang(l)}); else schoolSetLang(l); })();
+</script></body>
 </html>

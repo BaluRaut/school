@@ -49,19 +49,7 @@
   #ptext { font-weight:700; white-space:nowrap; }
   footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:.88rem; }
 </style>
-
-<style id="i18n-css">
-#lang-pick{position:fixed;top:10px;right:10px;z-index:9999;font:600 .85rem -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--card,#fff);color:var(--ink,#0f172a);border:1px solid var(--line,#e2e8f0);border-radius:999px;padding:6px 12px;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer}
-html[lang="mr"] body{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-html[lang="mr"] svg text{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",sans-serif}
-.i18n-en{display:block;font-size:.86em;line-height:1.35;color:var(--muted,#64748b);font-weight:400;margin-top:2px;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-.i18n-en.i{display:inline;margin:0 0 0 .3em;font-size:.92em;opacity:.85}
-.i18n-en.i::before{content:"· "}
-h1 .i18n-en,h2 .i18n-en{font-size:.58em;margin-top:4px} h3 .i18n-en{font-size:.78em}
-.lab .i18n-en,.wk .i18n-en{color:inherit;opacity:.85}
-html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-@media print{#lang-pick{display:none}}
-</style><style id="navfab-css">
+<style id="navfab-css">
 #navfab{position:fixed;right:18px;bottom:18px;z-index:9000;display:flex;flex-direction:column;align-items:flex-end;gap:10px;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
 #navfab button.fb{border:0;cursor:pointer;border-radius:999px;box-shadow:0 6px 18px rgba(15,23,42,.28);display:flex;align-items:center;gap:8px;font-weight:700}
 #navfab .fb-main{background:var(--accent,#2563eb);color:#fff;height:52px;padding:0 18px 0 16px;font-size:1rem}
@@ -85,7 +73,19 @@ html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sa
  #navpanel{left:0;right:0;bottom:0;width:auto;max-height:78vh;border-radius:18px 18px 0 0}}
 @media print{#navfab,#navpanel{display:none!important}}
 </style>
-</head>
+
+<style id="i18n-css">
+#lang-pick{position:fixed;top:10px;right:10px;z-index:9999;font:600 .85rem -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--card,#fff);color:var(--ink,#0f172a);border:1px solid var(--line,#e2e8f0);border-radius:999px;padding:6px 12px;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer}
+html[lang="mr"] body{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+html[lang="mr"] svg text{font-family:"Noto Sans Devanagari","Mukta","Devanagari Sangam MN","Nirmala UI",sans-serif}
+.i18n-en{display:block;font-size:.86em;line-height:1.35;color:var(--muted,#64748b);font-weight:400;margin-top:2px;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+.i18n-en.i{display:inline;margin:0 0 0 .3em;font-size:.92em;opacity:.85}
+.i18n-en.i::before{content:"· "}
+h1 .i18n-en,h2 .i18n-en{font-size:.58em;margin-top:4px} h3 .i18n-en{font-size:.78em}
+.lab .i18n-en,.wk .i18n-en{color:inherit;opacity:.85}
+html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+@media print{#lang-pick{display:none}}
+</style></head>
 <body><select aria-label="Language / भाषा" id="lang-pick" onchange="schoolSetLang(this.value)">
 <option value="both">🇮🇳🇬🇧 मराठी + English</option><option value="mr">🇮🇳 मराठी</option><option value="en">🇬🇧 English</option></select>
 <div class="wrap">
@@ -97,7 +97,7 @@ html[lang="mr"] .i18n-en{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sa
   (a language model, an MCP server &amp;amp; client, an agent, a vector database).">दहा कोर्स, एकच पद्धत: प्रत्येक संकल्पना एक <b>शाळेच्या उपमेची गोष्ट</b>, प्रत्येक धडा स्वतःच्या <b>git ब्रँचवर</b> क्रमांकित <b>बॉक्स-आणि-बाण आकृतीसह</b>, प्रत्येक दावा तुम्ही स्वतः <b>चालवू</b> शकाल अशा गोष्टीने सिद्ध — यात खरा, शून्य-अवलंबित्व कोड असलेले चार रेपो आहेत (एक भाषा मॉडेल, MCP सर्व्हर &amp; क्लायंट, एक एजंट, एक व्हेक्टर डेटाबेस).</p>
 <div class="stats">
 <div class="stat" data-en="&lt;b&gt;15&lt;/b&gt;&lt;span&gt;courses&lt;/span&gt;"><b>15</b><span>कोर्स</span></div>
-<div class="stat" data-en="&lt;b&gt;206&lt;/b&gt;&lt;span&gt;lesson branches&lt;/span&gt;"><b>206</b><span>धड्यांच्या ब्रँच</span></div>
+<div class="stat" data-en="&lt;b&gt;207&lt;/b&gt;&lt;span&gt;lesson branches&lt;/span&gt;"><b>207</b><span>धड्यांच्या ब्रँच</span></div>
 <div class="stat" data-en="&lt;b&gt;190+&lt;/b&gt;&lt;span&gt;numbered diagrams&lt;/span&gt;"><b>190+</b><span>क्रमांकित आकृत्या</span></div>
 <div class="stat" data-en="&lt;b&gt;10&lt;/b&gt;&lt;span&gt;runnable codebases&lt;/span&gt;"><b>10</b><span>चालवता येणारे कोडबेस</span></div>
 <div class="stat" data-en="&lt;b&gt;264&lt;/b&gt;&lt;span&gt;dictionary terms&lt;/span&gt;"><b>264</b><span>शब्दकोशातील संज्ञा</span></div>
@@ -181,7 +181,7 @@ transfers between courses. Pick a track, or interleave.">सगळीकडे �
 <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-database-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-database-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-database-school/study-plan.html"&gt;Study plan&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-database-school/before-and-tradeoffs.html"&gt;Trade-offs&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-database-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-database-school/">साइट</a><a href="https://baluraut.github.io/learn-database-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-database-school/study-plan.html">अभ्यास योजना</a><a href="https://baluraut.github.io/learn-database-school/before-and-tradeoffs.html">फायदे-तोटे</a><a href="https://github.com/BaluRaut/learn-database-school">रेपो</a></div></div>
 <div class="school" style="--c:#0e7490"><h3 data-en="🏢 APIs — the front office">🏢 API — फ्रंट ऑफिस</h3>
 <div class="sig" data-en="How programs talk: the slip and the stamp (HTTP), nouns in cabinets (REST), the standard form and its catalogue (JSON, OpenAPI), hall passes (keys, tokens, OAuth), polite refusals and receipt numbers (idempotency), cursors, versioning, the queue and the cached copy, webhooks and gRPC, contract tests and the gateway.">प्रोग्राम कसे बोलतात: चिठ्ठी आणि शिक्का (HTTP), कपाटांतली नामे (REST), प्रमाणित फॉर्म आणि त्याचा कॅटलॉग (JSON, OpenAPI), हॉल पास (keys, tokens, OAuth), नम्र नकार आणि पावती क्रमांक (idempotency), cursors, versioning, रांग आणि cache केलेली प्रत, webhooks आणि gRPC, contract tests आणि gateway.</div>
-<div class="meta" data-en="16 lessons · 3 parts · runnable zero-dependency API · the full maps: every REST method, auth method, API type and test · big-picture 4K · trade-offs">16 धडे · 3 भाग · चालवता येणारे शून्य-dependency API · संपूर्ण नकाशे: प्रत्येक REST method, auth पद्धत, API प्रकार आणि चाचणी · संपूर्ण चित्र 4K · फायदे-तोटे</div>
+<div class="meta" data-en="17 lessons · 4 parts · runnable zero-dependency API · the full maps: every REST method, auth method, API type and test · big-picture 4K · trade-offs · p95 latency + Prometheus, Datadog, CloudWatch">17 धडे · 4 भाग · चालवता येणारे शून्य-dependency API · संपूर्ण नकाशे: प्रत्येक REST method, auth पद्धत, API प्रकार आणि चाचणी · संपूर्ण चित्र 4K · फायदे-तोटे · p95 latency + Prometheus, Datadog, CloudWatch</div>
 <div class="links" data-en='&lt;a href="https://baluraut.github.io/learn-api-school/"&gt;Site&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-api-school/lesson-diagrams.html"&gt;Diagrams&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-api-school/study-plan.html"&gt;Study plan&lt;/a&gt;&lt;a href="https://baluraut.github.io/learn-api-school/before-and-tradeoffs.html"&gt;Trade-offs&lt;/a&gt;&lt;a href="https://github.com/BaluRaut/learn-api-school"&gt;Repo&lt;/a&gt;'><a href="https://baluraut.github.io/learn-api-school/">साइट</a><a href="https://baluraut.github.io/learn-api-school/lesson-diagrams.html">आकृत्या</a><a href="https://baluraut.github.io/learn-api-school/study-plan.html">अभ्यास योजना</a><a href="https://baluraut.github.io/learn-api-school/before-and-tradeoffs.html">फायदे-तोटे</a><a href="https://github.com/BaluRaut/learn-api-school">रेपो</a></div></div>
 <div class="school" style="--c:#db2777"><h3 data-en="📌 UI — the notice board">📌 UI — सूचना फलक</h3>
 <div class="sig" data-en="What people actually see: semantic HTML, layout that bends to a phone, events and fetch, one source of truth (UI = render(state)), accessibility for keyboard and screen readers, what frameworks automate, design tokens and dark mode, performance and Core Web Vitals, testing, talking to backends safely, and pinning it up.">लोक प्रत्यक्षात काय पाहतात: semantic HTML, फोनला वाकणारी मांडणी, events आणि fetch, सत्याचा एकच स्रोत (UI = render(state)), keyboard आणि screen readers साठी सुलभता, frameworks काय automate करतात, design tokens आणि dark mode, कामगिरी आणि Core Web Vitals, चाचणी, backends शी सुरक्षित संवाद, आणि तो भिंतीवर लावणे.</div>
@@ -216,8 +216,8 @@ transfers between courses. Pick a track, or interleave.">सगळीकडे �
 <tr><td>🗺️ VectorDB</td><td>8</td><td data-en="✅ mini vector DB">✅ मिनी व्हेक्टर DB</td><td>✅ 8</td><td>✅</td><td data-en="≈ landscape">≈ लँडस्केप</td><td data-en="✅ 3 weeks">✅ 3 आठवडे</td><td data-en="✅ 8 Qs">✅ 8 प्रश्न</td><td data-en="✅ landscape">✅ लँडस्केप</td></tr>
 <tr><td>🔌 MCP</td><td>8</td><td data-en="✅ server + client">✅ सर्व्हर + क्लायंट</td><td>✅ 8</td><td>✅</td><td data-en="→ in AI school">→ AI शाळेत</td><td data-en="✅ 3 weeks">✅ 3 आठवडे</td><td data-en="✅ 14 Qs">✅ 14 प्रश्न</td><td data-en="✅ 5 use cases">✅ 5 वापर-प्रकरणे</td></tr>
 <tr><td data-en="📋 Agents">📋 एजंट्स</td><td>8</td><td data-en="✅ runnable agent">✅ चालवता येणारा एजंट</td><td>✅ 8</td><td>✅</td><td data-en="≈ history page">≈ इतिहास पान</td><td data-en="✅ 3 weeks">✅ 3 आठवडे</td><td data-en="✅ 10 Qs">✅ 10 प्रश्न</td><td data-en="✅ patterns + history">✅ पॅटर्न + इतिहास</td></tr>
-<tr><td data-en="🗄️ Database">🗄️ डेटाबेस</td><td>12</td><td data-en="✅ SQLite lab + migrations">✅ SQLite लॅब + migrations</td><td>✅ 12</td><td>✅</td><td>✅</td><td data-en="✅ 4 weeks">✅ 4 आठवडे</td><td data-en="✅ 15 Qs">✅ 15 प्रश्न</td><td>—</td></tr>
-<tr><td>🏢 API</td><td>16</td><td data-en="✅ zero-dep API + 6 shapes + 7 auth schemes">✅ शून्य-dependency API + 6 आकार + 7 auth पद्धती</td><td>✅ 16</td><td>✅</td><td>✅</td><td data-en="✅ 5 weeks">✅ 5 आठवडे</td><td data-en="✅ 20 Qs">✅ 20 प्रश्न</td><td data-en="✅ Part 3: the full maps">✅ भाग 3: संपूर्ण नकाशे</td></tr>
+<tr><td data-en="🗄️ Database">🗄️ डेटाबेस</td><td>18</td><td data-en="✅ SQLite lab + migrations + Postgres procedures">✅ SQLite लॅब + migrations + Postgres procedures</td><td>✅ 18</td><td>✅</td><td>✅</td><td data-en="✅ 6 weeks">✅ 6 आठवडे</td><td data-en="✅ 24 Qs">✅ 24 प्रश्न</td><td data-en="✅ Part 3: going deeper">✅ भाग 3: आणखी खोलवर</td></tr>
+<tr><td>🏢 API</td><td>17</td><td data-en="✅ zero-dep API + 6 shapes + 7 auth schemes + perf.py">✅ शून्य-dependency API + 6 आकार + 7 auth पद्धती + perf.py</td><td>✅ 17</td><td>✅</td><td>✅</td><td data-en="✅ 6 weeks">✅ 6 आठवडे</td><td data-en="✅ 23 Qs">✅ 23 प्रश्न</td><td data-en="✅ Part 3 maps · Part 4 performance">✅ भाग 3: संपूर्ण नकाशे · भाग 4: performance</td></tr>
 <tr><td>📌 UI</td><td>12</td><td data-en="✅ web app + smoke test">✅ web ॲप + smoke test</td><td>✅ 12</td><td>✅</td><td>✅</td><td data-en="✅ 4 weeks">✅ 4 आठवडे</td><td data-en="✅ 15 Qs">✅ 15 प्रश्न</td><td>—</td></tr>
 <tr><td>🧹 Shell</td><td>12</td><td data-en="✅ register CLI + backup + test runner">✅ नोंदवही CLI + backup + test runner</td><td>✅ 12</td><td>✅</td><td>✅</td><td data-en="✅ 4 weeks">✅ 4 आठवडे</td><td data-en="✅ 15 Qs">✅ 15 प्रश्न</td><td>—</td></tr>
 <tr><td>🕸️ Networking</td><td>12</td><td data-en="✅ sockets lab + the ladder">✅ sockets लॅब + शिडी</td><td>✅ 12</td><td>✅</td><td>✅</td><td data-en="✅ 4 weeks">✅ 4 आठवडे</td><td data-en="✅ 15 Qs">✅ 15 प्रश्न</td><td>—</td></tr>
@@ -251,7 +251,7 @@ as does &lt;a href="https://baluraut.github.io/learn-ai-school/study-plan.html"&
 <div class="sub" data-en="This certifies that" style="margin:10px auto 0">हे प्रमाणित करण्यात येते की</div>
 <input data-en-ph="type your name" id="cert-name" placeholder="तुमचे नाव लिहा" style="display:block; margin:8px auto; padding:6px 14px; font:inherit; font-size:1.25rem; font-weight:700; text-align:center; border:none; border-bottom:2px dashed var(--line); background:transparent; color:var(--ink); max-width:340px; width:90%;"/>
 <div class="sub" data-en="has walked all &lt;b&gt;fifteen schools&lt;/b&gt; of The School — DSA, Shell scripting, Networking, AWS, Docker, Kubernetes, CI/CD,
-  ArgoCD, AI, Vector Databases, MCP, AI Agents, Databases, APIs and UI — &lt;b&gt;206 lessons&lt;/b&gt;, from the caretaker's first command to a running agent and a notice board. Zero magic remains. 🏫" style="margin:6px auto 0; max-width:60ch">द स्कूलच्या सर्व <b>पंधरा शाळा</b> पूर्ण केल्या आहेत — DSA, Shell scripting, Networking, AWS, Docker, Kubernetes, CI/CD, ArgoCD, AI, Vector Databases, MCP, AI Agents, Databases, APIs आणि UI — <b>206 धडे</b>, केअरटेकरच्या पहिल्या command पासून चालणाऱ्या agent आणि सूचना फलकापर्यंत. जादू शून्य उरली आहे. 🏫</div>
+  ArgoCD, AI, Vector Databases, MCP, AI Agents, Databases, APIs and UI — &lt;b&gt;207 lessons&lt;/b&gt;, from the caretaker's first command to a running agent and a notice board. Zero magic remains. 🏫" style="margin:6px auto 0; max-width:60ch">द स्कूलच्या सर्व <b>पंधरा शाळा</b> पूर्ण केल्या आहेत — DSA, Shell scripting, Networking, AWS, Docker, Kubernetes, CI/CD, ArgoCD, AI, Vector Databases, MCP, AI Agents, Databases, APIs आणि UI — <b>207 धडे</b>, केअरटेकरच्या पहिल्या command पासून चालणाऱ्या agent आणि सूचना फलकापर्यंत. जादू शून्य उरली आहे. 🏫</div>
 <div class="sub" id="cert-date" style="margin-top:12px; font-weight:600"></div>
 <button data-en="🖨️ Print / save as PDF" onclick="window.print()" style="margin-top:16px; padding:9px 22px; font:inherit; font-weight:700; border:none; border-radius:10px; background:var(--ok); color:#fff; cursor:pointer;">🖨️ प्रिंट / PDF म्हणून जतन करा</button>
 </div>
@@ -293,44 +293,7 @@ as does &lt;a href="https://baluraut.github.io/learn-ai-school/study-plan.html"&
   render();
 })();
 </script>
-
-<script id="i18n-js">
-var I18N_INLINE={A:1,SPAN:1,CODE:1,B:1,I:1,EM:1,STRONG:1,BUTTON:1,LABEL:1,SUMMARY:1,SMALL:1,KBD:1};
-function schoolSetLang(l){
-  if(l!=='en'&&l!=='mr'&&l!=='both') l='both';
-  try{localStorage.setItem('school-lang2',l)}catch(e){}
-  document.documentElement.setAttribute('lang', l==='en' ? 'en' : 'mr');
-  document.querySelectorAll('[data-en]').forEach(function(el){
-    if(!el.hasAttribute('data-mr')) el.setAttribute('data-mr', el.innerHTML);
-    var en=el.getAttribute('data-en'), mr=el.getAttribute('data-mr');
-    var svg = el.namespaceURI && el.namespaceURI.indexOf('svg')>-1;
-    if(svg){
-      el.innerHTML = (l==='en') ? en : mr;
-      var t=el.querySelector('title'); if(t) t.remove();
-      if(l==='both'){ t=document.createElementNS('http://www.w3.org/2000/svg','title'); t.textContent=en.replace(/<[^>]+>/g,''); el.insertBefore(t, el.firstChild); }
-      return;
-    }
-    if(l==='en') el.innerHTML = en;
-    else if(l==='mr') el.innerHTML = mr;
-    else if(en.replace(/\s+/g,' ').trim()===mr.replace(/\s+/g,' ').trim()) el.innerHTML = mr;
-    else {
-      var e2=en.replace(/<span class="(ln|num|wk)">[\s\S]*?<\/span>\s*/g,'');
-      if(e2.charAt(0)!=='<' && mr.charAt(0)!=='<'){           /* drop the prefix both languages share, e.g. "01 · 🏢 " */
-        var i=0; while(i<e2.length&&i<mr.length&&e2.charAt(i)===mr.charAt(i)) i++;
-        var cut=e2.lastIndexOf(' ',i); if(cut>0 && cut<e2.length-1) e2=e2.slice(cut+1);
-      }
-      el.innerHTML = mr + '<span class="i18n-en'+(I18N_INLINE[el.tagName]?' i':'')+'">'+e2+'</span>';
-    }
-  });
-  document.querySelectorAll('[data-en-ph]').forEach(function(el){
-    if(!el.hasAttribute('data-mr-ph')) el.setAttribute('data-mr-ph', el.getAttribute('placeholder'));
-    el.setAttribute('placeholder', (l==='en') ? el.getAttribute('data-en-ph') : (l==='mr' ? el.getAttribute('data-mr-ph') : el.getAttribute('data-mr-ph')+' / '+el.getAttribute('data-en-ph')));
-  });
-  var p=document.getElementById('lang-pick'); if(p) p.value=l;
-}
-(function(){ var l='both'; try{ l=localStorage.getItem('school-lang2')||'both'; }catch(e){}
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){schoolSetLang(l)}); else schoolSetLang(l); })();
-</script><div id="navfab-js"><script>
+<div id="navfab-js"><script>
 (function(){
 const PAGES=[["index.html", "🏫 All schools", "🏫 सर्व शाळा"], ["program.html", "🎓 The program", "🎓 कार्यक्रम"], ["dictionary.html", "📖 Dictionary", "📖 शब्दकोश"]], PORTAL="", HERE=location.pathname.split('/').pop()||'index.html';
 const mr=()=> (document.documentElement.lang||'').startsWith('mr');
@@ -380,5 +343,42 @@ if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.f
  items().forEach(i=>{const t=document.getElementById(i.id);if(t)io.observe(t)})}
 })();
 </script></div><!--/navfab-js-->
-</body>
+
+<script id="i18n-js">
+var I18N_INLINE={A:1,SPAN:1,CODE:1,B:1,I:1,EM:1,STRONG:1,BUTTON:1,LABEL:1,SUMMARY:1,SMALL:1,KBD:1};
+function schoolSetLang(l){
+  if(l!=='en'&&l!=='mr'&&l!=='both') l='both';
+  try{localStorage.setItem('school-lang2',l)}catch(e){}
+  document.documentElement.setAttribute('lang', l==='en' ? 'en' : 'mr');
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if(!el.hasAttribute('data-mr')) el.setAttribute('data-mr', el.innerHTML);
+    var en=el.getAttribute('data-en'), mr=el.getAttribute('data-mr');
+    var svg = el.namespaceURI && el.namespaceURI.indexOf('svg')>-1;
+    if(svg){
+      el.innerHTML = (l==='en') ? en : mr;
+      var t=el.querySelector('title'); if(t) t.remove();
+      if(l==='both'){ t=document.createElementNS('http://www.w3.org/2000/svg','title'); t.textContent=en.replace(/<[^>]+>/g,''); el.insertBefore(t, el.firstChild); }
+      return;
+    }
+    if(l==='en') el.innerHTML = en;
+    else if(l==='mr') el.innerHTML = mr;
+    else if(en.replace(/\s+/g,' ').trim()===mr.replace(/\s+/g,' ').trim()) el.innerHTML = mr;
+    else {
+      var e2=en.replace(/<span class="(ln|num|wk)">[\s\S]*?<\/span>\s*/g,'');
+      if(e2.charAt(0)!=='<' && mr.charAt(0)!=='<'){           /* drop the prefix both languages share, e.g. "01 · 🏢 " */
+        var i=0; while(i<e2.length&&i<mr.length&&e2.charAt(i)===mr.charAt(i)) i++;
+        var cut=e2.lastIndexOf(' ',i); if(cut>0 && cut<e2.length-1) e2=e2.slice(cut+1);
+      }
+      el.innerHTML = mr + '<span class="i18n-en'+(I18N_INLINE[el.tagName]?' i':'')+'">'+e2+'</span>';
+    }
+  });
+  document.querySelectorAll('[data-en-ph]').forEach(function(el){
+    if(!el.hasAttribute('data-mr-ph')) el.setAttribute('data-mr-ph', el.getAttribute('placeholder'));
+    el.setAttribute('placeholder', (l==='en') ? el.getAttribute('data-en-ph') : (l==='mr' ? el.getAttribute('data-mr-ph') : el.getAttribute('data-mr-ph')+' / '+el.getAttribute('data-en-ph')));
+  });
+  var p=document.getElementById('lang-pick'); if(p) p.value=l;
+}
+(function(){ var l='both'; try{ l=localStorage.getItem('school-lang2')||'both'; }catch(e){}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){schoolSetLang(l)}); else schoolSetLang(l); })();
+</script></body>
 </html>
